@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import { Outlet, useParams } from "react-router";
+import Header from "@components/Grants/Header/Header";
 
 const Grants = (): ReactElement => {
   const params = useParams();
@@ -9,6 +10,7 @@ const Grants = (): ReactElement => {
   return (
     <>
       <h1>Grants</h1>
+      <Header/>
     </>
   );
 };

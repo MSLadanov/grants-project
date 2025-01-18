@@ -1,9 +1,12 @@
 import { ReactElement } from "react";
+import SearchBar from "./SearchBar/SearchBar";
+import GrantCard from "./GrantCard/GrantCard";
 
 const GrantsList = (): ReactElement => {
   return (
     <>
-      <h1>Grants List</h1>
+      <SearchBar />
+      <GrantCard />
     </>
   );
 };

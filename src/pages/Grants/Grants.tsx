@@ -1,6 +1,8 @@
 import { ReactElement } from "react";
 import { Outlet, useParams } from "react-router";
-import Header from "@components/Grants/Header/Header";
+import Header from "@/components/Grants/Header/Header";
+import Footer from "@/components/Grants/Footer/Footer";
+import GrantsContent from "@/components/Grants/GrantsContent/GrantsContent";
 
 const Grants = (): ReactElement => {
   const params = useParams();
@@ -9,8 +11,9 @@ const Grants = (): ReactElement => {
   }
   return (
     <>
-      <h1>Grants</h1>
-      <Header/>
+      <Header />
+      <GrantsContent />
+      <Footer />
     </>
   );
 };

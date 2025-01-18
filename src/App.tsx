@@ -1,8 +1,8 @@
 import "./App.css";
 import { Routes, Route } from "react-router";
-import Grants from "./pages/Grants";
-import GrantPage from "./pages/GrantPage";
-import PageNotFound from "./pages/PageNotFound";
+import Grants from "./pages/Grants/Grants";
+import GrantPage from "./pages/GrantPage/GrantPage";
+import PageNotFound from "./pages/PageNotFound/PageNotFound";
 
 function App() {
   return (

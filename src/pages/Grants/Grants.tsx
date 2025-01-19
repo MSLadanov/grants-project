@@ -6,6 +6,7 @@ import GrantsContent from "@/components/Grants/GrantsContent/GrantsContent";
 
 const Grants = (): ReactElement => {
   const params = useParams();
+
   if (params.grantId) {
     return <Outlet />;
   }

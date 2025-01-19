@@ -3,7 +3,7 @@ import { ReactElement } from "react";
 const Header = (): ReactElement => {
   return (
     <>
-      <h1>Header</h1>
+      <h1>Grant Header</h1>
     </>
   );
 };

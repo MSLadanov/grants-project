@@ -3,7 +3,7 @@ import { ReactElement } from "react";
 const Footer = (): ReactElement => {
   return (
     <>
-      <h1>Footer</h1>
+      <h1>Grant Footer</h1>
     </>
   );
 };

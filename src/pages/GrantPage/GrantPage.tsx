@@ -8,18 +8,25 @@ import { useOutletContext } from "react-router";
 
 const GrantPage = (): ReactElement => {
   const { data, isLoading, isError, grantId } = useOutletContext();
-  const {grantData, setGrantData} = useState(null)
-  useEffect(()=> {
-    if(data){
-      console.log(data.grants.find((item) => item.id === +grantId))
+  const [grantData, setGrantData] = useState(null);
+
+  useEffect(() => {
+    if (data) {
+      const foundGrant = data.grants.find((item) => item.id === +grantId);
+      setGrantData(foundGrant || null);
     }
-  },[data, grantId])
+  }, [data, grantId]);
+
   return (
     <>
       <Header />
-      {data && !isLoading && !isError && <GrantContent />}
-      {isLoading && !data && <Loader />}
-      {isError && !isLoading && !data && <ErrorComponent />}
+      {isLoading && <Loader />}
+      {isError && !isLoading && <ErrorComponent />}
+      {grantData && !isLoading && !isError ? (
+        <GrantContent grantData={grantData} />
+      ) : (
+        !isLoading && <ErrorComponent />
+      )}
       <Footer />
     </>
   );

@@ -7,7 +7,7 @@ const GrantsContent = ({ grants }) => {
   const [grantsList, setGrantsList] = useState(grants);
   return (
     <div className="grant-content">
-      <GrantsFilter directions={[...new Set(grantsList.map((item) => item.direction))]} setGrantsList={setGrantsList} />
+      <GrantsFilter directions={[...new Set(grantsList.map((item) => item.direction))]} amounts={[...new Set(grantsList.map((item) => item.amount))]} setGrantsList={setGrantsList} />
       <GrantsList grantsList={grantsList} setGrantsList={setGrantsList} />
     </div>
   );

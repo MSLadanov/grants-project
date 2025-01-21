@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import './style.scss'
 
-const GrantsFilter = ({ directions }): ReactElement => {
+const GrantsFilter = ({ directions, amounts }): ReactElement => {
   return (
     <div>
       <div className="filter-header">
@@ -20,7 +20,14 @@ const GrantsFilter = ({ directions }): ReactElement => {
           </div>
         ))}
       </div>
-      <div></div>
+      <div>
+      {amounts.map((item, index) => (
+          <div key={index}>
+            <input id={item} type="radio" />
+            <label htmlFor={item}>{item}</label>
+          </div>
+        ))}
+      </div>
       <div></div>
     </div>
   );

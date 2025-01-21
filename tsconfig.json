@@ -1,6 +1,7 @@
-{
+{  
   "compilerOptions": {
     "jsx": "react-jsx",
+    "downlevelIteration": true,
     "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {

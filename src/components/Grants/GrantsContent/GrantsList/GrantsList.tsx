@@ -5,9 +5,8 @@ import GrantCard from "./GrantCard/GrantCard";
 const GrantsList = ({grantsList}): ReactElement => {
   return (
     <>
-      <SearchBar />
+      <SearchBar/>
       {grantsList.map((grant) => <GrantCard key={grant.id} grant={grant}/>)}
-      
     </>
   );
 };

@@ -3,7 +3,8 @@ import { ReactElement } from "react";
 const SearchBar = (): ReactElement => {
   return (
     <>
-      <h1>SearchBar</h1>
+      <input/>
+      <button>Искать</button>
     </>
   );
 };

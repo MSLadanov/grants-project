@@ -7,7 +7,7 @@ const GrandCardInfo = ({
   amount,
 }): ReactElement => {
   return (
-    <>
+    <div>
       <div>
         <h3>Кто оказывает услуги</h3>
         <h4>{grantor}</h4>
@@ -22,7 +22,7 @@ const GrandCardInfo = ({
         <h3>Размер гранта</h3>
         <h4>{amount}</h4>
       </div>
-    </>
+    </div>
   );
 };
 

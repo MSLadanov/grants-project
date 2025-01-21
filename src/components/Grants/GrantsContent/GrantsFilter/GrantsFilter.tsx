@@ -1,9 +1,23 @@
 import { ReactElement } from "react";
 
-const GrantsFilter = (): ReactElement => {
+const GrantsFilter = ({ directions }): ReactElement => {
+  console.log(directions);
   return (
     <>
-      <h1>Grants Filter</h1>
+      <div>
+        <h1>Фильтр</h1>
+        <button>Сбросить</button>
+      </div>
+      <div>
+        {directions.map((item, index) => (
+          <div key={index}>
+            <input id={item} type="checkbox"/>
+            <label htmlFor={item}>{item}</label>
+          </div>
+        ))}
+      </div>
+      <div></div>
+      <div></div>
     </>
   );
 };

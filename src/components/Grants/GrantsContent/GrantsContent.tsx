@@ -6,7 +6,7 @@ const GrantsContent = ({ grants }) => {
   const [grantsList, setGrantsList] = useState(grants);
   return (
     <>
-      <GrantsFilter setGrantsList={setGrantsList} />
+      <GrantsFilter directions={[...new Set(grantsList.map((item) => item.direction))]} setGrantsList={setGrantsList} />
       <GrantsList grantsList={grantsList} setGrantsList={setGrantsList} />
     </>
   );

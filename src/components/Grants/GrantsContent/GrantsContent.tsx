@@ -1,11 +1,13 @@
+import { useState } from "react";
 import GrantsFilter from "./GrantsFilter/GrantsFilter";
 import GrantsList from "./GrantsList/GrantsList";
 
-const GrantsContent = () => {
+const GrantsContent = ({ grants }) => {
+  const [grantsList, setGrantsList] = useState(grants);
   return (
     <>
-      <GrantsFilter />
-      <GrantsList />
+      <GrantsFilter setGrantsList={setGrantsList} />
+      <GrantsList grantsList={grantsList} setGrantsList={setGrantsList} />
     </>
   );
 };

@@ -16,7 +16,7 @@ const Grants = (): ReactElement => {
   return (
     <>
       <Header />
-      {data && <GrantsContent />}
+      {data && <GrantsContent grants={data.grants} />}
       {isLoading && <Loader />}
       {isError && <ErrorComponent />}
       <Footer />

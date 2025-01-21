@@ -4,10 +4,10 @@ import GrantCard from "./GrantCard/GrantCard";
 
 const GrantsList = ({grantsList}): ReactElement => {
   return (
-    <>
+    <div>
       <SearchBar/>
       {grantsList.map((grant) => <GrantCard key={grant.id} grant={grant}/>)}
-    </>
+    </div>
   );
 };
 

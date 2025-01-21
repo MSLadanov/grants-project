@@ -1,24 +1,28 @@
 import { ReactElement } from "react";
+import './style.scss'
 
 const GrantsFilter = ({ directions }): ReactElement => {
-  console.log(directions);
   return (
-    <>
-      <div>
-        <h1>Фильтр</h1>
-        <button>Сбросить</button>
+    <div>
+      <div className="filter-header">
+        <div>
+          <h1>Фильтр</h1>
+        </div>
+        <div>
+          <button>Сбросить</button>
+        </div>
       </div>
       <div>
         {directions.map((item, index) => (
           <div key={index}>
-            <input id={item} type="checkbox"/>
+            <input id={item} type="checkbox" />
             <label htmlFor={item}>{item}</label>
           </div>
         ))}
       </div>
       <div></div>
       <div></div>
-    </>
+    </div>
   );
 };
 

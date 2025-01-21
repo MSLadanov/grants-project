@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 
-const GrandCardDescription = (): ReactElement => {
+const GrandCardDescription = ({ id, title, description }): ReactElement => {
   return (
     <>
       <h1>Grand Card Description</h1>
@@ -8,4 +8,4 @@ const GrandCardDescription = (): ReactElement => {
   );
 };
 
-export default GrandCardDescription
+export default GrandCardDescription;

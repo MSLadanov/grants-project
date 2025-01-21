@@ -6,7 +6,7 @@ const GrantsList = ({grantsList}): ReactElement => {
   return (
     <>
       <SearchBar />
-      {grantsList.map((grant) => <GrantCard grant={grant}/>)}
+      {grantsList.map((grant) => <GrantCard key={grant.id} grant={grant}/>)}
       
     </>
   );

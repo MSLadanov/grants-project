@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import './style.scss'
+import './style.scss';
 
 const GrantsFilter = ({ directions, amounts, sortList, setSortList }): ReactElement => {
   const handleDirection = (e) => {
@@ -10,8 +10,12 @@ const GrantsFilter = ({ directions, amounts, sortList, setSortList }): ReactElem
     } else {
       setSortList(prevList => [...prevList, id]);
     }
-    console.log(sortList);
   };
+
+  const handleReset = () => {
+    setSortList([]);
+  };
+
   return (
     <div>
       <div className="filter-header">
@@ -19,7 +23,7 @@ const GrantsFilter = ({ directions, amounts, sortList, setSortList }): ReactElem
           <h1>Фильтр</h1>
         </div>
         <div>
-          <button>Сбросить</button>
+          <button onClick={handleReset}>Сбросить</button>
         </div>
       </div>
       <div>
@@ -31,7 +35,7 @@ const GrantsFilter = ({ directions, amounts, sortList, setSortList }): ReactElem
         ))}
       </div>
       <div>
-      {amounts.map((item, index) => (
+        {amounts.map((item, index) => (
           <div key={index}>
             <input id={item} type="radio" />
             <label htmlFor={item}>{item}</label>

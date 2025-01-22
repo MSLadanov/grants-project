@@ -5,14 +5,19 @@ import "./style.scss";
 
 const GrantsContent = ({ grants }) => {
   const [grantsList, setGrantsList] = useState(grants);
-  const [sortedGrantsList, setSortedGrantsList] = useState(grants);
+  const [filteredGrantsList, setFilteredGrantsList] = useState(grants);
   const [directionsList, setDirectionsList] = useState([...new Set(grantsList.map((item) => item.direction))]);
   const [amount, setAmount] = useState(null);
 
   useEffect(() => {
-    const filteredByDirectionGrants = grantsList.filter((item) => directionsList.includes(item.direction));
-    setSortedGrantsList(filteredByDirectionGrants);
-    console.log(amount)
+    const filteredGrants = grantsList.filter((item) => directionsList.includes(item.direction));
+    if(amount !== null){
+      const limit = +amount.split(' ')[1]
+      const filteredAndLimitedGrants = filteredGrants.filter((item) => +item.amount.split(' ')[1] <= limit)
+      setFilteredGrantsList(filteredAndLimitedGrants)
+    } else {
+      setFilteredGrantsList(filteredGrants);
+    }
   }, [directionsList, grantsList, amount]);
 
   return (
@@ -24,7 +29,7 @@ const GrantsContent = ({ grants }) => {
         setDirectionsList={setDirectionsList}
         setAmount={setAmount}
       />
-      <GrantsList grantsList={sortedGrantsList} />
+      <GrantsList grantsList={filteredGrantsList} />
     </div>
   );
 };

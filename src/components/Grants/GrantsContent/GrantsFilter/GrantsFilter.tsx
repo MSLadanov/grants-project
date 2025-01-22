@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import './style.scss';
 
-const GrantsFilter = ({ directions, amounts, directionsList, setDirectionsList, amount, setAmount }): ReactElement => {
+const GrantsFilter = ({ directions, amounts, directionsList, setDirectionsList, setAmount }): ReactElement => {
   const handleDirection = (e) => {
     const id = e.target.id;
     if (directionsList.includes(id)) {

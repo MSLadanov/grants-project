@@ -10,9 +10,10 @@ const GrantsContent = ({ grants }) => {
   const [amount, setAmount] = useState(null);
 
   useEffect(() => {
-    const filteredGrants = grantsList.filter((item) => directionsList.includes(item.direction));
-    setSortedGrantsList(filteredGrants);
-  }, [directionsList, grantsList]);
+    const filteredByDirectionGrants = grantsList.filter((item) => directionsList.includes(item.direction));
+    setSortedGrantsList(filteredByDirectionGrants);
+    console.log(amount)
+  }, [directionsList, grantsList, amount]);
 
   return (
     <div className="grant-content">
@@ -21,8 +22,7 @@ const GrantsContent = ({ grants }) => {
         amounts={[...new Set(grantsList.map((item) => item.amount))]}
         directionsList={directionsList}
         setDirectionsList={setDirectionsList}
-        amountsList={amount}
-        setAmountsList={setAmount}
+        setAmount={setAmount}
       />
       <GrantsList grantsList={sortedGrantsList} />
     </div>

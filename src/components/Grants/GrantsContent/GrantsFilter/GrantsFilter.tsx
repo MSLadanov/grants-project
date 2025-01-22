@@ -1,19 +1,23 @@
 import { ReactElement } from "react";
 import './style.scss';
 
-const GrantsFilter = ({ directions, amounts, sortList, setSortList }): ReactElement => {
+const GrantsFilter = ({ directions, amounts, directionsList, setDirectionsList, amount, setAmount }): ReactElement => {
   const handleDirection = (e) => {
     const id = e.target.id;
-    if (sortList.includes(id)) {
-      const updatedList = sortList.filter(item => item !== id);
-      setSortList(updatedList);
+    if (directionsList.includes(id)) {
+      const updatedList = directionsList.filter(item => item !== id);
+      setDirectionsList(updatedList);
     } else {
-      setSortList(prevList => [...prevList, id]);
+      setDirectionsList(prevList => [...prevList, id]);
     }
   };
 
+  const handleAmount = (e) => {
+    setAmount(e.target.value)
+  }
+
   const handleReset = () => {
-    setSortList([]);
+    setDirectionsList([]);
   };
 
   return (
@@ -29,7 +33,7 @@ const GrantsFilter = ({ directions, amounts, sortList, setSortList }): ReactElem
       <div>
         {directions.map((item, index) => (
           <div key={index}>
-            <input id={item} checked={sortList.includes(item)} type="checkbox" onChange={(e) => handleDirection(e)} />
+            <input id={item} checked={directionsList.includes(item)} type="checkbox" onChange={(e) => handleDirection(e)} />
             <label htmlFor={item}>{item}</label>
           </div>
         ))}
@@ -37,7 +41,7 @@ const GrantsFilter = ({ directions, amounts, sortList, setSortList }): ReactElem
       <div>
         {amounts.map((item, index) => (
           <div key={index}>
-            <input id={item} type="radio" />
+            <input id={item} value={item} name='amount' type="radio" onChange={(e) => handleAmount(e)} />
             <label htmlFor={item}>{item}</label>
           </div>
         ))}

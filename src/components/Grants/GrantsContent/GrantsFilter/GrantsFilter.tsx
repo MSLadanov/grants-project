@@ -1,7 +1,17 @@
 import { ReactElement } from "react";
 import './style.scss'
 
-const GrantsFilter = ({ directions, amounts }): ReactElement => {
+const GrantsFilter = ({ directions, amounts, setGrantsList, sortList, setSortList }): ReactElement => {
+  const handleDirection = (e) => {
+    const id = e.target.id;
+    if (sortList.includes(id)) {
+      const updatedList = sortList.filter(item => item !== id);
+      setSortList(updatedList);
+    } else {
+      setSortList(prevList => [...prevList, id]);
+    }
+    console.log(sortList);
+  };
   return (
     <div>
       <div className="filter-header">
@@ -15,7 +25,7 @@ const GrantsFilter = ({ directions, amounts }): ReactElement => {
       <div>
         {directions.map((item, index) => (
           <div key={index}>
-            <input id={item} type="checkbox" />
+            <input id={item} type="checkbox" onChange={(e) => handleDirection(e)} />
             <label htmlFor={item}>{item}</label>
           </div>
         ))}

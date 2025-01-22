@@ -1,21 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import GrantsFilter from "./GrantsFilter/GrantsFilter";
 import GrantsList from "./GrantsList/GrantsList";
 import "./style.scss";
 
 const GrantsContent = ({ grants }) => {
   const [grantsList, setGrantsList] = useState(grants);
-  const [sortList, setSortList] = useState([]);
+  const [sortedGrantsList, setSortedGransList] = useState(grantsList)
+  const [sortList, setSortList] = useState([...new Set(grantsList.map((item) => item.direction))]);
+  useEffect(() => {
+    if(sortList.length){
+      setSortedGransList(grantsList.filter((item) => sortList.includes(item.direction)))
+    }
+    console.log(sortedGrantsList)
+  }, [sortList])
   return (
     <div className="grant-content">
       <GrantsFilter
         directions={[...new Set(grantsList.map((item) => item.direction))]}
         amounts={[...new Set(grantsList.map((item) => item.amount))]}
-        setGrantsList={setGrantsList}
         sortList={sortList}
         setSortList={setSortList}
       />
-      <GrantsList grantsList={grantsList} setGrantsList={setGrantsList} />
+      <GrantsList grantsList={grantsList}  />
     </div>
   );
 };

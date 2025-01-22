@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import './style.scss'
 
-const GrantsFilter = ({ directions, amounts, setGrantsList, sortList, setSortList }): ReactElement => {
+const GrantsFilter = ({ directions, amounts, sortList, setSortList }): ReactElement => {
   const handleDirection = (e) => {
     const id = e.target.id;
     if (sortList.includes(id)) {
@@ -25,7 +25,7 @@ const GrantsFilter = ({ directions, amounts, setGrantsList, sortList, setSortLis
       <div>
         {directions.map((item, index) => (
           <div key={index}>
-            <input id={item} type="checkbox" onChange={(e) => handleDirection(e)} />
+            <input id={item} checked={sortList.includes(item)} type="checkbox" onChange={(e) => handleDirection(e)} />
             <label htmlFor={item}>{item}</label>
           </div>
         ))}

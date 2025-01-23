@@ -6,15 +6,31 @@ import "./style.scss";
 const GrantsContent = ({ grants }) => {
   const [grantsList, setGrantsList] = useState(grants);
   const [filteredGrantsList, setFilteredGrantsList] = useState(grants);
-  const [directionsList, setDirectionsList] = useState([...new Set(grantsList.map((item) => item.direction))]);
+  const [directionsList, setDirectionsList] = useState([
+    ...new Set(grantsList.map((item) => item.direction)),
+  ]);
   const [amount, setAmount] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const searchGrants = () => {
+    const searchedGrantsList = filteredGrantsList.filter((grant) => {
+      return Object.values(grant).some((value) => 
+        typeof value === 'string' && value.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    });
+    setFilteredGrantsList(searchedGrantsList);
+  };
 
   useEffect(() => {
-    const filteredGrants = grantsList.filter((item) => directionsList.includes(item.direction));
-    if(amount !== null){
-      const limit = +amount.split(' ')[1]
-      const filteredAndLimitedGrants = filteredGrants.filter((item) => +item.amount.split(' ')[1] <= limit)
-      setFilteredGrantsList(filteredAndLimitedGrants)
+    const filteredGrants = grantsList.filter((item) =>
+      directionsList.includes(item.direction)
+    );
+    if (amount !== null) {
+      const limit = +amount.split(" ")[1];
+      const filteredAndLimitedGrants = filteredGrants.filter(
+        (item) => +item.amount.split(" ")[1] <= limit
+      );
+      setFilteredGrantsList(filteredAndLimitedGrants);
     } else {
       setFilteredGrantsList(filteredGrants);
     }
@@ -29,7 +45,11 @@ const GrantsContent = ({ grants }) => {
         setDirectionsList={setDirectionsList}
         setAmount={setAmount}
       />
-      <GrantsList grantsList={filteredGrantsList} />
+      <GrantsList
+        grantsList={filteredGrantsList}
+        setSearchQuery={setSearchQuery}
+        searchGrants={searchGrants}
+      />
     </div>
   );
 };

@@ -1,10 +1,10 @@
 import { ReactElement } from "react";
 
-const SearchBar = (): ReactElement => {
+const SearchBar = ({ setSearchQuery, searchGrants }): ReactElement => {
   return (
     <>
-      <input/>
-      <button>Искать</button>
+      <input onChange={(e) => setSearchQuery(e.target.value)}/>
+      <button onClick={() => searchGrants()}>Искать</button>
     </>
   );
 };

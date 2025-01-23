@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import SearchBar from "./SearchBar/SearchBar";
 import GrantCard from "./GrantCard/GrantCard";
 
-const GrantsList = ({ grantsList }): ReactElement => {
+const GrantsList = ({ grantsList, setSearchQuery, searchGrants }): ReactElement => {
   if (grantsList.length === 0) {
     return (
       <>
@@ -12,7 +12,7 @@ const GrantsList = ({ grantsList }): ReactElement => {
   }
   return (
     <div>
-      <SearchBar />
+      <SearchBar setSearchQuery={setSearchQuery} searchGrants={searchGrants}/>
       {grantsList.map((grant) => (
         <GrantCard key={grant.id} grant={grant} />
       ))}

@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import './style.scss';
-import DatePicker from "./DatePicker";
+import DatePicker from "./CustomDatePicker/CustomDatePicker";
 
 const GrantsFilter = ({ directions, amounts, directionsList, setDirectionsList, setAmount }): ReactElement => {
   const handleDirection = (e) => {

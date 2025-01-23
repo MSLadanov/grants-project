@@ -1,8 +1,8 @@
 import { ReactElement } from "react";
 import './style.scss';
-import DatePicker from "./CustomDatePicker/CustomDatePicker";
+import CustomDatePicker from "./CustomDatePicker/CustomDatePicker";
 
-const GrantsFilter = ({ directions, amounts, directionsList, setDirectionsList, setAmount }): ReactElement => {
+const GrantsFilter = ({ directions, amounts, directionsList, setDirectionsList, setAmount, dateRange, setDateRange }): ReactElement => {
   const handleDirection = (e) => {
     const id = e.target.id;
     if (directionsList.includes(id)) {
@@ -48,7 +48,7 @@ const GrantsFilter = ({ directions, amounts, directionsList, setDirectionsList, 
         ))}
       </div>
       <div>
-        <DatePicker/>
+        <CustomDatePicker dateRange={dateRange} setDateRange={setDateRange}/>
       </div>
     </div>
   );

@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import GrantsFilter from "./GrantsFilter/GrantsFilter";
 import GrantsList from "./GrantsList/GrantsList";
 import "./style.scss";
+import dayjs from "dayjs";
+import isBetween from "dayjs/plugin/isBetween";
+dayjs.extend(isBetween);
 
 const GrantsContent = ({ grants }) => {
   const [grantsList, setGrantsList] = useState(grants);
@@ -10,31 +13,39 @@ const GrantsContent = ({ grants }) => {
     ...new Set(grantsList.map((item) => item.direction)),
   ]);
   const [amount, setAmount] = useState(null);
+  const [dateRange, setDateRange] = useState<[Date | null, Date | null]>([
+    null,
+    null,
+  ]);
   const [searchQuery, setSearchQuery] = useState("");
 
   const searchGrants = () => {
     const searchedGrantsList = filteredGrantsList.filter((grant) => {
-      return Object.values(grant).some((value) => 
-        typeof value === 'string' && value.toLowerCase().includes(searchQuery.toLowerCase())
+      return Object.values(grant).some(
+        (value) =>
+          typeof value === "string" &&
+          value.toLowerCase().includes(searchQuery.toLowerCase())
       );
     });
     setFilteredGrantsList(searchedGrantsList);
   };
 
   useEffect(() => {
-    const filteredGrants = grantsList.filter((item) =>
-      directionsList.includes(item.direction)
-    );
-    if (amount !== null) {
-      const limit = +amount.split(" ")[1];
-      const filteredAndLimitedGrants = filteredGrants.filter(
-        (item) => +item.amount.split(" ")[1] <= limit
+    const filteredGrants = grantsList.filter((item) => {
+      const matchesDirection = directionsList.includes(item.direction);
+      const matchesAmount = amount === null || +item.amount.split(" ")[1] <= +amount.split(" ")[1];
+      const matchesDateRange =
+        dateRange.every((date) => date !== null) ? 
+        dayjs(item.application_period.start).isBetween(dayjs(dateRange[0]), dayjs(dateRange[1]), null, '[]') : true;
+      const matchesSearchQuery = Object.values(item).some((value) =>
+        typeof value === "string" && value.toLowerCase().includes(searchQuery.toLowerCase())
       );
-      setFilteredGrantsList(filteredAndLimitedGrants);
-    } else {
-      setFilteredGrantsList(filteredGrants);
-    }
-  }, [directionsList, grantsList, amount]);
+  
+      return matchesDirection && matchesAmount && matchesDateRange && matchesSearchQuery;
+    });
+  
+    setFilteredGrantsList(filteredGrants);
+  }, [directionsList, grantsList, amount, dateRange, searchQuery]);
 
   return (
     <div className="grant-content">
@@ -44,6 +55,8 @@ const GrantsContent = ({ grants }) => {
         directionsList={directionsList}
         setDirectionsList={setDirectionsList}
         setAmount={setAmount}
+        dateRange={dateRange}
+        setDateRange={setDateRange}
       />
       <GrantsList
         grantsList={filteredGrantsList}

@@ -3,10 +3,9 @@ import "dayjs/locale/ru";
 import { ReactElement, useState } from "react";
 import "./style.scss";
 
-const CustomDatePicker = (): ReactElement => {
-  const [value, setValue] = useState<[Date | null, Date | null]>([null, null]);
+const CustomDatePicker = ({dateRange, setDateRange}): ReactElement => {
   return (
-    <DatePicker type="range" locale="ru" value={value} onChange={setValue} />
+    <DatePicker type="range" locale="ru" value={dateRange} onChange={setDateRange} />
   );
 };
 

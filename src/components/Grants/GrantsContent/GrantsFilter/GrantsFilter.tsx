@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import './style.scss';
+import DatePicker from "./DatePicker";
 
 const GrantsFilter = ({ directions, amounts, directionsList, setDirectionsList, setAmount }): ReactElement => {
   const handleDirection = (e) => {
@@ -47,7 +48,7 @@ const GrantsFilter = ({ directions, amounts, directionsList, setDirectionsList, 
         ))}
       </div>
       <div>
-
+        <DatePicker/>
       </div>
     </div>
   );

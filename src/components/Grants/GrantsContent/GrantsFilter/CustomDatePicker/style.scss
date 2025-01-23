@@ -2,6 +2,14 @@
     display: flex;
 }
 
-.mantine-DatePicker-calendarHeaderControlIcon{
+.mantine-DatePicker-calendarHeaderControl:first-child svg{
     transform: rotate(90deg);
+}
+
+.mantine-DatePicker-calendarHeaderControl:last-child svg{
+    transform: rotate(270deg);
+}
+
+.mantine-DatePicker-day[data-selected=true], [data-in-range=true]{
+    color: #2D4EF8;
 }

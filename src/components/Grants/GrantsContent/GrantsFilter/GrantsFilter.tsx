@@ -1,5 +1,4 @@
 import { ReactElement } from "react";
-import { StaticDatePicker } from "@mui/x-date-pickers";
 import './style.scss';
 
 const GrantsFilter = ({ directions, amounts, directionsList, setDirectionsList, setAmount }): ReactElement => {
@@ -48,7 +47,7 @@ const GrantsFilter = ({ directions, amounts, directionsList, setDirectionsList, 
         ))}
       </div>
       <div>
-        <StaticDatePicker/>
+
       </div>
     </div>
   );

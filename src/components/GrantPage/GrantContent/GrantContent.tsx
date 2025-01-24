@@ -4,11 +4,10 @@ import GrantDescription from "./GrantDescription/GrantDescription";
 import SectionMenu from "./SectionMenu/SectionMenu";
 
 const GrantContent = ({ grantData }): ReactElement => {
-  console.log(grantData);
   return (
     <div className="grant-content">
       <BackwardButton />
-      <GrantDescription />
+      <GrantDescription grantData={grantData} />
       <SectionMenu />
     </div>
   );

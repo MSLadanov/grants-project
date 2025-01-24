@@ -1,6 +1,7 @@
 import { ReactElement } from "react";
 
-const MainInfo = (): ReactElement => {
+const MainInfo = ({ description }): ReactElement => {
+  console.log(description)
   return (
     <div>
       <h1>Main info</h1>

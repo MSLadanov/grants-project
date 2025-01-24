@@ -4,7 +4,8 @@ import MainInfo from "./MainInfo/MainInfo";
 import Requirements from "./Requirements/Requirements";
 
 const GrantDescription = ({grantData}): ReactElement => {
-  const {} = grantData
+  const {application_period, due_date, amount, description, requirements} = grantData
+  console.log(application_period, due_date, amount, description, requirements)
   return (
     <div>
       <h1>Краткая информация</h1>

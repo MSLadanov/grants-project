@@ -18,7 +18,7 @@ const GrantsFilter = ({ directions, amounts, directionsList, setDirectionsList, 
   }
 
   const handleReset = () => {
-    setDirectionsList([]);
+    setDirectionsList(directions);
   };
 
   return (

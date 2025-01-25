@@ -58,7 +58,7 @@ const GrantsContent = ({ grants }) => {
     });
 
     setFilteredGrantsList(filteredGrants);
-  }, [directionsList, grantsList, amount, dateRange, searchQuery]);
+  }, [directionsList, grantsList, amount, dateRange]);
 
   return (
     <div className="grant-content">

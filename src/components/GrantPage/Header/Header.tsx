@@ -1,9 +1,9 @@
 import { ReactElement } from "react";
 
-const Header = (): ReactElement => {
+const Header = ({grantData}): ReactElement => {
   return (
     <>
-      <h1>Grant Header</h1>
+      <h1>{grantData?.title}</h1>
     </>
   );
 };

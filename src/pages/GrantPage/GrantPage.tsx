@@ -19,7 +19,7 @@ const GrantPage = (): ReactElement => {
 
   return (
     <>
-      <Header />
+      <Header grantData={grantData} />
       {isLoading && <Loader />}
       {isError && !isLoading && <ErrorComponent />}
       {grantData && !isLoading && !isError ? (

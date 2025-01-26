@@ -47,7 +47,7 @@ const GrantsFilter = ({ directions, amounts, directionsList, setDirectionsList, 
           </div>
         ))}
       </div>
-      <div>
+      <div className="filter-datepicker">
         <CustomDatePicker dateRange={dateRange} setDateRange={setDateRange}/>
       </div>
     </div>

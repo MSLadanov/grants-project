@@ -1,6 +1,6 @@
 import { DatePicker } from "@mantine/dates";
 import "dayjs/locale/ru";
-import { ReactElement, useState } from "react";
+import { ReactElement } from "react";
 import "./style.scss";
 
 const CustomDatePicker = ({dateRange, setDateRange}): ReactElement => {

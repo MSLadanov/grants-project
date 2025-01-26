@@ -1,9 +1,9 @@
 import { ReactElement } from "react";
 
-const SearchBar = ({ setSearchQuery, searchGrants }): ReactElement => {
+const SearchBar = ({searchGrants, handleSearchChange }): ReactElement => {
   return (
     <div>
-      <input onChange={(e) => setSearchQuery(e.target.value)}/>
+      <input onChange={(e) => handleSearchChange(e)}/>
       <button onClick={() => searchGrants()}>Искать</button>
     </div>
   );

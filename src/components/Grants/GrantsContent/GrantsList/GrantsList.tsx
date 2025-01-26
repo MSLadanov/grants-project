@@ -3,7 +3,7 @@ import SearchBar from "./SearchBar/SearchBar";
 import GrantCard from "./GrantCard/GrantCard";
 import Pagination from "@/components/Grants/Pagination/Pagination";
 
-const GrantsList = ({ grantsList, setSearchQuery, searchGrants }): ReactElement => {
+const GrantsList = ({ grantsList, searchGrants, handleSearchChange }): ReactElement => {
   const PageSize = 5;
   const [currentPage, setCurrentPage] = useState(1);
   const firstPageIndex = (currentPage - 1) * PageSize;
@@ -14,7 +14,7 @@ const GrantsList = ({ grantsList, setSearchQuery, searchGrants }): ReactElement 
   }
   return (
     <div>
-      <SearchBar setSearchQuery={setSearchQuery} searchGrants={searchGrants} />
+      <SearchBar searchGrants={searchGrants} handleSearchChange={handleSearchChange} />
       {paginatedGrants.map((grant) => (
         <GrantCard key={grant.id} grant={grant} />
       ))}

@@ -19,6 +19,14 @@ const GrantsContent = ({ grants }) => {
   ]);
   const [searchQuery, setSearchQuery] = useState("");
 
+  const handleSearchChange = (e) => {
+    if (!e.target.value) {
+      setFilteredGrantsList(grantsList);
+      filterGrants()
+    }
+    setSearchQuery(e.target.value);
+  };
+
   const searchGrants = () => {
     const searchedGrantsList = filteredGrantsList.filter((grant) => {
       return Object.values(grant).some(
@@ -30,7 +38,7 @@ const GrantsContent = ({ grants }) => {
     setFilteredGrantsList(searchedGrantsList);
   };
 
-  useEffect(() => {
+  const filterGrants = () => {
     const filteredGrants = grantsList.filter((item) => {
       const matchesDirection = directionsList.includes(item.direction);
       const matchesAmount =
@@ -56,8 +64,11 @@ const GrantsContent = ({ grants }) => {
         matchesSearchQuery
       );
     });
-
     setFilteredGrantsList(filteredGrants);
+  };
+
+  useEffect(() => {
+    filterGrants();
   }, [directionsList, grantsList, amount, dateRange]);
 
   return (
@@ -73,8 +84,8 @@ const GrantsContent = ({ grants }) => {
       />
       <GrantsList
         grantsList={filteredGrantsList}
-        setSearchQuery={setSearchQuery}
         searchGrants={searchGrants}
+        handleSearchChange={handleSearchChange}
       />
     </div>
   );

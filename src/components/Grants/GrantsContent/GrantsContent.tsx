@@ -4,9 +4,12 @@ import GrantsList from "./GrantsList/GrantsList";
 import "./style.scss";
 import dayjs from "dayjs";
 import isBetween from "dayjs/plugin/isBetween";
+import Pagination from "../Pagination/Pagination";
 dayjs.extend(isBetween);
 
 const GrantsContent = ({ grants }) => {
+  const PageSize = 5;
+  const [currentPage, setCurrentPage] = useState(1);
   const [grantsList, setGrantsList] = useState(grants);
   const [filteredGrantsList, setFilteredGrantsList] = useState(grants);
   const [directionsList, setDirectionsList] = useState([
@@ -18,6 +21,9 @@ const GrantsContent = ({ grants }) => {
     null,
   ]);
   const [searchQuery, setSearchQuery] = useState("");
+  const firstPageIndex = (currentPage - 1) * PageSize;
+  const lastPageIndex = firstPageIndex + PageSize;
+  const paginatedGrants = filteredGrantsList.slice(firstPageIndex, lastPageIndex);
 
   const searchGrants = () => {
     const searchedGrantsList = filteredGrantsList.filter((grant) => {
@@ -72,9 +78,16 @@ const GrantsContent = ({ grants }) => {
         setDateRange={setDateRange}
       />
       <GrantsList
-        grantsList={filteredGrantsList}
+        grantsList={paginatedGrants}
         setSearchQuery={setSearchQuery}
         searchGrants={searchGrants}
+      />
+      <Pagination
+        className="pagination-bar"
+        currentPage={currentPage}
+        totalCount={filteredGrantsList.length}
+        pageSize={PageSize}
+        onPageChange={(page) => setCurrentPage(page)}
       />
     </div>
   );

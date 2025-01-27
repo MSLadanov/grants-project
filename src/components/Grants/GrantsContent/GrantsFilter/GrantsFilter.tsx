@@ -32,19 +32,23 @@ const GrantsFilter = ({
   const [startDateActive, setStartDateActive] = useState(false);
   const [endDateActive, setEndDateActive] = useState(false);
 
-  const handleStartDateFocus = () => {
+  const handleStartDateFocus = (e) => {
+    e.preventDefault()
     setStartDateActive(true);
   };
 
-  const handleStartDateBlur = () => {
+  const handleStartDateBlur = (e) => {
+    e.preventDefault()
     setStartDateActive(false);
   };
 
-  const handleEndDateFocus = () => {
+  const handleEndDateFocus = (e) => {
+    e.preventDefault()
     setEndDateActive(true);
   };
 
-  const handleEndDateBlur = () => {
+  const handleEndDateBlur = (e) => {
+    e.preventDefault()
     setEndDateActive(false);
   };
 
@@ -90,8 +94,9 @@ const GrantsFilter = ({
           <label htmlFor="date-start">Начало периода</label>
           <input
             className={startDateActive ? "active" : ""}
-            onFocus={handleStartDateFocus}
-            onBlur={handleStartDateBlur}
+            onFocus={(e) => handleStartDateFocus(e)}
+            onBlur={(e) => handleStartDateBlur(e)}
+            // value={dateRange[0]}
             type="date"
             name="date-start"
             id="date-start"
@@ -101,8 +106,9 @@ const GrantsFilter = ({
           <label htmlFor="date-start">Конец периода</label>
           <input
             className={endDateActive ? "active" : ""}
-            onFocus={handleEndDateFocus}
-            onBlur={handleEndDateBlur}
+            onFocus={(e) => handleEndDateFocus(e)}
+            onBlur={(e) => handleEndDateBlur(e)}
+            // value={dateRange[1]}
             type="date"
             name="date-start"
             id="date-start"

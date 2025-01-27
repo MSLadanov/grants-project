@@ -75,8 +75,9 @@ const GrantsFilter = ({
             label="Начало периода"
             placeholder="Date input"
             value={dateRange[0]}
+            disabled
           />
-          <div className="filter-date-icon"></div>
+          <div className={"filter-date-icon" + (dateRange[0] ? ' active' : '')}></div>
         </div>
         <div className="filter-date-indicator">
           <DateInput
@@ -84,8 +85,9 @@ const GrantsFilter = ({
             label="Конец периода"
             placeholder="Date input"
             value={dateRange[1]}
+            disabled
           />
-          <div className="filter-date-icon"></div>
+          <div className={"filter-date-icon" + (dateRange[1] ? ' active' : '')}></div>
         </div>
       </div>
       <div className="filter-datepicker">

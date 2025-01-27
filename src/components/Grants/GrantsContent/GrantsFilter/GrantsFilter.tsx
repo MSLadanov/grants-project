@@ -1,7 +1,8 @@
-import { ReactElement, useState } from "react";
+import { ReactElement } from "react";
 import "./style.scss";
 import CustomDatePicker from "./CustomDatePicker/CustomDatePicker";
 import dayjs from "dayjs";
+import { DateInput } from "@mantine/dates";
 
 const GrantsFilter = ({
   directions,
@@ -29,29 +30,6 @@ const GrantsFilter = ({
   const handleReset = () => {
     setDirectionsList(directions);
   };
-
-  const [startDateActive, setStartDateActive] = useState(false);
-  const [endDateActive, setEndDateActive] = useState(false);
-
-  // const handleStartDateFocus = (e) => {
-  //   e.preventDefault()
-  //   setStartDateActive(true);
-  // };
-
-  // const handleStartDateBlur = (e) => {
-  //   e.preventDefault()
-  //   setStartDateActive(false);
-  // };
-
-  // const handleEndDateFocus = (e) => {
-  //   e.preventDefault()
-  //   setEndDateActive(true);
-  // };
-
-  // const handleEndDateBlur = (e) => {
-  //   e.preventDefault()
-  //   setEndDateActive(false);
-  // };
 
   return (
     <div>
@@ -92,28 +70,22 @@ const GrantsFilter = ({
       </div>
       <div className="filter-date-group">
         <div className="filter-date-indicator">
-          <label htmlFor="date-start">Начало периода</label>
-          <input
-            className={dateRange[0] ? "active" : ""}
-            // onFocus={(e) => handleStartDateFocus(e)}
-            // onBlur={(e) => handleStartDateBlur(e)}
-            value={dateRange[0] ? dayjs(dateRange[0]).format('YYYY-MM-DD') : null}
-            type="date"
-            name="date-start"
-            id="date-start"
+          <DateInput
+            valueFormat="DD/MM/YYYY"
+            label="Начало периода"
+            placeholder="Date input"
+            value={dateRange[0]}
           />
+          <div className="filter-date-icon"></div>
         </div>
         <div className="filter-date-indicator">
-          <label htmlFor="date-start">Конец периода</label>
-          <input
-            className={dateRange[1] ? "active" : ""}
-            // onFocus={(e) => handleEndDateFocus(e)}
-            // onBlur={(e) => handleEndDateBlur(e)}
-            value={dateRange[1] ? dayjs(dateRange[0]).format('YYYY-MM-DD') : null}
-            type="date"
-            name="date-start"
-            id="date-start"
+          <DateInput
+            valueFormat="DD/MM/YYYY"
+            label="Конец периода"
+            placeholder="Date input"
+            value={dateRange[1]}
           />
+          <div className="filter-date-icon"></div>
         </div>
       </div>
       <div className="filter-datepicker">

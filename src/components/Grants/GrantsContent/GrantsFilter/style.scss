@@ -12,26 +12,24 @@
 }
 
 .filter-date-indicator {
+    input{
+      height: 35px;
+      width: 100px;
+      padding-left: 40px;
+    }
     position: relative;
-  
-    input {
-      width: 110px;
+    .filter-date-icon{
+      top:25px;
+      left: 5px;
       height: 25px;
-  
-      &::-webkit-calendar-picker-indicator {
-        background: url("/src/assets/calendar.svg");
-        background-size: contain;
-        position: absolute;
-        cursor: pointer;
-      }
-  
-      &::-webkit-datetime-edit {
-        margin-left: 25px;
-      }
-  
-      &.active::-webkit-calendar-picker-indicator {
-        background: url("/src/assets/calendar-active.svg");
-        background-size: contain;
-      }
+      width: 25px;
+      background: url("/src/assets/calendar.svg");
+      background-size: contain;
+      position: absolute;
+      cursor: pointer;
+    }
+   
+    & label{
+      display: block;
     }
   }

@@ -47,6 +47,10 @@ const GrantsFilter = ({ directions, amounts, directionsList, setDirectionsList, 
           </div>
         ))}
       </div>
+      <div className="filter-date-indicator">
+        <input className="date-input" type="date" name="" id="" />
+        <input className="date-input" type="date" name="" id="" />
+      </div>
       <div className="filter-datepicker">
         <CustomDatePicker dateRange={dateRange} setDateRange={setDateRange}/>
       </div>

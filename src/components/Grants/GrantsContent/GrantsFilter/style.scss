@@ -1,8 +1,17 @@
-.filter-header{
-    display: flex;
-    align-items: center;
+.filter-header {
+  display: flex;
+  align-items: center;
 }
 
-.filter-datepicker{
-    width: 245px;
+.filter-datepicker {
+  width: 245px;
+}
+
+.filter-date-indicator {
+  input[type="date"]::-webkit-inner-spin-button,
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    background: url('/src/assets/calendar.svg');
+    height: 25px;
+    width: 25px;
+  }
 }

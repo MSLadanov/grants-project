@@ -71,9 +71,10 @@ const GrantsFilter = ({
       <div className="filter-date-group">
         <div className="filter-date-indicator">
           <DateInput
+            className={(dateRange[0] && ' active')}
             valueFormat="DD/MM/YYYY"
             label="Начало периода"
-            placeholder="Date input"
+            placeholder="23/10/2023"
             value={dateRange[0]}
             disabled
           />
@@ -81,9 +82,10 @@ const GrantsFilter = ({
         </div>
         <div className="filter-date-indicator">
           <DateInput
+            className={(dateRange[0] ? ' active' : '')}
             valueFormat="DD/MM/YYYY"
             label="Конец периода"
-            placeholder="Date input"
+            placeholder="01/12/2023"
             value={dateRange[1]}
             disabled
           />

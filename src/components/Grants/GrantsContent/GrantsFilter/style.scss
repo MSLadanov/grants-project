@@ -12,6 +12,9 @@
 }
 
 .filter-date-indicator {
+  &:first-child {
+    border-right: 1px solid #e0e4e7;
+  }
   input {
     height: 35px;
     width: 100px;
@@ -33,7 +36,22 @@
     }
   }
 }
+
+.active {
+  .mantine-DateInput-input {
+    color: #2d4ef8;
+  }
+}
+
+.mantine-DateInput-input {
+  color: #99a7b2;
+  border: none;
+  &:disabled {
+    background-color: transparent;
+  }
+}
 .mantine-DateInput-label {
+  color: #99a7b2;
   position: relative;
-  left: 40px;
+  left: 35px;
 }

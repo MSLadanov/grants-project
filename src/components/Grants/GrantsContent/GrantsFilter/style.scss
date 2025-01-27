@@ -8,10 +8,22 @@
 }
 
 .filter-date-indicator {
-  input[type="date"]::-webkit-inner-spin-button,
-  input[type="date"]::-webkit-calendar-picker-indicator {
-    background: url('/src/assets/calendar.svg');
+  input {
+    width: 110px;
     height: 25px;
-    width: 25px;
+  }
+  input[type="date"] {
+    &::-webkit-calendar-picker-indicator {
+      background: url("/src/assets/calendar.svg");
+      background-size: contain;
+      position: absolute;
+      &:focus{
+        background: url("/src/assets/calendar-active.svg");
+        background-size: contain;
+      }
+    }
+    &::-webkit-datetime-edit{
+        margin-left: 25px;
+    }
   }
 }

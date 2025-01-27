@@ -7,23 +7,31 @@
   width: 245px;
 }
 
+.filter-date-group{
+    display: flex;
+}
+
 .filter-date-indicator {
-  input {
-    width: 110px;
-    height: 25px;
-  }
-  input[type="date"] {
-    &::-webkit-calendar-picker-indicator {
-      background: url("/src/assets/calendar.svg");
-      background-size: contain;
-      position: absolute;
-      &:focus{
+    position: relative;
+  
+    input {
+      width: 110px;
+      height: 25px;
+  
+      &::-webkit-calendar-picker-indicator {
+        background: url("/src/assets/calendar.svg");
+        background-size: contain;
+        position: absolute;
+        cursor: pointer;
+      }
+  
+      &::-webkit-datetime-edit {
+        margin-left: 25px;
+      }
+  
+      &.active::-webkit-calendar-picker-indicator {
         background: url("/src/assets/calendar-active.svg");
         background-size: contain;
       }
     }
-    &::-webkit-datetime-edit{
-        margin-left: 25px;
-    }
   }
-}

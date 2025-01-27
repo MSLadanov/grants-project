@@ -32,25 +32,25 @@ const GrantsFilter = ({
   const [startDateActive, setStartDateActive] = useState(false);
   const [endDateActive, setEndDateActive] = useState(false);
 
-  const handleStartDateFocus = (e) => {
-    e.preventDefault()
-    setStartDateActive(true);
-  };
+  // const handleStartDateFocus = (e) => {
+  //   e.preventDefault()
+  //   setStartDateActive(true);
+  // };
 
-  const handleStartDateBlur = (e) => {
-    e.preventDefault()
-    setStartDateActive(false);
-  };
+  // const handleStartDateBlur = (e) => {
+  //   e.preventDefault()
+  //   setStartDateActive(false);
+  // };
 
-  const handleEndDateFocus = (e) => {
-    e.preventDefault()
-    setEndDateActive(true);
-  };
+  // const handleEndDateFocus = (e) => {
+  //   e.preventDefault()
+  //   setEndDateActive(true);
+  // };
 
-  const handleEndDateBlur = (e) => {
-    e.preventDefault()
-    setEndDateActive(false);
-  };
+  // const handleEndDateBlur = (e) => {
+  //   e.preventDefault()
+  //   setEndDateActive(false);
+  // };
 
   return (
     <div>
@@ -93,10 +93,10 @@ const GrantsFilter = ({
         <div className="filter-date-indicator">
           <label htmlFor="date-start">Начало периода</label>
           <input
-            className={startDateActive ? "active" : ""}
-            onFocus={(e) => handleStartDateFocus(e)}
-            onBlur={(e) => handleStartDateBlur(e)}
-            // value={dateRange[0]}
+            className={dateRange[0] ? "active" : ""}
+            // onFocus={(e) => handleStartDateFocus(e)}
+            // onBlur={(e) => handleStartDateBlur(e)}
+            value={dateRange[0] ? dateRange[0] : null}
             type="date"
             name="date-start"
             id="date-start"
@@ -105,9 +105,9 @@ const GrantsFilter = ({
         <div className="filter-date-indicator">
           <label htmlFor="date-start">Конец периода</label>
           <input
-            className={endDateActive ? "active" : ""}
-            onFocus={(e) => handleEndDateFocus(e)}
-            onBlur={(e) => handleEndDateBlur(e)}
+            className={dateRange[1] ? "active" : ""}
+            // onFocus={(e) => handleEndDateFocus(e)}
+            // onBlur={(e) => handleEndDateBlur(e)}
             // value={dateRange[1]}
             type="date"
             name="date-start"

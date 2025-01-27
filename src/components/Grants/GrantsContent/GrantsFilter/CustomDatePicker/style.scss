@@ -1,13 +1,29 @@
 .mantine-DatePicker-calendarHeader{
     display: flex;
+    justify-content: space-between;
 }
 
-.mantine-DatePicker-calendarHeaderControl:first-child svg{
-    transform: rotate(90deg);
+.mantine-DatePicker-calendarHeaderControl{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    border: none;
+    background-color: white;
+    width: 60px;
+    &:first-child svg{
+
+        transform: rotate(90deg) scale(1.5);
+    }
+    &:last-child svg{
+        transform: rotate(270deg) scale(1.5);
+    }
 }
 
-.mantine-DatePicker-calendarHeaderControl:last-child svg{
-    transform: rotate(270deg);
+.mantine-DatePicker-calendarHeaderLevel{
+    text-transform: capitalize;
+    background-color: white;
+    border: none;
 }
 
 .mantine-DatePicker-day[data-selected=true], [data-in-range=true]{

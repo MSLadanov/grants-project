@@ -5,7 +5,7 @@ import "./style.scss";
 
 const CustomDatePicker = ({dateRange, setDateRange}): ReactElement => {
   return (
-    <DatePicker type="range" locale="ru" value={dateRange} onChange={setDateRange} />
+    <DatePicker type="range" monthLabelFormat={'MMMM'} locale="ru" value={dateRange} onChange={setDateRange} />
   );
 };
 

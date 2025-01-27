@@ -1,6 +1,7 @@
 import { ReactElement, useState } from "react";
 import "./style.scss";
 import CustomDatePicker from "./CustomDatePicker/CustomDatePicker";
+import dayjs from "dayjs";
 
 const GrantsFilter = ({
   directions,
@@ -96,7 +97,7 @@ const GrantsFilter = ({
             className={dateRange[0] ? "active" : ""}
             // onFocus={(e) => handleStartDateFocus(e)}
             // onBlur={(e) => handleStartDateBlur(e)}
-            value={dateRange[0] ? dateRange[0] : null}
+            value={dateRange[0] ? dayjs(dateRange[0]).format('YYYY-MM-DD') : null}
             type="date"
             name="date-start"
             id="date-start"
@@ -108,7 +109,7 @@ const GrantsFilter = ({
             className={dateRange[1] ? "active" : ""}
             // onFocus={(e) => handleEndDateFocus(e)}
             // onBlur={(e) => handleEndDateBlur(e)}
-            // value={dateRange[1]}
+            value={dateRange[1] ? dayjs(dateRange[0]).format('YYYY-MM-DD') : null}
             type="date"
             name="date-start"
             id="date-start"

@@ -24,7 +24,7 @@ const GrantsList = ({
           clearSearchQuery={clearSearchQuery}
           searchQuery={searchQuery}
         />
-        <h1>Нет грантов</h1>;
+        <h1>Нет грантов</h1>
       </div>
     )
   }

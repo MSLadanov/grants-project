@@ -9,26 +9,17 @@ dayjs.extend(isBetween);
 const GrantsContent = ({ grants }) => {
   const [grantsList, setGrantsList] = useState(grants);
   const [filteredGrantsList, setFilteredGrantsList] = useState(grants);
-  const [directionsList, setDirectionsList] = useState([
-    ...new Set(grantsList.map((item) => item.direction)),
-  ]);
+  const [directionsList, setDirectionsList] = useState([...new Set(grantsList.map((item) => item.direction))]);
   const [amount, setAmount] = useState(null);
-  const [dateRange, setDateRange] = useState<[Date | null, Date | null]>([
-    null,
-    null,
-  ]);
+  const [dateRange, setDateRange] = useState<[Date | null, Date | null]>([null, null]);
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearchChange = (e) => {
-    if (!e.target.value) {
-      setFilteredGrantsList(grantsList);
-      filterGrants();
-    }
     setSearchQuery(e.target.value);
   };
 
   const searchGrants = () => {
-    const searchedGrantsList = filteredGrantsList.filter((grant) => {
+    const searchedGrantsList = grantsList.filter((grant) => {
       return Object.values(grant).some(
         (value) =>
           typeof value === "string" &&
@@ -38,42 +29,53 @@ const GrantsContent = ({ grants }) => {
     setFilteredGrantsList(searchedGrantsList);
   };
 
-  const filterGrants = () => {
-    const filteredGrants = grantsList.filter((item) => {
-      const matchesDirection = directionsList.includes(item.direction);
-      const matchesAmount =
-        amount === null || +item.amount.split(" ")[1] <= +amount.split(" ")[1];
-      const matchesDateRange = dateRange.every((date) => date !== null)
-        ? dayjs(item.application_period.start).isBetween(
-            dayjs(dateRange[0]),
-            dayjs(dateRange[1]),
-            null,
-            "[]"
-          )
-        : true;
-      const matchesSearchQuery = Object.values(item).some(
-        (value) =>
-          typeof value === "string" &&
-          value.toLowerCase().includes(searchQuery.toLowerCase())
-      );
+  const matchesDirection = (grant) => directionsList.includes(grant.direction);
 
+  const matchesAmount = (grant) => {
+    if (amount === null) return true;
+    const grantAmount = +grant.amount.split(" ")[1];
+    const selectedAmount = +amount.split(" ")[1];
+    return grantAmount <= selectedAmount;
+  };
+
+  const matchesDateRange = (grant) => {
+    if (!dateRange.every((date) => date !== null)) return true;
+    return dayjs(grant.application_period.start).isBetween(
+      dayjs(dateRange[0]),
+      dayjs(dateRange[1]),
+      null,
+      "[]"
+    );
+  };
+
+  const matchesSearchQuery = (grant) => {
+    return Object.values(grant).some(
+      (value) =>
+        typeof value === "string" &&
+        value.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  };
+
+  const filterGrants = () => {
+    const filteredGrants = grantsList.filter((grant) => {
       return (
-        matchesDirection &&
-        matchesAmount &&
-        matchesDateRange &&
-        matchesSearchQuery
+        matchesDirection(grant) &&
+        matchesAmount(grant) &&
+        matchesDateRange(grant) &&
+        matchesSearchQuery(grant)
       );
     });
     setFilteredGrantsList(filteredGrants);
   };
 
   const clearSearchQuery = () => {
-    setSearchQuery('')
+    setSearchQuery("");
+    filterGrants();
   };
 
   useEffect(() => {
     filterGrants();
-  }, [directionsList, grantsList, amount, dateRange]);
+  }, [directionsList, grantsList, amount, dateRange, searchQuery]);
 
   return (
     <div className="grants-content">

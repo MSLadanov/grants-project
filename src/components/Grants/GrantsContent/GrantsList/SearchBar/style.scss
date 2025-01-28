@@ -1,11 +1,16 @@
 .grants-searchbar {
   display: flex;
-  img {
-    width: 25px;
-    height: 25px;
-  }
   .grants-searchbar-input {
     display: flex;
+    :first-child{
+        height: 36px;
+        width: 36px;
+    }
+    :last-child{
+        height: 26px;
+        width: 26px;
+        align-self: center;
+    }
   }
   .grants-searchbar-btn {
     display: flex;

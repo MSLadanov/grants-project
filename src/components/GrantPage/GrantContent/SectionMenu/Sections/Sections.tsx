@@ -1,8 +1,9 @@
 import { ReactElement } from "react";
+import './style.scss'
 
 const Sections = (): ReactElement => {
   return (
-    <div>
+    <div className="grantpage-sections-list">
       <ol>
         <li>Краткая информация</li>
         <li>Основные сведения о гранте</li>

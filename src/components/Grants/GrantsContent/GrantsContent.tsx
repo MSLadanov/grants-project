@@ -22,7 +22,7 @@ const GrantsContent = ({ grants }) => {
   const handleSearchChange = (e) => {
     if (!e.target.value) {
       setFilteredGrantsList(grantsList);
-      filterGrants()
+      filterGrants();
     }
     setSearchQuery(e.target.value);
   };
@@ -67,12 +67,16 @@ const GrantsContent = ({ grants }) => {
     setFilteredGrantsList(filteredGrants);
   };
 
+  const clearSearchQuery = () => {
+    setSearchQuery('')
+  };
+
   useEffect(() => {
     filterGrants();
   }, [directionsList, grantsList, amount, dateRange]);
 
   return (
-    <div className="grant-content">
+    <div className="grants-content">
       <GrantsFilter
         directions={[...new Set(grantsList.map((item) => item.direction))]}
         amounts={[...new Set(grantsList.map((item) => item.amount))]}
@@ -86,6 +90,8 @@ const GrantsContent = ({ grants }) => {
         grantsList={filteredGrantsList}
         searchGrants={searchGrants}
         handleSearchChange={handleSearchChange}
+        clearSearchQuery={clearSearchQuery}
+        searchQuery={searchQuery}
       />
     </div>
   );

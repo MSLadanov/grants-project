@@ -4,7 +4,13 @@
 }
 
 .filter-datepicker {
-  width: 245px;
+  display: flex;
+  justify-content: center;
+  * {
+    color: #6e7880;
+    background-color: #ffffff;
+    border: none;
+  }
 }
 
 .filter-date-group {

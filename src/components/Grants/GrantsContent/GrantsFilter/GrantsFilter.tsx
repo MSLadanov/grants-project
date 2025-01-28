@@ -1,7 +1,6 @@
 import { ReactElement } from "react";
 import "./style.scss";
 import CustomDatePicker from "./CustomDatePicker/CustomDatePicker";
-import dayjs from "dayjs";
 import { DateInput } from "@mantine/dates";
 
 const GrantsFilter = ({
@@ -32,7 +31,7 @@ const GrantsFilter = ({
   };
 
   return (
-    <div>
+    <div className="filter">
       <div className="filter-header">
         <div>
           <h1>Фильтр</h1>

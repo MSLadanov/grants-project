@@ -1,9 +1,10 @@
 import { ReactElement } from "react";
 import { NavLink } from "react-router";
+import './style.scss'
 
 const GrandCardDescription = ({ id, title, description }): ReactElement => {
   return (
-    <div>
+    <div className="grant-card-description">
       <div>
         <h1>{title}</h1>
       </div>

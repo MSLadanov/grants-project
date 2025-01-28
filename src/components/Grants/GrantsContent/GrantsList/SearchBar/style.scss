@@ -1,6 +1,8 @@
 .grants-searchbar {
   display: flex;
   .grants-searchbar-input {
+    background-color: #FFFFFF;
+    border-radius: 50px;
     display: flex;
     :first-child{
         height: 36px;

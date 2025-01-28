@@ -1,11 +1,15 @@
-.filter{
-  background-color: #FFFFFF;
-  border-radius: 30px;
+.filter {
 }
 
 .filter-header {
   display: flex;
   align-items: center;
+}
+
+.filter-body {
+  background-color: #ffffff;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 
 .filter-datepicker {

@@ -1,0 +1,35 @@
+$breakpoint-desktop: 1920px;         // Десктопка
+$breakpoint-tablet-portrait: 768px;   // Планшет вертикаль
+$breakpoint-tablet-landscape: 1000px; // Планшет горизонталь
+$breakpoint-mobile-portrait: 360px;    // Мобильная версия вертикаль
+$breakpoint-mobile-landscape: 480px;   // Мобильная версия горизонталь
+
+@mixin media-desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin media-tablet-portrait {
+  @media (max-width: $breakpoint-tablet-portrait) {
+    @content;
+  }
+}
+
+@mixin media-tablet-landscape {
+  @media (min-width: $breakpoint-tablet-portrait) and (max-width: $breakpoint-tablet-landscape) {
+    @content;
+  }
+}
+
+@mixin media-mobile-portrait {
+  @media (max-width: $breakpoint-mobile-portrait) {
+    @content;
+  }
+}
+
+@mixin media-mobile-landscape {
+  @media (min-width: $breakpoint-mobile-portrait) and (max-width: $breakpoint-mobile-landscape) {
+    @content;
+  }
+}

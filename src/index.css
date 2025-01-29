@@ -6,3 +6,12 @@
   font-family: "Open Sans Regular";
   src: local("Open Sans Regular"), url(./fonts/OpenSans-Regular.ttf) format("truetype");
 }
+
+@font-face {
+  font-family: "Montsserrat Light";
+  src: local("Montsserrat Light"), url(./fonts/Montserrat-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Open Sans Light";
+  src: local("Open Sans Light"), url(./fonts/OpenSans-Light.ttf) format("truetype");
+}

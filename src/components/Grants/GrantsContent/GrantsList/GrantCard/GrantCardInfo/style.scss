@@ -1,0 +1,41 @@
+@import '/src/variables.scss';
+
+h3 {
+  font-family: "Open Sans Regular";
+  font-size: 28px;
+  @include media-tablet-landscape {
+    font-size: 12px;
+  }
+
+  @include media-tablet-portrait {
+    font-size: 12px;
+  }
+
+  @include media-mobile-landscape {
+    font-size: 14px;
+  }
+
+  @include media-mobile-portrait {
+    font-size: 14px;
+  }
+}
+
+h4 {
+  font-family: "Open Sans Light";
+  font-size: 24px;
+  @include media-tablet-landscape {
+    font-size: 12px;
+  }
+
+  @include media-tablet-portrait {
+    font-size: 12px;
+  }
+
+  @include media-mobile-landscape {
+    font-size: 14px;
+  }
+
+  @include media-mobile-portrait {
+    font-size: 14px;
+  }
+}

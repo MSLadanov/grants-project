@@ -1,5 +1,24 @@
 @import '/src/variables.scss';
 
+.grant-card-info{
+  width: 519px;
+  @include media-tablet-landscape {
+    width: 210px;
+  }
+
+  @include media-tablet-portrait {
+    width: 179px;
+  }
+
+  @include media-mobile-landscape {
+    width: 460px;
+  }
+
+  @include media-mobile-portrait {
+    width: 340px;
+  }
+}
+
 h3 {
   font-family: "Open Sans Regular";
   font-size: 28px;

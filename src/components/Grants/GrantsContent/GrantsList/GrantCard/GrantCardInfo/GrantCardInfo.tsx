@@ -8,7 +8,7 @@ const GrandCardInfo = ({
   amount,
 }): ReactElement => {
   return (
-    <div>
+    <div className="grant-card-info">
       <div>
         <h3>Кто оказывает услуги</h3>
         <h4>{grantor}</h4>

@@ -2,6 +2,7 @@ import { ReactElement, useState } from "react";
 import SearchBar from "./SearchBar/SearchBar";
 import GrantCard from "./GrantCard/GrantCard";
 import Pagination from "@/components/Grants/Pagination/Pagination";
+import './style.scss'
 
 const GrantsList = ({
   grantsList,
@@ -29,7 +30,7 @@ const GrantsList = ({
     )
   }
   return (
-    <div>
+    <div className="grants-list">
       <SearchBar
         searchGrants={searchGrants}
         handleSearchChange={handleSearchChange}

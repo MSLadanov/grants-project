@@ -1,4 +1,12 @@
-.grant-card{
-    display: flex;
-    width: 70%;
+@import "/src/variables.scss";
+
+.grant-card {
+  display: flex;
+  @include media-mobile-landscape {
+    flex-direction: column;
+  }
+
+  @include media-mobile-portrait {
+    flex-direction: column;
+  }
 }

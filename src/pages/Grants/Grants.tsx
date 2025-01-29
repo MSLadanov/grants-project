@@ -1,7 +1,6 @@
 import { ReactElement } from "react";
 import { Outlet, useParams } from "react-router";
 import Header from "@/components/Grants/Header/Header";
-import Footer from "@/components/Grants/Footer/Footer";
 import GrantsContent from "@/components/Grants/GrantsContent/GrantsContent";
 import useFetch from "@/hooks/useFetch";
 import Loader from "@/components/Loader/Loader";
@@ -19,7 +18,6 @@ const Grants = (): ReactElement => {
       {data && <GrantsContent grants={data.grants} />}
       {isLoading && <Loader />}
       {isError && <ErrorComponent />}
-      <Footer />
     </>
   );
 };

@@ -3,20 +3,6 @@
 .grant-card-description {
   background-color: #ffffff;
   border-radius: 46px;
-  width: 900px;
-  @include media-tablet-landscape {
-    width: 500px;
-  }
+  width: 70%;
 
-  @include media-tablet-portrait {
-    width: 340px;
-  }
-
-  @include media-mobile-landscape {
-    width: 460px;
-  }
-
-  @include media-mobile-portrait {
-    width: 340px;
-  }
 }

@@ -7,12 +7,23 @@
   justify-content: space-between;
 }
 
-.filter-header-logo{
+.filter-header-logo {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   width: 50%;
+}
+
+.grant-filter-divisor {
+  width: 0px;
+  border-bottom: 50px solid white;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  transform: rotate(135deg);
+  position: relative;
+  top: 20px;
+  left: 30px;
 }
 
 .filter-header-reset {
@@ -22,11 +33,11 @@
   background-color: #ffffff;
   & button {
     border-radius: 100px;
-    border: 1px solid #99A7B2;
+    border: 1px solid #99a7b2;
     background-color: #ffffff;
     position: relative;
     top: 25%;
-    left: 25%;
+    left: 0%;
   }
 }
 

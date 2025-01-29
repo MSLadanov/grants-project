@@ -36,6 +36,7 @@ const GrantsFilter = ({
         <div className="filter-header-logo">
           <h1>Фильтр</h1>
         </div>
+        <div className="grant-filter-divisor"></div>
         <div className="filter-header-reset">
           <button onClick={handleReset}>Сбросить</button>
         </div>

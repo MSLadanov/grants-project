@@ -1,30 +1,76 @@
+@import "/src/variables.scss";
+
 .grants-searchbar {
   display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  @include media-tablet-landscape {
+    max-width: 500px;
+  }
+
+  @include media-tablet-portrait {
+    max-width: 340px;
+  }
+
+  @include media-mobile-landscape {
+    max-width: 490px;
+  }
+
+  @include media-mobile-portrait {
+    max-width: 340px;
+  }
   .grants-searchbar-input {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border-radius: 50px;
     display: flex;
-    :first-child{
-        height: 36px;
-        width: 36px;
+    width: 80%;
+    :first-child {
+      height: 36px;
+      width: 36px;
     }
-    :last-child{
-        height: 26px;
-        width: 26px;
-        align-self: center;
-        cursor: pointer;
+    :last-child {
+      height: 26px;
+      width: 26px;
+      align-self: center;
+      cursor: pointer;
     }
-    input{
+    input {
       border: none;
       outline: none;
     }
   }
   .grants-searchbar-btn {
     display: flex;
-    button{
-      background-color: #FFFFFF;
+    button {
+      background-color: #ffffff;
       border-radius: 50px;
       border: none;
+      height: 58px;
+      width: 124px;
+      font-size: 24px;
+      @include media-tablet-landscape {
+        height: 34px;
+        width: 78px;
+        font-size: 14px;
+      }
+
+      @include media-tablet-portrait {
+        height: 34px;
+        width: 78px;
+        font-size: 14px;
+      }
+
+      @include media-mobile-landscape {
+        height: 34px;
+        width: 78px;
+        font-size: 14px;
+      }
+
+      @include media-mobile-portrait {
+        height: 34px;
+        width: 78px;
+        font-size: 14px;
+      }
     }
   }
 }

@@ -6,7 +6,7 @@ const GrandCardDescription = ({ id, title, description }): ReactElement => {
   return (
     <div className="grant-card-description">
       <div>
-        <h1>{title}</h1>
+        <h3>{title}</h3>
       </div>
       <div>
         <p>{description}</p>

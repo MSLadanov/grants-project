@@ -1,4 +1,4 @@
-import "./App.css";
+import "./global.scss";
 import { Routes, Route } from "react-router";
 import Grants from "./pages/Grants/Grants";
 import GrantPage from "./pages/GrantPage/GrantPage";

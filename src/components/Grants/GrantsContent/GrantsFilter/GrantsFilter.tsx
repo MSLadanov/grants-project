@@ -34,7 +34,7 @@ const GrantsFilter = ({
     <div className="filter">
       <div className="filter-header">
         <div className="filter-header-logo">
-          <h1>Фильтр</h1>
+          <h3>Фильтр</h3>
         </div>
         <div className="grant-filter-divisor"></div>
         <div className="filter-header-reset">
@@ -42,7 +42,7 @@ const GrantsFilter = ({
         </div>
       </div>
       <div className="filter-body">
-        <h3>Направление</h3>
+        <h4>Направление</h4>
         <div>
           {directions.map((item, index) => (
             <div key={index}>
@@ -56,7 +56,7 @@ const GrantsFilter = ({
             </div>
           ))}
         </div>
-        <h3>Размер</h3>
+        <h4>Размер</h4>
         <div>
           {amounts.map((item, index) => (
             <div key={index}>
@@ -71,7 +71,7 @@ const GrantsFilter = ({
             </div>
           ))}
         </div>
-        <h3>Период</h3>
+        <h4>Период</h4>
         <div className="filter-date-group">
           <div className="filter-date-indicator">
             <DateInput

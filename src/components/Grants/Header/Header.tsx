@@ -3,7 +3,7 @@ import { ReactElement } from "react";
 const Header = (): ReactElement => {
   return (
     <>
-      <h1>Grants Header</h1>
+      <h1>Подбери программу для реализации своего проекта</h1>
     </>
   );
 };

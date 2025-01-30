@@ -96,8 +96,27 @@
   .filter-date-icon {
     top: 25px;
     left: 5px;
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
+    @include media-tablet-landscape {
+      height: 16px;
+      width: 16px;
+    }
+
+    @include media-tablet-portrait {
+      height: 20px;
+      width: 20px;
+    }
+
+    @include media-mobile-landscape {
+      height: 24px;
+      width: 24px;
+    }
+
+    @include media-mobile-portrait {
+      height: 24px;
+      width: 24px;
+    }
     background: url("/src/assets/calendar.svg");
     background-size: contain;
     position: absolute;

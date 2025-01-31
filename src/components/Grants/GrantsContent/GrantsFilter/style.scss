@@ -1,12 +1,14 @@
 @import "/src/variables.scss";
 
 .filter {
+  padding: 15px;
 }
 
 .filter-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 }
 
 .filter-header-logo {
@@ -34,6 +36,23 @@
   border-top-right-radius: 30px;
   background-color: #ffffff;
   & button {
+    height: 50px;
+    width: 142px;
+    @include media-tablet-landscape {
+      
+    }
+
+    @include media-tablet-portrait {
+    
+    }
+
+    @include media-mobile-landscape {
+      
+    }
+
+    @include media-mobile-portrait {
+      
+    }
     border-radius: 100px;
     border: 1px solid #99a7b2;
     background-color: #ffffff;
@@ -48,6 +67,7 @@
   border-top-left-radius: 30px;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
+  padding: 20px 25px;
 }
 
 .filter-datepicker {

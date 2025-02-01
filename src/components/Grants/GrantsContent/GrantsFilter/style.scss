@@ -131,6 +131,7 @@
   display: flex;
   justify-content: center;
   border-radius: 14px;
+  margin-top: 15px;
   box-shadow: 0 0 16px rgba(138, 153, 176, 0.12);
   * {
     color: #6e7880;
@@ -168,10 +169,27 @@
   }
   input {
     height: 35px;
-    width: 100px;
+    // width: 100px;
     padding-left: 40px;
+    font-size: 21px;
+    @include media-tablet-landscape {
+      font-size: 12px;
+    }
+
+    @include media-tablet-portrait {
+      font-size: 10px;
+    }
+
+    @include media-mobile-landscape {
+      font-size: 14px;
+    }
+
+    @include media-mobile-portrait {
+      font-size: 14px;
+    }
   }
   position: relative;
+  width: 160px;
   .filter-date-icon {
     top: 25px;
     left: 5px;

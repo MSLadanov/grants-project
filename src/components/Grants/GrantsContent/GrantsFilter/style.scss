@@ -196,6 +196,25 @@
     border-radius: 50%;
     margin: 0;
     position: relative;
+    @include media-tablet-landscape {
+      height: 20px;
+      width: 20px;
+    }
+
+    @include media-tablet-portrait {
+      height: 20px;
+      width: 20px;
+    }
+
+    @include media-mobile-landscape {
+      height: 24px;
+      width: 24px;
+    }
+
+    @include media-mobile-portrait {
+      height: 24px;
+      width: 24px;
+    }
   }
 
   .amount input[type="radio"]:checked {
@@ -207,11 +226,30 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     background-color: #2d4ef8;
     border-radius: 50%;
     transform: translate(-50%, -50%);
+    @include media-tablet-landscape {
+      height: 11px;
+      width: 11px;
+    }
+
+    @include media-tablet-portrait {
+      height: 11px;
+      width: 11px;
+    }
+
+    @include media-mobile-landscape {
+      height: 13px;
+      width: 13px;
+    }
+
+    @include media-mobile-portrait {
+      height: 13px;
+      width: 13px;
+    }
   }
 
   h4 {

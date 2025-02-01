@@ -45,7 +45,7 @@ const GrantsFilter = ({
         <h4>Направление</h4>
         <div>
           {directions.map((item, index) => (
-            <div key={index}>
+            <div key={index} className="direction">
               <input
                 id={item}
                 checked={directionsList.includes(item)}
@@ -59,7 +59,7 @@ const GrantsFilter = ({
         <h4>Размер</h4>
         <div>
           {amounts.map((item, index) => (
-            <div key={index}>
+            <div key={index} className="amount" >
               <input
                 id={item}
                 value={item}

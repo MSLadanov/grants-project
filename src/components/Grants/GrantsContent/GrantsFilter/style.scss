@@ -32,6 +32,11 @@
   align-items: center;
   height: 50px;
   width: 50%;
+  h3{
+    position: relative;
+    left: 10px;
+    font-family: "Montsserrat SemiBold";
+  }
 }
 
 .grant-filter-divisor {
@@ -77,7 +82,7 @@
     background-color: #ffffff;
     position: relative;
     top: 25%;
-    left: 0%;
+    left: -10%;
   }
 }
 

@@ -1,40 +1,68 @@
 @import "/src/variables.scss";
 
-.grants-header{
-    display: flex;
-    background: url('/src/assets/grants-header-desktop.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #ffffff;
-    padding: 0px 4%;
-    height: 620px;
-    @include media-tablet-landscape {
-        height: 280px;
-      }
-    
-      @include media-tablet-portrait {
-        height: 237px;
-      }
-    
-      @include media-mobile-landscape {
-        height: 255px;
-        background: url('/src/assets/grants-header-ml.svg');
-      }
-    
-      @include media-mobile-portrait {
-        height: 443px;
-        background: url('/src/assets/grants-header-mp.svg');
-      }
+.grants-header {
+  display: flex;
+  background: url("/src/assets/grants-header-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  border-radius: 38px;
+  padding: 0px 4%;
+  height: 620px;
+  overflow: hidden;
+  @include media-tablet-landscape {
+    height: 280px;
+  }
+
+  @include media-tablet-portrait {
+    height: 237px;
+  }
+
+  @include media-mobile-landscape {
+    height: 255px;
+    background: url("/src/assets/grants-header-ml.svg");
+  }
+
+  @include media-mobile-portrait {
+    flex-direction: column;
+    height: 443px;
+    background: url("/src/assets/grants-header-mp.svg");
+  }
 }
-.grants-header-left{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.grants-header-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.grants-header-right{
-    img{
-        position: relative;
-        top: 5px;
+.grants-header-right {
+  img {
+    position: relative;
+    top: 160px;
+    width: 596px;
+    height: 460px;
+    @include media-tablet-landscape {
+      width: 296px;
+      height: 228px;
+      top: 52px;
     }
+
+    @include media-tablet-portrait {
+      width: 256px;
+      height: 198px;
+      top: 40px;
+    }
+
+    @include media-mobile-landscape {
+      width: 195px;
+      height: 150px;
+      top: 105px;
+    }
+
+    @include media-mobile-portrait {
+      width: 296px;
+      height: 228px;
+      top: 131px;
+    }
+  }
 }

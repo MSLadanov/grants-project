@@ -1,6 +1,6 @@
 .grants-header{
     display: flex;
-    background: url('/src/assets/header-background.svg');
+    background: url('/src/assets/grants-header-desktop.svg');
     background-repeat: no-repeat;
     background-size: cover;
     color: #ffffff;
@@ -10,4 +10,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.grants-header-right{
+    img{
+        position: relative;
+        top: 5px;
+    }
 }

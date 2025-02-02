@@ -1,3 +1,7 @@
+body{
+  padding: 15px;
+}
+
 @font-face {
   font-family: "Montsserrat SemiBold";
   src: local("Montsserrat SemiBold"), url(./fonts/Montserrat-SemiBold.ttf) format("truetype");

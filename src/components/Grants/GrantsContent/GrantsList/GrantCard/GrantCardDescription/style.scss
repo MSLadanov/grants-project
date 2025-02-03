@@ -1,8 +1,20 @@
 @import "/src/variables.scss";
 
 .grant-card-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #ffffff;
   border-radius: 46px;
   width: 70%;
-
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #45459d;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    border-radius: 19px;
+  }
 }

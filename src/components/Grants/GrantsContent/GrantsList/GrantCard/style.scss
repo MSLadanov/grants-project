@@ -3,6 +3,7 @@
 .grant-card {
   display: flex;
   height: 470px;
+  margin-bottom: 2%;
   @include media-tablet-landscape {
     height: 210px;
   }

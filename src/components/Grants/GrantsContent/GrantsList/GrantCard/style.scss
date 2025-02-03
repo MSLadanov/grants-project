@@ -2,6 +2,20 @@
 
 .grant-card {
   display: flex;
+  height: 470px;
+  @include media-tablet-landscape {
+    height: 210px;
+  }
+
+  @include media-tablet-portrait {
+    height: 195px;
+  }
+
+  @include media-mobile-landscape {
+  }
+
+  @include media-mobile-portrait {
+  }
   @include media-mobile-landscape {
     flex-direction: column;
   }

@@ -6,8 +6,16 @@
   background: url('/src/assets/card-info.svg');
   padding: 20px;
   .grant-card-info-content{
+    border-radius: 46px;
     backdrop-filter: blur(45px);
     height: 100%;
+    overflow: hidden;
+    display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    div{
+      padding: 15px;
+    }
   }
 }
 

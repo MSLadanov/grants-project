@@ -17,5 +17,21 @@
     color: white;
     text-decoration: none;
     border-radius: 19px;
+    height: 68px;
+  @include media-tablet-landscape {
+    height: 36px;
+  }
+
+  @include media-tablet-portrait {
+    height: 34px;
+  }
+
+  @include media-mobile-landscape {
+    height: 42px;
+  }
+
+  @include media-mobile-portrait {
+    height: 42px;
+  }
   }
 }

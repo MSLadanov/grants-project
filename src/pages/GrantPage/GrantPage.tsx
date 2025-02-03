@@ -1,5 +1,4 @@
 import ErrorComponent from "@/components/ErrorComponent/Error";
-import Footer from "@/components/GrantPage/Footer/Footer";
 import GrantContent from "@/components/GrantPage/GrantContent/GrantContent";
 import Header from "@/components/GrantPage/Header/Header";
 import Loader from "@/components/Loader/Loader";
@@ -27,7 +26,6 @@ const GrantPage = (): ReactElement => {
       ) : (
         !isLoading && <ErrorComponent />
       )}
-      <Footer />
     </>
   );
 };

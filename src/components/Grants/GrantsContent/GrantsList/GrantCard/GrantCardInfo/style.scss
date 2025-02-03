@@ -5,6 +5,9 @@
   border-radius: 46px;
   background: url('/src/assets/card-info.svg');
   padding: 20px;
+  .grant-card-info-content{
+    backdrop-filter: blur(45px);
+  }
 }
 
 h3 {

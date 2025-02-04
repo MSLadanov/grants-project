@@ -1,6 +1,44 @@
-.grantpage-description{
-    div {
-        border-radius: 35px;
-        background-color: #ffffff;
+@import "/src/variables.scss";
+
+.grantpage-description {
+  div {
+    border-radius: 35px;
+    background-color: #ffffff;
+  }
+  h1 {
+    font-size: 38px;
+    @include media-tablet-landscape {
+      font-size: 16px;
     }
+
+    @include media-tablet-portrait {
+      font-size: 16px;
+    }
+
+    @include media-mobile-landscape {
+      font-size: 16px;
+    }
+
+    @include media-mobile-portrait {
+      font-size: 16px;
+    }
+  }
+  p{
+    font-size: 24px;
+    @include media-tablet-landscape {
+        font-size: 14px;
+      }
+  
+      @include media-tablet-portrait {
+        font-size: 14px;
+      }
+  
+      @include media-mobile-landscape {
+        font-size: 14px;
+      }
+  
+      @include media-mobile-portrait {
+        font-size: 14px;
+      }
+  }
 }

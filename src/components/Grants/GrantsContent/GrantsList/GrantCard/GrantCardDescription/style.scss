@@ -8,9 +8,13 @@
   border-radius: 46px;
   width: 70%;
   padding: 20px;
+  h3{
+    margin: 2% 0%;
+  }
   a {
     display: flex;
     align-items: center;
+    justify-self: flex-end;
     justify-content: center;
     background-color: #45459d;
     width: 100%;

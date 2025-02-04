@@ -1,5 +1,23 @@
+@import '/src/variables.scss';
+
 .grantpage-sections{
-    h1{
+    h1 {
+        font-size: 38px;
         margin-left: 25px;
-    }
+        @include media-tablet-landscape {
+          font-size: 16px;
+        }
+    
+        @include media-tablet-portrait {
+          font-size: 16px;
+        }
+    
+        @include media-mobile-landscape {
+          font-size: 16px;
+        }
+    
+        @include media-mobile-portrait {
+          font-size: 16px;
+        }
+      }
 }

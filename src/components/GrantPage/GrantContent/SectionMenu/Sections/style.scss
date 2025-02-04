@@ -1,7 +1,24 @@
+@import '/src/variables.scss';
+
 .grantpage-sections-list{
     border: 1px solid #6E7880;
     border-radius: 35px;
-    ol{
-        
-    }
+    ol {
+        font-size: 24px;
+        @include media-tablet-landscape {
+          font-size: 14px;
+        }
+    
+        @include media-tablet-portrait {
+          font-size: 12px;
+        }
+    
+        @include media-mobile-landscape {
+          font-size: 16px;
+        }
+    
+        @include media-mobile-portrait {
+          font-size: 16px;
+        }
+      }
 }

@@ -1,0 +1,14 @@
+.backward-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 30px;
+        height: 30px;
+    }
+    a{
+        margin-left: 10%;
+        color: #2C4EC5;
+        text-decoration: none;
+    }
+}

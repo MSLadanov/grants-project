@@ -13,7 +13,6 @@ const GrandCardDescription = ({ id, title, description }): ReactElement => {
           <p>{description}</p>
         </div>
       </div>
-
       <div>
         <NavLink to={`/grants/${id}`}>Подробнее о программе</NavLink>
       </div>

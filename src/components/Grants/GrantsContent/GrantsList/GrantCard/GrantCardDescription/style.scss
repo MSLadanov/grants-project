@@ -8,12 +8,23 @@
   border-radius: 46px;
   width: 70%;
   padding: 20px;
+  @include media-tablet-landscape {
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  @include media-tablet-portrait {
+    border-radius: 20px;
+    padding: 10px;
+  }
   @include media-mobile-landscape {
+    border-radius: 16px;
     width: 100%;
     padding: 0px;
   }
 
   @include media-mobile-portrait {
+    border-radius: 16px;
     width: 100%;
     padding: 0px;
   }

@@ -11,6 +11,8 @@ const GrantsList = ({
   handleSearchChange,
   clearSearchQuery,
   searchQuery,
+  toggleModal,
+  handleOutSideClick,
 }): ReactElement => {
   const PageSize = 5;
   const [currentPage, setCurrentPage] = useState(1);
@@ -26,7 +28,10 @@ const GrantsList = ({
           clearSearchQuery={clearSearchQuery}
           searchQuery={searchQuery}
         />
-        <GrantsMobileMenu />
+        <GrantsMobileMenu
+          toggleModal={toggleModal}
+          handleOutSideClick={handleOutSideClick}
+        />
         <h1>Нет грантов</h1>
       </div>
     );
@@ -39,7 +44,10 @@ const GrantsList = ({
         clearSearchQuery={clearSearchQuery}
         searchQuery={searchQuery}
       />
-      <GrantsMobileMenu />
+      <GrantsMobileMenu
+        toggleModal={toggleModal}
+        handleOutSideClick={handleOutSideClick}
+      />
       {paginatedGrants.map((grant) => (
         <GrantCard key={grant.id} grant={grant} />
       ))}

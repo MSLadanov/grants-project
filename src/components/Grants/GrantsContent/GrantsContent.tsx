@@ -4,14 +4,21 @@ import GrantsList from "./GrantsList/GrantsList";
 import "./style.scss";
 import dayjs from "dayjs";
 import isBetween from "dayjs/plugin/isBetween";
+import useModal from "@/hooks/useModal";
 dayjs.extend(isBetween);
 
 const GrantsContent = ({ grants }) => {
+  const { toggleModal, Modal, handleOutSideClick } = useModal();
   const [grantsList, setGrantsList] = useState(grants);
   const [filteredGrantsList, setFilteredGrantsList] = useState(grants);
-  const [directionsList, setDirectionsList] = useState([...new Set(grantsList.map((item) => item.direction))]);
+  const [directionsList, setDirectionsList] = useState([
+    ...new Set(grantsList.map((item) => item.direction)),
+  ]);
   const [amount, setAmount] = useState(null);
-  const [dateRange, setDateRange] = useState<[Date | null, Date | null]>([null, null]);
+  const [dateRange, setDateRange] = useState<[Date | null, Date | null]>([
+    null,
+    null,
+  ]);
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearchChange = (e) => {
@@ -88,12 +95,15 @@ const GrantsContent = ({ grants }) => {
         dateRange={dateRange}
         setDateRange={setDateRange}
       />
+      <Modal />
       <GrantsList
         grantsList={filteredGrantsList}
         searchGrants={searchGrants}
         handleSearchChange={handleSearchChange}
         clearSearchQuery={clearSearchQuery}
         searchQuery={searchQuery}
+        toggleModal={toggleModal}
+        handleOutSideClick={handleOutSideClick}
       />
     </div>
   );

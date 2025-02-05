@@ -1,11 +1,11 @@
-import { ReactElement } from "react";
+import React, { forwardRef } from 'react';
 
-const GrantsMobileFilter = (): ReactElement => {
+const GrantsMobileFilter = forwardRef((props, ref) => {
   return (
-    <div>
-      <h1>Grants Mobile Filter</h1>
+    <div ref={ref}>
+      <h1>Modal</h1>
     </div>
   );
-};
+});
 
 export default GrantsMobileFilter;

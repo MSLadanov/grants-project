@@ -6,20 +6,30 @@ import GrantsMobileFilter from "@/components/Grants/GrantsContent/GrantsMobileFi
 function useModal() {
   const modalRef = useRef(null);
   const [openModal, setOpenModal] = useState(false);
+
   function toggleModal() {
-    !openModal && setOpenModal(true);
+    setOpenModal(!openModal);
   }
+
   function handleOutSideClick() {
-    openModal && setOpenModal(false);
+    if (openModal) {
+      setOpenModal(false);
+    }
   }
+
   useClickOutside(modalRef, handleOutSideClick);
-  
+
   function Modal() {
-    return createPortal(
-      openModal && <GrantsMobileFilter/>,
-      document.getElementById("modal")!
-    );
+    const modalRoot = document.getElementById("modal");
+    if (!modalRoot) {
+      console.error("Модальное окно не обнаружено");
+      return null;
+    }
+    return openModal
+      ? createPortal(<GrantsMobileFilter ref={modalRef} />, modalRoot)
+      : null;
   }
+
   return { toggleModal, handleOutSideClick, Modal };
 }
 

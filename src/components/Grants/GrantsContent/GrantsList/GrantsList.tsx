@@ -2,7 +2,8 @@ import { ReactElement, useState } from "react";
 import SearchBar from "./SearchBar/SearchBar";
 import GrantCard from "./GrantCard/GrantCard";
 import Pagination from "@/components/Grants/Pagination/Pagination";
-import './style.scss'
+import "./style.scss";
+import GrantsMobileMenu from "../GrantsMobileMenu/GrantsMobileMenu";
 
 const GrantsList = ({
   grantsList,
@@ -25,9 +26,10 @@ const GrantsList = ({
           clearSearchQuery={clearSearchQuery}
           searchQuery={searchQuery}
         />
+        <GrantsMobileMenu />
         <h1>Нет грантов</h1>
       </div>
-    )
+    );
   }
   return (
     <div className="grants-list">
@@ -37,6 +39,7 @@ const GrantsList = ({
         clearSearchQuery={clearSearchQuery}
         searchQuery={searchQuery}
       />
+      <GrantsMobileMenu />
       {paginatedGrants.map((grant) => (
         <GrantCard key={grant.id} grant={grant} />
       ))}

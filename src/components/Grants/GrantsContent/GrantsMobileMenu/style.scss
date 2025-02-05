@@ -1,0 +1,17 @@
+@import "/src/variables.scss";
+
+.grants-mobile-menu {
+  display: none;
+  @include media-mobile-landscape {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include media-mobile-portrait {
+    display: flex;
+    justify-content: space-between;
+  }
+  button{
+    border-radius: 100px;
+  }
+}

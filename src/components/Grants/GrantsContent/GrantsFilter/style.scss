@@ -11,11 +11,11 @@
   }
 
   @include media-mobile-landscape {
-    width: 480px;
+    display: none;
   }
 
   @include media-mobile-portrait {
-    width: 360px;
+    display: none;
   }
 }
 

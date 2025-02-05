@@ -11,7 +11,7 @@ const GrantsList = ({
   handleSearchChange,
   clearSearchQuery,
   searchQuery,
-  toggleModal,
+  toggleFilterModal,
   handleOutSideClick,
 }): ReactElement => {
   const PageSize = 5;
@@ -29,7 +29,7 @@ const GrantsList = ({
           searchQuery={searchQuery}
         />
         <GrantsMobileMenu
-          toggleModal={toggleModal}
+          toggleFilterModal={toggleFilterModal}
           handleOutSideClick={handleOutSideClick}
         />
         <h1>Нет грантов</h1>
@@ -45,7 +45,7 @@ const GrantsList = ({
         searchQuery={searchQuery}
       />
       <GrantsMobileMenu
-        toggleModal={toggleModal}
+        toggleFilterModal={toggleFilterModal}
         handleOutSideClick={handleOutSideClick}
       />
       {paginatedGrants.map((grant) => (

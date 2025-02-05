@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import "./style.scss";
 
 const GrantsMobileMenu = ({
-  toggleModal,
+  toggleFilterModal,
   handleOutSideClick,
 }): ReactElement => {
   return (
@@ -10,7 +10,7 @@ const GrantsMobileMenu = ({
       <button>Сбросить</button>
       <button
         onClick={(e) => {
-          toggleModal();
+          toggleFilterModal();
           handleOutSideClick(e);
         }}
       >

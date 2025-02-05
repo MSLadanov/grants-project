@@ -13,9 +13,11 @@
   }
 
   @include media-mobile-landscape {
+    height: auto;
   }
 
   @include media-mobile-portrait {
+    height: auto;
   }
   @include media-mobile-landscape {
     flex-direction: column;

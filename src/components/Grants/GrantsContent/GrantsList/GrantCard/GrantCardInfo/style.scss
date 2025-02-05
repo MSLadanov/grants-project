@@ -5,6 +5,15 @@
   border-radius: 46px;
   background: url('/src/assets/card-info.svg');
   padding: 20px;
+  @include media-mobile-landscape {
+    width: 100%;
+    padding: 0px;
+  }
+
+  @include media-mobile-portrait {
+    width: 100%;
+    padding: 0px;
+  }
   .grant-card-info-content{
     border-radius: 46px;
     backdrop-filter: blur(45px);

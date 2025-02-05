@@ -8,6 +8,15 @@
   border-radius: 46px;
   width: 70%;
   padding: 20px;
+  @include media-mobile-landscape {
+    width: 100%;
+    padding: 0px;
+  }
+
+  @include media-mobile-portrait {
+    width: 100%;
+    padding: 0px;
+  }
   h3{
     font-size: 38px;
     margin: 2% 0%;

@@ -6,10 +6,16 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
+  overflow: hidden;
   @include media-not-mobile {
     display: none;
   }
-  
+  .filter-date-indicator{
+    width: 50%;
+  }
+  .filter-date-group label{
+    width: 100%;
+  }
   .filter-body {
     background-color: #ffffff;
     border-radius: 30px;

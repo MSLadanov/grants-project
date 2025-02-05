@@ -1,9 +1,9 @@
-@import '/src/variables.scss';
+@import "/src/variables.scss";
 
-.grant-card-info{
+.grant-card-info {
   width: 30%;
   border-radius: 46px;
-  background: url('/src/assets/card-info.svg');
+  background: url("/src/assets/card-info.svg");
   padding: 20px;
   @include media-mobile-landscape {
     width: 100%;
@@ -14,15 +14,22 @@
     width: 100%;
     padding: 0px;
   }
-  .grant-card-info-content{
+  .grant-card-info-content {
     border-radius: 46px;
     backdrop-filter: blur(45px);
     height: 100%;
     overflow: hidden;
     display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    div{
+    flex-direction: column;
+    justify-content: space-between;
+    @include media-mobile-landscape {
+      margin: 20px;
+    }
+  
+    @include media-mobile-portrait {
+      margin: 20px;
+    }
+    div {
       padding: 15px;
     }
   }

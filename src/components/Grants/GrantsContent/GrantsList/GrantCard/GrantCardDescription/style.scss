@@ -17,6 +17,15 @@
     width: 100%;
     padding: 0px;
   }
+  & > div{
+    @include media-mobile-landscape {
+      margin: 20px;
+    }
+  
+    @include media-mobile-portrait {
+      margin: 20px;
+    }
+  }
   h3{
     font-size: 38px;
     margin: 2% 0%;

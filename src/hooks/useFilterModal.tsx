@@ -19,14 +19,34 @@ function useFilterModal() {
 
   useClickOutside(modalRef, handleOutSideClick);
 
-  function FilterModal() {
+  function FilterModal({
+    directions,
+    amounts,
+    directionsList,
+    setDirectionsList,
+    setAmount,
+    dateRange,
+    setDateRange,
+  }) {
     const modalRoot = document.getElementById("modal");
     if (!modalRoot) {
       console.error("Модальное окно не обнаружено");
       return null;
     }
     return openModal
-      ? createPortal(<GrantsMobileFilter ref={modalRef} />, modalRoot)
+      ? createPortal(
+          <GrantsMobileFilter
+            directions={directions}
+            amounts={amounts}
+            directionsList={directionsList}
+            setDirectionsList={setDirectionsList}
+            setAmount={setAmount}
+            dateRange={dateRange}
+            setDateRange={setDateRange}
+            ref={modalRef}
+          />,
+          modalRoot
+        )
       : null;
   }
 

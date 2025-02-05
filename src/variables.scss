@@ -33,3 +33,9 @@ $breakpoint-mobile-landscape: 480px;   // Мобильная версия гор
     @content;
   }
 }
+
+@mixin media-not-mobile{
+  @media (min-width: $breakpoint-mobile-landscape) {
+    @content;
+  }
+}

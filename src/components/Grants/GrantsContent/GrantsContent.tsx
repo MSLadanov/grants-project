@@ -7,9 +7,10 @@ import isBetween from "dayjs/plugin/isBetween";
 import useModal from "@/hooks/useFilterModal";
 import GrantsContext from "@/contexts/GrantsContext";
 import useFilters from "@/hooks/useFilters";
+import { TGrants } from "@/types/types";
 dayjs.extend(isBetween);
 
-const GrantsContent = ({ grants }) => {
+const GrantsContent = ({ grants } : { grants : TGrants }) => {
   const { toggleFilterModal, FilterModal, handleOutSideClick } = useModal();
   const [grantsList] = useState(grants);
   const [filteredGrantsList, setFilteredGrantsList] = useState(grants);

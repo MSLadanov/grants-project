@@ -3,9 +3,16 @@ import "dayjs/locale/ru";
 import { ReactElement } from "react";
 import "./style.scss";
 
-const CustomDatePicker = ({dateRange, setDateRange}): ReactElement => {
+const CustomDatePicker = ({ dateRange, setDateRange }): ReactElement => {
   return (
-    <DatePicker type="range" monthLabelFormat={'MMMM'} locale="ru" value={dateRange} onChange={setDateRange} hideOutsideDates />
+    <DatePicker
+      type="range"
+      monthLabelFormat={"MMMM"}
+      locale="ru"
+      value={dateRange}
+      onChange={setDateRange}
+      hideOutsideDates
+    />
   );
 };
 

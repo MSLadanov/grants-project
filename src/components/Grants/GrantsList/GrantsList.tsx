@@ -5,6 +5,7 @@ import Pagination from "@/components/Grants/Pagination/Pagination";
 import "./style.scss";
 import GrantsMobileMenu from "../GrantsMobileMenu/GrantsMobileMenu";
 import GrantsContext from "@/contexts/GrantsContext";
+import { TGrant } from "@/types/types";
 
 const GrantsList = (): ReactElement => {
   const {
@@ -50,7 +51,7 @@ const GrantsList = (): ReactElement => {
         toggleFilterModal={toggleFilterModal}
         handleOutSideClick={handleOutSideClick}
       />
-      {paginatedGrants.map((grant) => (
+      {paginatedGrants.map((grant : TGrant) => (
         <GrantCard key={grant.id} grant={grant} />
       ))}
       <Pagination

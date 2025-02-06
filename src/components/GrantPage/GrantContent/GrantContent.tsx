@@ -3,8 +3,9 @@ import BackwardButton from "../BackwardButton/BackwardButton";
 import GrantDescription from "../GrantDescription/GrantDescription";
 import SectionMenu from "../SectionMenu/SectionMenu";
 import './style.scss'
+import { TGrant } from "@/types/types";
 
-const GrantContent = ({ grantData }): ReactElement => {
+const GrantContent = ({ grantData } : {grantData : TGrant}): ReactElement => {
   return (
     <div className="grantpage-content">
       <BackwardButton />

@@ -2,6 +2,7 @@ import { createContext } from "react";
 
 const GrantsContext = createContext({
   directions: [],
+  amount: null,
   amounts: [],
   directionsList: [],
   setDirectionsList: (dirs) => {},

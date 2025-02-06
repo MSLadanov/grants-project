@@ -68,6 +68,7 @@ const GrantsContent = ({ grants }) => {
     <GrantsContext.Provider
       value={{
         directions: [...new Set(grantsList.map((item) => item.direction))],
+        amount: amount,
         amounts: [...new Set(grantsList.map((item) => item.amount))],
         directionsList,
         setDirectionsList,

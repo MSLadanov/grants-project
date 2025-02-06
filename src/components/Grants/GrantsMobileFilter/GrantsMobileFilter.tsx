@@ -6,6 +6,7 @@ import GrantsContext from "@/contexts/GrantsContext";
 const GrantsMobileFilter = forwardRef((props, ref) => {
   const {
     directions,
+    amount,
     amounts,
     directionsList,
     setDirectionsList,
@@ -52,6 +53,7 @@ const GrantsMobileFilter = forwardRef((props, ref) => {
                 value={item}
                 name="amount"
                 type="radio"
+                checked={amount === item}
                 onChange={(e) => handleAmount(e)}
               />
               <label htmlFor={item}>{item}</label>

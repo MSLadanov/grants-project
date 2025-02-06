@@ -7,6 +7,7 @@ import GrantsContext from "@/contexts/GrantsContext";
 const GrantsFilter = (): ReactElement => {
   const {
     directions,
+    amount,
     amounts,
     directionsList,
     setDirectionsList,
@@ -30,6 +31,7 @@ const GrantsFilter = (): ReactElement => {
 
   const handleReset = () => {
     setDirectionsList(directions);
+    setAmount(null)
   };
 
   return (
@@ -67,6 +69,7 @@ const GrantsFilter = (): ReactElement => {
                 value={item}
                 name="amount"
                 type="radio"
+                checked={amount === item}
                 onChange={(e) => handleAmount(e)}
               />
               <label htmlFor={item}>{item}</label>

@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import './style.scss'
 import { NavLink } from "react-router";
 
-const Header = ({grantData}): ReactElement => {
+const GrantHeader = ({grantData}): ReactElement => {
 
   return (
     <div className="grant-header">
@@ -18,4 +18,4 @@ const Header = ({grantData}): ReactElement => {
   );
 };
 
-export default Header;
+export default GrantHeader;

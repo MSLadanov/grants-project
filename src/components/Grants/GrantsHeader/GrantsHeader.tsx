@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import sponsors from '@/assets/sponsors.svg'
 import "./style.scss";
 
-const Header = (): ReactElement => {
+const GrantsHeader = (): ReactElement => {
   return (
     <div className="grants-header">
       <div className="grants-header-left">
@@ -15,4 +15,4 @@ const Header = (): ReactElement => {
   );
 };
 
-export default Header;
+export default GrantsHeader;

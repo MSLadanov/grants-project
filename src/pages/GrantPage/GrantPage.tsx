@@ -1,6 +1,6 @@
 import ErrorComponent from "@/components/ErrorComponent/Error";
 import GrantContent from "@/components/GrantPage/GrantContent/GrantContent";
-import Header from "@/components/GrantPage/Header/Header";
+import GrantHeader from "@/components/GrantPage/GrantHeader/GrantHeader";
 import Loader from "@/components/Loader/Loader";
 import { ReactElement, useEffect, useState } from "react";
 import { useOutletContext } from "react-router";
@@ -18,7 +18,7 @@ const GrantPage = (): ReactElement => {
 
   return (
     <>
-      <Header grantData={grantData} />
+      <GrantHeader grantData={grantData} />
       {isLoading && <Loader />}
       {isError && !isLoading && <ErrorComponent />}
       {grantData && !isLoading && !isError ? (

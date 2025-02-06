@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 
-const Footer = (): ReactElement => {
+const GrantFooter = (): ReactElement => {
   return (
     <>
       <h1>Grant Footer</h1>
@@ -8,4 +8,4 @@ const Footer = (): ReactElement => {
   );
 };
 
-export default Footer;
+export default GrantFooter;

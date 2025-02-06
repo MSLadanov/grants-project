@@ -1,3 +1,5 @@
+@import '/src/variables.scss';
+
 .pagination-container {
     display: flex;
       justify-content: center;
@@ -9,27 +11,50 @@
       height: 32px;
       text-align: center;
       margin: auto 4px;
-      color: rgba(0, 0, 0, 0.87);
+      color: #6E7880;
       display: flex;
       box-sizing: border-box;
       align-items: center;
       letter-spacing: 0.01071em;
-      border-radius: 16px;
+      border-radius: 10px;
       line-height: 1.43;
-      font-size: 13px;
+      font-size: 24px;
+      font-style: "Open Sans Regular";
       min-width: 32px;
+      @include media-tablet-landscape {
+        font-size: 12px;
+      }
+    
+      @include media-tablet-portrait {
+        font-size: 12px;
+      }
+    
+      @include media-mobile-landscape {
+        font-size: 16px;
+      }
+    
+      @include media-mobile-portrait {
+        font-size: 14px;
+      }
   
       &.dots:hover {
         background-color: transparent;
         cursor: default;
       }
       &:hover {
-        background-color: rgba(0, 0, 0, 0.04);
+        background-color: #ffffff;
         cursor: pointer;
       }
   
       &.selected {
-        background-color: rgba(0, 0, 0, 0.08);
+        color: #2D4EF8;
+        background-color: #ffffff;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 0px 106.16px 0px rgba(31, 169, 255, 1);
+        box-shadow: 0px 0px 61.92px 0px rgba(31, 169, 255, 1);
+        box-shadow: 0px 0px 30.96px 0px rgba(31, 169, 255, 1);
+        box-shadow: 0px 0px 8.85px 0px rgba(31, 169, 255, 1);
+        box-shadow: 0px 0px 4.42px 0px rgba(31, 169, 255, 1);
       }
   
       .arrow {

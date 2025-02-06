@@ -21,7 +21,6 @@ const GrantsList = (): ReactElement => {
   const firstPageIndex = (currentPage - 1) * PageSize;
   const lastPageIndex = firstPageIndex + PageSize;
   const paginatedGrants = grantsList.slice(firstPageIndex, lastPageIndex);
-  console.log(grantsList)
   if (grantsList.length === 0) {
     return (
       <div>

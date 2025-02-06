@@ -6,6 +6,7 @@ import dayjs from "dayjs";
 import isBetween from "dayjs/plugin/isBetween";
 import useModal from "@/hooks/useFilterModal";
 import GrantsContext from "@/contexts/GrantsContext";
+import useFilters from "@/hooks/useFilters";
 dayjs.extend(isBetween);
 
 const GrantsContent = ({ grants }) => {
@@ -21,7 +22,12 @@ const GrantsContent = ({ grants }) => {
     null,
   ]);
   const [searchQuery, setSearchQuery] = useState("");
-
+  const {
+    matchesDirection,
+    matchesAmount,
+    matchesDateRange,
+    matchesSearchQuery,
+  } = useFilters(directionsList, amount, dateRange, searchQuery);
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
   };
@@ -35,33 +41,6 @@ const GrantsContent = ({ grants }) => {
       );
     });
     setFilteredGrantsList(searchedGrantsList);
-  };
-
-  const matchesDirection = (grant) => directionsList.includes(grant.direction);
-
-  const matchesAmount = (grant) => {
-    if (amount === null) return true;
-    const grantAmount = +grant.amount.split(" ")[1];
-    const selectedAmount = +amount.split(" ")[1];
-    return grantAmount <= selectedAmount;
-  };
-
-  const matchesDateRange = (grant) => {
-    if (!dateRange.every((date) => date !== null)) return true;
-    return dayjs(grant.application_period.start).isBetween(
-      dayjs(dateRange[0]),
-      dayjs(dateRange[1]),
-      null,
-      "[]"
-    );
-  };
-
-  const matchesSearchQuery = (grant) => {
-    return Object.values(grant).some(
-      (value) =>
-        typeof value === "string" &&
-        value.toLowerCase().includes(searchQuery.toLowerCase())
-    );
   };
 
   const filterGrants = () => {
@@ -95,7 +74,7 @@ const GrantsContent = ({ grants }) => {
         setAmount,
         dateRange,
         setDateRange,
-        grantsList:filteredGrantsList,
+        grantsList: filteredGrantsList,
         searchGrants,
         handleSearchChange,
         clearSearchQuery,

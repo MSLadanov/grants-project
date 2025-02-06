@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
-import GrandCardDescription from "./GrantCardDescription/GrantCardDescription";
-import GrandCardInfo from "./GrantCardInfo/GrantCardInfo";
+import GrandCardDescription from "../GrantCardDescription/GrantCardDescription";
+import GrandCardInfo from "../GrantCardInfo/GrantCardInfo";
 import './style.scss'
 
 const GrantCard = ({ grant }): ReactElement => {

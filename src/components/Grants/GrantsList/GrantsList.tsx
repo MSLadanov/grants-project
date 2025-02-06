@@ -1,6 +1,6 @@
 import { ReactElement, useContext, useState } from "react";
-import SearchBar from "./SearchBar/SearchBar";
-import GrantCard from "./GrantCard/GrantCard";
+import SearchBar from "../SearchBar/SearchBar";
+import GrantCard from "../GrantCard/GrantCard";
 import Pagination from "@/components/Grants/Pagination/Pagination";
 import "./style.scss";
 import GrantsMobileMenu from "../GrantsMobileMenu/GrantsMobileMenu";

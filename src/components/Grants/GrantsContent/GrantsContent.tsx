@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import GrantsFilter from "./GrantsFilter/GrantsFilter";
-import GrantsList from "./GrantsList/GrantsList";
+import GrantsFilter from "../GrantsFilter/GrantsFilter";
+import GrantsList from "../GrantsList/GrantsList";
 import "./style.scss";
 import dayjs from "dayjs";
 import isBetween from "dayjs/plugin/isBetween";

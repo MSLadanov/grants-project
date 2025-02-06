@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { createPortal } from "react-dom";
 import { useClickOutside } from "./useOutsideClick";
-import GrantsMobileFilter from "@/components/Grants/GrantsContent/GrantsMobileFilter/GrantsMobileFilter";
+import GrantsMobileFilter from "@/components/Grants/GrantsMobileFilter/GrantsMobileFilter";
 
 function useFilterModal() {
   const modalRef = useRef(null);

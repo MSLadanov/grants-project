@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
-import Summary from "./Summary/Summary";
-import MainInfo from "./MainInfo/MainInfo";
-import Requirements from "./Requirements/Requirements";
+import Summary from "../Summary/Summary";
+import MainInfo from "../MainInfo/MainInfo";
+import Requirements from "../Requirements/Requirements";
 import './style.scss'
 
 const GrantDescription = ({grantData}): ReactElement => {

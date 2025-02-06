@@ -1,17 +1,19 @@
-import { ReactElement } from "react";
+import { ReactElement, useContext } from "react";
 import "./style.scss";
 import CustomDatePicker from "./CustomDatePicker/CustomDatePicker";
 import { DateInput } from "@mantine/dates";
+import GrantsContext from "@/contexts/GrantsContext";
 
-const GrantsFilter = ({
-  directions,
-  amounts,
-  directionsList,
-  setDirectionsList,
-  setAmount,
-  dateRange,
-  setDateRange,
-}): ReactElement => {
+const GrantsFilter = (): ReactElement => {
+  const {
+    directions,
+    amounts,
+    directionsList,
+    setDirectionsList,
+    setAmount,
+    dateRange,
+    setDateRange,
+  } = useContext(GrantsContext)
   const handleDirection = (e) => {
     const id = e.target.id;
     if (directionsList.includes(id)) {

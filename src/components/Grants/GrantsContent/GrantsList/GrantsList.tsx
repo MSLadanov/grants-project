@@ -1,24 +1,27 @@
-import { ReactElement, useState } from "react";
+import { ReactElement, useContext, useState } from "react";
 import SearchBar from "./SearchBar/SearchBar";
 import GrantCard from "./GrantCard/GrantCard";
 import Pagination from "@/components/Grants/Pagination/Pagination";
 import "./style.scss";
 import GrantsMobileMenu from "../GrantsMobileMenu/GrantsMobileMenu";
+import GrantsContext from "@/contexts/GrantsContext";
 
-const GrantsList = ({
-  grantsList,
-  searchGrants,
-  handleSearchChange,
-  clearSearchQuery,
-  searchQuery,
-  toggleFilterModal,
-  handleOutSideClick,
-}): ReactElement => {
+const GrantsList = (): ReactElement => {
+  const {
+    grantsList,
+    searchGrants,
+    handleSearchChange,
+    clearSearchQuery,
+    searchQuery,
+    toggleFilterModal,
+    handleOutSideClick,
+  } = useContext(GrantsContext);
   const PageSize = 5;
   const [currentPage, setCurrentPage] = useState(1);
   const firstPageIndex = (currentPage - 1) * PageSize;
   const lastPageIndex = firstPageIndex + PageSize;
   const paginatedGrants = grantsList.slice(firstPageIndex, lastPageIndex);
+  console.log(grantsList)
   if (grantsList.length === 0) {
     return (
       <div>

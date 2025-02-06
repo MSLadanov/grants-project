@@ -5,11 +5,12 @@ import "./style.scss";
 import dayjs from "dayjs";
 import isBetween from "dayjs/plugin/isBetween";
 import useModal from "@/hooks/useFilterModal";
+import GrantsContext from "@/contexts/GrantsContext";
 dayjs.extend(isBetween);
 
 const GrantsContent = ({ grants }) => {
   const { toggleFilterModal, FilterModal, handleOutSideClick } = useModal();
-  const [grantsList, setGrantsList] = useState(grants);
+  const [grantsList] = useState(grants);
   const [filteredGrantsList, setFilteredGrantsList] = useState(grants);
   const [directionsList, setDirectionsList] = useState([
     ...new Set(grantsList.map((item) => item.direction)),
@@ -85,35 +86,30 @@ const GrantsContent = ({ grants }) => {
   }, [directionsList, grantsList, amount, dateRange, searchQuery]);
 
   return (
-    <div className="grants-content">
-      <GrantsFilter
-        directions={[...new Set(grantsList.map((item) => item.direction))]}
-        amounts={[...new Set(grantsList.map((item) => item.amount))]}
-        directionsList={directionsList}
-        setDirectionsList={setDirectionsList}
-        setAmount={setAmount}
-        dateRange={dateRange}
-        setDateRange={setDateRange}
-      />
-      <FilterModal
-        directions={[...new Set(grantsList.map((item) => item.direction))]}
-        amounts={[...new Set(grantsList.map((item) => item.amount))]}
-        directionsList={directionsList}
-        setDirectionsList={setDirectionsList}
-        setAmount={setAmount}
-        dateRange={dateRange}
-        setDateRange={setDateRange}
-      />
-      <GrantsList
-        grantsList={filteredGrantsList}
-        searchGrants={searchGrants}
-        handleSearchChange={handleSearchChange}
-        clearSearchQuery={clearSearchQuery}
-        searchQuery={searchQuery}
-        toggleFilterModal={toggleFilterModal}
-        handleOutSideClick={handleOutSideClick}
-      />
-    </div>
+    <GrantsContext.Provider
+      value={{
+        directions: [...new Set(grantsList.map((item) => item.direction))],
+        amounts: [...new Set(grantsList.map((item) => item.amount))],
+        directionsList,
+        setDirectionsList,
+        setAmount,
+        dateRange,
+        setDateRange,
+        grantsList:filteredGrantsList,
+        searchGrants,
+        handleSearchChange,
+        clearSearchQuery,
+        searchQuery,
+        toggleFilterModal,
+        handleOutSideClick,
+      }}
+    >
+      <div className="grants-content">
+        <GrantsFilter />
+        <FilterModal />
+        <GrantsList />
+      </div>
+    </GrantsContext.Provider>
   );
 };
 

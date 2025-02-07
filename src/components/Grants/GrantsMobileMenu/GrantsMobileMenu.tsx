@@ -1,12 +1,17 @@
-import { ReactElement } from "react";
+import { ReactElement, useContext } from "react";
 import "./style.scss";
+import GrantsContext from "@/contexts/GrantsContext";
 
-const GrantsMobileMenu = ({
-  toggleModal,
-}): ReactElement => {
+const GrantsMobileMenu = ({ toggleModal }): ReactElement => {
+  const { directions, setDirectionsList, setAmount } =
+    useContext(GrantsContext);
+  const handleReset = () => {
+    setDirectionsList(directions);
+    setAmount(null);
+  };
   return (
     <div className="grants-mobile-menu">
-      <button>Сбросить</button>
+      <button onClick={handleReset}>Сбросить</button>
       <button
         onClick={() => {
           toggleModal();

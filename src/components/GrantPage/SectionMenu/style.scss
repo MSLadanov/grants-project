@@ -1,23 +1,45 @@
-@import '/src/variables.scss';
+@import "/src/variables.scss";
 
-.grantpage-sections{
-    h1 {
-        font-size: 38px;
-        margin-left: 25px;
-        @include media-tablet-landscape {
-          font-size: 16px;
-        }
-    
-        @include media-tablet-portrait {
-          font-size: 16px;
-        }
-    
-        @include media-mobile-landscape {
-          font-size: 16px;
-        }
-    
-        @include media-mobile-portrait {
-          font-size: 16px;
-        }
-      }
+.grantpage-sections {
+  h1 {
+    font-size: 38px;
+    margin-left: 25px;
+    @include media-tablet-landscape {
+      font-size: 16px;
+    }
+
+    @include media-tablet-portrait {
+      font-size: 16px;
+    }
+
+    @include media-mobile-landscape {
+      font-size: 16px;
+    }
+
+    @include media-mobile-portrait {
+      font-size: 16px;
+    }
+  }
+  a {
+    display: none;
+    font-size: 16px;
+    @include media-tablet-landscape {
+      display: flex;
+      width: 180px;
+      height: 46px;
+    }
+    @include media-tablet-portrait {
+      display: flex;
+      width: 180px;
+      height: 46px;
+    }
+
+    @include media-mobile-landscape {
+      display: none;
+    }
+
+    @include media-mobile-portrait {
+      display: none;
+    }
+  }
 }

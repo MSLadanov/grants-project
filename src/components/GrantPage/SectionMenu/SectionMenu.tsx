@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import Sections from "../Sections/Sections";
+import { NavLink } from "react-router";
 import './style.scss'
 
 const SectionMenu = (): ReactElement => {
@@ -7,6 +8,7 @@ const SectionMenu = (): ReactElement => {
     <div className="grantpage-sections">
       <h1>Разделы</h1>
       <Sections/>
+      <NavLink to={""}>Перейти на сайт</NavLink>
     </div>
   );
 };

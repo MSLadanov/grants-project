@@ -1,14 +1,17 @@
 import { useState, useRef } from "react";
 import { createPortal } from "react-dom";
 import { useClickOutside } from "./useOutsideClick";
-import GrantsMobileFilter from "@/components/Grants/GrantsMobileFilter/GrantsMobileFilter";
 
-function useFilterModal() {
+function useModal(modalContent) {
   const modalRef = useRef(null);
   const [openModal, setOpenModal] = useState(false);
 
-  function toggleFilterModal() {
-    setOpenModal(!openModal);
+  function toggleModal() {
+    setOpenModal(prev => !prev);
+  }
+
+  function closeModal() {
+    setOpenModal(false);
   }
 
   function handleOutSideClick() {
@@ -19,7 +22,7 @@ function useFilterModal() {
 
   useClickOutside(modalRef, handleOutSideClick);
 
-  function FilterModal() {
+  function Modal() {
     const modalRoot = document.getElementById("modal");
     if (!modalRoot) {
       console.error("Модальное окно не обнаружено");
@@ -27,13 +30,15 @@ function useFilterModal() {
     }
     return openModal
       ? createPortal(
-          <GrantsMobileFilter />,
+          <div ref={modalRef} style={{ background: 'white', padding: '20px', borderRadius: '5px' }}>
+            {modalContent}
+          </div>,
           modalRoot
         )
       : null;
   }
 
-  return { toggleFilterModal, handleOutSideClick, FilterModal };
+  return { toggleModal, Modal, openModal, closeModal };
 }
 
-export default useFilterModal;
+export default useModal;

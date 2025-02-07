@@ -1,8 +1,15 @@
 import { ReactElement } from "react";
 import dateFormatter from "@/utils/dateFormatter";
+import sectionsOpen from "@/assets/sections-open.svg";
+import sectionsClose from "@/assets/sections-close.svg";
 import "./style.scss";
+import useModal from "@/hooks/useModal";
+import MobileSectionMenu from "../MobileSectionMenu/MobileSectionMenu";
 
 const Summary = ({ applicationPeriod, dueDate, amount }): ReactElement => {
+  const { toggleModal, Modal, openModal, closeModal } = useModal(
+    <MobileSectionMenu />
+  );
   return (
     <div className="grant-summary">
       <div className="grant-summary-column">
@@ -32,6 +39,26 @@ const Summary = ({ applicationPeriod, dueDate, amount }): ReactElement => {
           </div>
         </div>
       </div>
+      <div className="grant-sections-toggler">
+        {openModal ? (
+          <img
+            src={sectionsClose}
+            onClick={() => {
+              closeModal();
+            }}
+            alt=""
+          />
+        ) : (
+          <img
+            src={sectionsOpen}
+            onClick={() => {
+              toggleModal();
+            }}
+            alt=""
+          />
+        )}
+      </div>
+      <Modal />
     </div>
   );
 };

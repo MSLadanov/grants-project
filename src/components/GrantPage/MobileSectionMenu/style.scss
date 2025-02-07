@@ -1,0 +1,26 @@
+@import "/src/variables.scss";
+
+.mobile-section {
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  overflow: hidden;
+  border-radius: 25px;
+  border: 1px solid black;
+  @include media-not-mobile {
+    display: none;
+  }
+  .grantpage-sections-list {
+    background-color: #ffffff;
+    border: none;
+    width: 100%;
+    padding: 15px;
+  }
+  ol {
+    li {
+      margin: 10% 0%;
+    }
+  }
+}

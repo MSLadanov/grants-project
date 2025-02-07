@@ -10,24 +10,24 @@
   @include media-mobile-portrait {
     flex-direction: column;
   }
-  .grant-summary-column{
+  .grant-summary-column {
     display: flex;
-   flex-direction: column;
-    .grant-summary-cell{
+    flex-direction: column;
+    .grant-summary-cell {
       display: flex;
       flex-direction: column;
       @include media-mobile-landscape {
         margin: 2% 0%;
       }
-    
+
       @include media-mobile-portrait {
         margin: 2% 0%;
       }
-      p{
+      p {
         @include media-mobile-landscape {
           margin: 1% 0%;
         }
-      
+
         @include media-mobile-portrait {
           margin: 1% 0%;
         }
@@ -55,12 +55,26 @@
     border-radius: 16px;
     padding: 16px;
   }
-  p{
+  p {
     font-family: "Montsserrat Light";
     font-weight: 700;
   }
-  h3{
-    color: #2C4EC5;
+  h3 {
+    color: #2c4ec5;
     font-family: "Open Sans Light";
+  }
+  .grant-sections-toggler {
+    display: none;
+    justify-content: end;
+    @include media-mobile-landscape {
+      display: flex;
+    }
+
+    @include media-mobile-portrait {
+      display: flex;
+    }
+    img {
+      cursor: pointer;
+    }
   }
 }

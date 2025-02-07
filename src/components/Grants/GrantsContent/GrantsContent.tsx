@@ -4,14 +4,16 @@ import GrantsList from "../GrantsList/GrantsList";
 import "./style.scss";
 import dayjs from "dayjs";
 import isBetween from "dayjs/plugin/isBetween";
-import useModal from "@/hooks/useFilterModal";
+import useModal from "@/hooks/useModal";
 import GrantsContext from "@/contexts/GrantsContext";
 import useFilters from "@/hooks/useFilters";
 import { TGrants } from "@/types/types";
+import GrantsMobileFilter from "../GrantsMobileFilter/GrantsMobileFilter";
+
 dayjs.extend(isBetween);
 
 const GrantsContent = ({ grants } : { grants : TGrants }) => {
-  const { toggleFilterModal, FilterModal, handleOutSideClick } = useModal();
+  const { toggleModal, Modal } = useModal(<GrantsMobileFilter />);
   const [grantsList] = useState(grants);
   const [filteredGrantsList, setFilteredGrantsList] = useState(grants);
   const [directionsList, setDirectionsList] = useState([
@@ -81,13 +83,12 @@ const GrantsContent = ({ grants } : { grants : TGrants }) => {
         handleSearchChange,
         clearSearchQuery,
         searchQuery,
-        toggleFilterModal,
-        handleOutSideClick,
+        toggleModal,
       }}
     >
       <div className="grants-content">
         <GrantsFilter />
-        <FilterModal />
+        <Modal />
         <GrantsList />
       </div>
     </GrantsContext.Provider>

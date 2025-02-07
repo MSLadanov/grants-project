@@ -14,8 +14,7 @@ const GrantsContext = createContext({
   handleSearchChange: (e) => {},
   clearSearchQuery: () => {},
   searchQuery: '',
-  toggleFilterModal: () => {},
-  handleOutSideClick: () => {},
+  toggleModal: () => {},
 });
 
 export default GrantsContext;

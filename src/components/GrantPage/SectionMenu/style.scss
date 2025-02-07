@@ -2,6 +2,13 @@
 
 .grantpage-sections {
   margin-left: 2%;
+  @include media-mobile-landscape {
+    display: none;
+  }
+
+  @include media-mobile-portrait {
+    display: none;
+  }
   h1 {
     font-size: 38px;
     margin-left: 25px;

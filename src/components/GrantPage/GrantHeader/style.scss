@@ -12,6 +12,18 @@
   overflow: hidden;
   justify-content: center;
   align-items: center;
+  @include media-tablet-landscape {
+    border-radius: 18px;
+  }
+  @include media-tablet-portrait {
+    border-radius: 16px;
+  }
+  @include media-mobile-landscape {
+    border-radius: 16px;
+  }
+  @include media-mobile-portrait {
+    border-radius: 16px;
+  }
   .backward-button-wrapper {
     display: none;
     @include media-tablet-landscape {

@@ -16,6 +16,22 @@
     .grant-summary-cell{
       display: flex;
       flex-direction: column;
+      @include media-mobile-landscape {
+        margin: 2% 0%;
+      }
+    
+      @include media-mobile-portrait {
+        margin: 2% 0%;
+      }
+      p{
+        @include media-mobile-landscape {
+          margin: 1% 0%;
+        }
+      
+        @include media-mobile-portrait {
+          margin: 1% 0%;
+        }
+      }
     }
   }
   border-radius: 35px;

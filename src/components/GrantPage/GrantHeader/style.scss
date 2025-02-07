@@ -12,6 +12,34 @@
   overflow: hidden;
   justify-content: center;
   align-items: center;
+  .backward-button-wrapper {
+    display: none;
+    @include media-tablet-landscape {
+      display: block;
+    }
+
+    @include media-tablet-portrait {
+      display: block;
+    }
+
+    @include media-mobile-landscape {
+      display: none;
+    }
+
+    @include media-mobile-portrait {
+      display: none;
+    }
+  }
+  .backward-button {
+    img{
+      width: 19px;
+      height: 19px;
+    }
+    a {
+      font-size: 14px;
+      color: #ffffff;
+    }
+  }
   h1 {
     font-size: 84px;
     @include media-tablet-landscape {
@@ -45,6 +73,7 @@
   }
 
   @include media-mobile-portrait {
+    justify-content: space-evenly;
     flex-direction: column;
     height: 443px;
     background: url("/src/assets/grants-header-mp.svg");

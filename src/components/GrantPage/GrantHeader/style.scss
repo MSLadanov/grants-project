@@ -66,6 +66,34 @@
   background-color: rgba(255, 255, 255, 0.4);
   box-shadow: 0 0 17px rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(20px);
+  h3{
+    font-family: "Open Sans Regular";
+    font-size: 30px;
+  }
+  h4{
+    font-family: "Montsserrat SemiBold";
+    font-size: 24px;
+  }
+  @include media-tablet-landscape {
+    width: 256px;
+    height: 147px;
+    border-radius: 16px;
+  }
+
+  @include media-tablet-portrait {
+    width: 180px;
+    height: 117px;
+  }
+
+  @include media-mobile-landscape {
+    width: 440px;
+    height: 116px;
+  }
+
+  @include media-mobile-portrait {
+    width: 310px;
+    height: 198px;
+  }
   a{
     display: flex;
     justify-content: center;

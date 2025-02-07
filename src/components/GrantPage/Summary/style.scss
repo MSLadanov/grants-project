@@ -3,6 +3,21 @@
 .grant-summary {
   display: flex;
   justify-content: space-between;
+  @include media-mobile-landscape {
+    flex-direction: column;
+  }
+
+  @include media-mobile-portrait {
+    flex-direction: column;
+  }
+  .grant-summary-column{
+    display: flex;
+   flex-direction: column;
+    .grant-summary-cell{
+      display: flex;
+      flex-direction: column;
+    }
+  }
   border-radius: 35px;
   padding: 24px;
   @include media-tablet-landscape {
@@ -23,5 +38,13 @@
   @include media-mobile-portrait {
     border-radius: 16px;
     padding: 16px;
+  }
+  p{
+    font-family: "Montsserrat Light";
+    font-weight: 700;
+  }
+  h3{
+    color: #2C4EC5;
+    font-family: "Open Sans Light";
   }
 }

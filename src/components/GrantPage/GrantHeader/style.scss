@@ -15,10 +15,16 @@
   .backward-button-wrapper {
     display: none;
     @include media-tablet-landscape {
+      position: absolute;
+      top: 3%;
+      left: 6%;
       display: block;
     }
 
     @include media-tablet-portrait {
+      position: absolute;
+      top: 3%;
+      left: 6%;
       display: block;
     }
 

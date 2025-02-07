@@ -22,7 +22,7 @@ const GrantDescription = ({
       />
       <h1>Основные сведения о гранте</h1>
       <MainInfo description={description} />
-      <h1>Требования</h1>
+      <h1>Требования для участия</h1>
       <Requirements requirements={requirements} />
     </div>
   );

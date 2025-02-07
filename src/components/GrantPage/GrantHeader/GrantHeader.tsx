@@ -14,6 +14,7 @@ const GrantHeader = ({grantData}): ReactElement => {
         <h3>{grantData?.grantor}</h3>
         <NavLink to={''}>Перейти на сайт</NavLink>
       </div>
+        <NavLink to={''}>Перейти на сайт</NavLink>
     </div>
   );
 };

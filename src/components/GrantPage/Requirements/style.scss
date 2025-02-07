@@ -1,8 +1,6 @@
 @import "/src/variables.scss";
 
-.grant-summary {
-  display: flex;
-  justify-content: space-between;
+.grant-requirements {
   border-radius: 35px;
   padding: 24px;
   @include media-tablet-landscape {

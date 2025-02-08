@@ -15,6 +15,7 @@
     flex-direction: column;
     .grant-summary-cell {
       display: flex;
+      height: 50%;
       flex-direction: column;
       @include media-mobile-landscape {
         margin: 2% 0%;

@@ -34,9 +34,9 @@ const Summary = ({ applicationPeriod, dueDate, amount }): ReactElement => {
       <div className="grant-summary-column">
         <div className="grant-summary-cell">
           <p>Размер гранта:</p>
-          <div className="grant-summary-cell">
-            <h3>{amount}</h3>
-          </div>
+        </div>
+        <div className="grant-summary-cell">
+          <h3>{amount}</h3>
         </div>
       </div>
       <div className="grant-sections-toggler">

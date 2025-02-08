@@ -30,7 +30,7 @@ function useModal(modalContent) {
     }
     return openModal
       ? createPortal(
-          <div ref={modalRef} style={{ background: 'white', padding: '20px', borderRadius: '5px' }}>
+          <div ref={modalRef}>
             {modalContent}
           </div>,
           modalRoot

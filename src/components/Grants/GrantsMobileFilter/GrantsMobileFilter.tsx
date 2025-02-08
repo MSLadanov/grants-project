@@ -2,6 +2,7 @@ import React, { forwardRef, useContext } from "react";
 import "./style.scss";
 import { DateInput } from "@mantine/dates";
 import GrantsContext from "@/contexts/GrantsContext";
+import dayjs from "dayjs";
 
 const GrantsMobileFilter = forwardRef((props, ref) => {
   const {
@@ -14,6 +15,7 @@ const GrantsMobileFilter = forwardRef((props, ref) => {
     dateRange,
     setDateRange,
   } = useContext(GrantsContext);
+
   const handleDirection = (e) => {
     const id = e.target.id;
     if (directionsList.includes(id)) {
@@ -28,9 +30,32 @@ const GrantsMobileFilter = forwardRef((props, ref) => {
     setAmount(e.target.value);
   };
 
-  const hangleDateChange = (e) =>{
+  const handleStartDateBlur = (value) => {
+    try {
+      const dateValue = dayjs(value, 'DD/MM/YYYY');
+      if (dateValue.isValid()) { // Проверка на корректность даты
+        setDateRange([dateValue.toDate(), dateRange[1]]);
+      } else {
+        console.error("Некорректная дата начала:", value);
+      }
+    } catch (error) {
+      console.error("Ошибка при установке даты начала:", error);
+    }
+  };
 
-  }
+  const handleEndDateBlur = (value) => {
+    try {
+      const dateValue = dayjs(value, 'DD/MM/YYYY');
+      if (dateValue.isValid()) { // Проверка на корректность даты
+        setDateRange([dateRange[0], dateValue.toDate()]);
+      } else {
+        console.error("Некорректная дата окончания:", value);
+      }
+    } catch (error) {
+      console.error("Ошибка при установке даты окончания:", error);
+    }
+  };
+
   return (
     <div className="filter-mobile" ref={ref}>
       <div className="filter-body">
@@ -42,7 +67,7 @@ const GrantsMobileFilter = forwardRef((props, ref) => {
                 id={item}
                 checked={directionsList.includes(item)}
                 type="checkbox"
-                onChange={(e) => handleDirection(e)}
+                onChange={handleDirection}
               />
               <label htmlFor={item}>{item}</label>
             </div>
@@ -58,7 +83,7 @@ const GrantsMobileFilter = forwardRef((props, ref) => {
                 name="amount"
                 type="radio"
                 checked={amount === item}
-                onChange={(e) => handleAmount(e)}
+                onChange={handleAmount}
               />
               <label htmlFor={item}>{item}</label>
             </div>
@@ -68,12 +93,12 @@ const GrantsMobileFilter = forwardRef((props, ref) => {
         <div className="filter-date-group">
           <div className="filter-date-indicator">
             <DateInput
-              className={dateRange[0] && " active"}
+              className={dateRange[0] ? "active" : ""}
               valueFormat="DD/MM/YYYY"
               label="Начало периода"
               placeholder="23/10/2023"
-              value={dateRange[0]}
-              onChange={(date) => hangleDateChange(date)}
+              value={dateRange[0] || null}
+              onBlur={(event) => handleStartDateBlur(event.target.value)}
             />
             <div
               className={"filter-date-icon" + (dateRange[0] ? " active" : "")}
@@ -81,12 +106,12 @@ const GrantsMobileFilter = forwardRef((props, ref) => {
           </div>
           <div className="filter-date-indicator">
             <DateInput
-              className={dateRange[0] ? " active" : ""}
+              className={dateRange[1] ? "active" : ""}
               valueFormat="DD/MM/YYYY"
               label="Конец периода"
               placeholder="01/12/2023"
-              value={dateRange[1]}
-              onChange={(date) => hangleDateChange(date)}
+              value={dateRange[1] || null}
+              onBlur={(event) => handleEndDateBlur(event.target.value)}
             />
             <div
               className={"filter-date-icon" + (dateRange[1] ? " active" : "")}

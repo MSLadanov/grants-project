@@ -6,6 +6,7 @@ import "./style.scss";
 import GrantsMobileMenu from "../GrantsMobileMenu/GrantsMobileMenu";
 import GrantsContext from "@/contexts/GrantsContext";
 import { TGrant } from "@/types/types";
+import NoGrantsComponent from "../NoGrantsComponent/NoGrantsComponent";
 
 const GrantsList = (): ReactElement => {
   const {
@@ -33,7 +34,7 @@ const GrantsList = (): ReactElement => {
         <GrantsMobileMenu
           toggleModal={toggleModal}
         />
-        <h1>Нет грантов</h1>
+        <NoGrantsComponent/>
       </div>
     );
   }

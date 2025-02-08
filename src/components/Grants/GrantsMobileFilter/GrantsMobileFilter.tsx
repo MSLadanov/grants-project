@@ -27,6 +27,10 @@ const GrantsMobileFilter = forwardRef((props, ref) => {
   const handleAmount = (e) => {
     setAmount(e.target.value);
   };
+
+  const hangleDateChange = (e) =>{
+
+  }
   return (
     <div className="filter-mobile" ref={ref}>
       <div className="filter-body">
@@ -69,6 +73,7 @@ const GrantsMobileFilter = forwardRef((props, ref) => {
               label="Начало периода"
               placeholder="23/10/2023"
               value={dateRange[0]}
+              onChange={(date) => hangleDateChange(date)}
             />
             <div
               className={"filter-date-icon" + (dateRange[0] ? " active" : "")}
@@ -81,6 +86,7 @@ const GrantsMobileFilter = forwardRef((props, ref) => {
               label="Конец периода"
               placeholder="01/12/2023"
               value={dateRange[1]}
+              onChange={(date) => hangleDateChange(date)}
             />
             <div
               className={"filter-date-icon" + (dateRange[1] ? " active" : "")}

@@ -3,7 +3,14 @@
 .grants-searchbar {
   display: flex;
   width: 100%;
-  margin: 2% 0%;
+  margin: 0% 0% 2% 0%;
+  @include media-mobile-landscape {
+    margin: 2% 0% 2% 0%;
+  }
+
+  @include media-mobile-portrait {
+    margin: 2% 0% 2% 0%;
+  }
   .grants-searchbar-input {
     background-color: #ffffff;
     border-radius: 50px;

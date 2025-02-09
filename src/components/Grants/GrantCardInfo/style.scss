@@ -4,7 +4,7 @@
   width: 30%;
   border-radius: 46px;
   background: url("/src/assets/card-info.svg");
-  padding: 20px;
+  padding: 15px;
   @include media-tablet-landscape {
     border-radius: 20px;
     padding: 10px;
@@ -50,7 +50,7 @@
       border-radius: 16px;
     }
     div {
-      padding: 15px;
+      padding: 15px 10px;
     }
   }
 }

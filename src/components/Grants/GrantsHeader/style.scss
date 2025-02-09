@@ -66,6 +66,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @include media-mobile-portrait {
+    position: relative;
+    top:70px;
+  }
 }
 
 .grants-header-right {

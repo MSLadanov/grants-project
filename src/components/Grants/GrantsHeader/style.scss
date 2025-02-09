@@ -10,6 +10,21 @@
   padding: 0px 4%;
   height: 620px;
   overflow: hidden;
+  @include media-tablet-landscape {
+    border-radius: 18px;
+  }
+
+  @include media-tablet-portrait {
+    border-radius: 18px;
+  }
+
+  @include media-mobile-landscape {
+    border-radius: 20px;
+  }
+
+  @include media-mobile-portrait {
+    border-radius: 20px;
+  }
   h1 {
     font-size: 84px;
     @include media-tablet-landscape {

@@ -21,9 +21,11 @@
   }
   @include media-mobile-landscape {
     flex-direction: column;
+    margin-bottom: 5%;
   }
 
   @include media-mobile-portrait {
     flex-direction: column;
+    margin-bottom: 5%;
   }
 }

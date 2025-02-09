@@ -2,6 +2,7 @@
 
 .grants-mobile-menu {
   display: none;
+  margin: 5% 0%;
   @include media-mobile-landscape {
     display: flex;
     justify-content: space-between;

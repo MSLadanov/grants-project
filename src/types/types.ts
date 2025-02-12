@@ -14,7 +14,10 @@ export type TGrant = {
 };
 
 export type TGrantsData = {
-  grants: TGrant;
+  grants: TGrants;
+  data: {
+    grants: TGrant;
+  };
 };
 
 export type TGrants = TGrant[];

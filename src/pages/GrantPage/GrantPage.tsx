@@ -18,7 +18,7 @@ interface GrantPageContext {
 const GrantPage = (): ReactElement => {
   const { data, isLoading, isError, grantId } =
     useOutletContext<GrantPageContext>();
-  const [grantData, setGrantData] = useState(null);
+  const [grantData, setGrantData] = useState<TGrant | null>(null);
 
   useEffect(() => {
     if (data) {
@@ -29,7 +29,7 @@ const GrantPage = (): ReactElement => {
 
   return (
     <>
-      <GrantHeader grantData={grantData} />
+      <GrantHeader grantData={grantData!} />
       {isLoading && <Loader />}
       {isError && !isLoading && <ErrorComponent />}
       {grantData && !isLoading && !isError ? (

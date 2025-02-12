@@ -9,22 +9,27 @@ const SearchBar = ({
   handleSearchChange,
   clearSearchQuery,
   searchQuery,
+}: {
+  searchGrants: () => void;
+  handleSearchChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  clearSearchQuery: () => void;
+  searchQuery: string;
 }): ReactElement => {
   return (
-      <div className="grants-searchbar">
-        <div className="grants-searchbar-input">
-          <img src={search} alt="" />
-          <input
-            placeholder="Введите название программы"
-            value={searchQuery}
-            onChange={(e) => handleSearchChange(e)}
-          />
-          <img src={clear} onClick={() => clearSearchQuery()} alt="" />
-        </div>
-        <div className="grants-searchbar-btn">
-          <button onClick={() => searchGrants()}>Искать</button>
-        </div>
+    <div className="grants-searchbar">
+      <div className="grants-searchbar-input">
+        <img src={search} alt="" />
+        <input
+          placeholder="Введите название программы"
+          value={searchQuery}
+          onChange={(e) => handleSearchChange(e)}
+        />
+        <img src={clear} onClick={() => clearSearchQuery()} alt="" />
       </div>
+      <div className="grants-searchbar-btn">
+        <button onClick={() => searchGrants()}>Искать</button>
+      </div>
+    </div>
   );
 };
 

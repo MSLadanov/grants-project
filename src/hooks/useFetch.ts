@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 
-const useFetch = (url: string) => {
+const useFetch = <T,>(url: string): { data: T | null; isLoading: boolean; isError: boolean } => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [isError, setIsError] = useState<null | Error>(null);
+  const [isError, setIsError] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchData = async () => {
-      setIsError(null);
+      setIsError(false);
       try {
         const response = await fetch(url);
         if (!response.ok) {
@@ -17,7 +17,7 @@ const useFetch = (url: string) => {
         setData(result);
       } catch (error) {
         if (error instanceof Error) {
-          setIsError(error);
+          setIsError(true);
         }
       } finally {
         setIsLoading(false);

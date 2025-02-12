@@ -1,13 +1,13 @@
-import { useState, useRef } from "react";
+import { useState, useRef, ReactElement } from "react";
 import { createPortal } from "react-dom";
 import { useClickOutside } from "./useOutsideClick";
 
-function useModal(modalContent) {
+function useModal(modalContent: ReactElement) {
   const modalRef = useRef(null);
   const [openModal, setOpenModal] = useState(false);
 
   function toggleModal() {
-    setOpenModal(prev => !prev);
+    setOpenModal((prev) => !prev);
   }
 
   function closeModal() {
@@ -29,12 +29,7 @@ function useModal(modalContent) {
       return null;
     }
     return openModal
-      ? createPortal(
-          <div ref={modalRef}>
-            {modalContent}
-          </div>,
-          modalRoot
-        )
+      ? createPortal(<div ref={modalRef}>{modalContent}</div>, modalRoot)
       : null;
   }
 

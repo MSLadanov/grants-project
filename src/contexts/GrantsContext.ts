@@ -1,12 +1,13 @@
 import { createContext } from "react";
+import { GrantsContextType } from "@/types/types";
 
-const GrantsContext = createContext({
+const GrantsContext  = createContext<GrantsContextType>({
   directions: [],
   amount: null,
   amounts: [],
   directionsList: [],
   setDirectionsList: (dirs : string[]) => {},
-  setAmount: (amount : string[]) => {},
+  setAmount: (amount : string | null) => {},
   dateRange: null,
   setDateRange: (dates : [Date | null, Date | null]) => {},
   grantsList: [],

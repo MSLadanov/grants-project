@@ -14,3 +14,20 @@ export type TGrant = {
 };
 
 export type TGrants = TGrant[];
+
+export interface GrantsContextType {
+  directions: string[];
+  amount: string | null;
+  amounts: string[];
+  directionsList: string[];
+  setDirectionsList: (dirs: string[]) => void;
+  setAmount: (amount: string | null) => void;
+  dateRange: [Date | null, Date | null] | null;
+  setDateRange: (dates: [Date | null, Date | null]) => void;
+  grantsList: TGrant[]; 
+  searchGrants: () => void;
+  handleSearchChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  clearSearchQuery: () => void;
+  searchQuery: string;
+  toggleModal: () => void;
+}

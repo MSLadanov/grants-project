@@ -20,7 +20,7 @@ const GrantsContent = ({ grants }: { grants: TGrants }) => {
   const [directionsList, setDirectionsList] = useState([
     ...new Set(grantsList.map((item) => item.direction)),
   ]);
-  const [amount, setAmount] = useState(null);
+  const [amount, setAmount] = useState<null | string>(null);
   const [dateRange, setDateRange] = useState<[Date | null, Date | null]>([
     null,
     null,

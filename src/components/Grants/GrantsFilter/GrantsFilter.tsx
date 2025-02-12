@@ -16,17 +16,17 @@ const GrantsFilter = (): ReactElement => {
     dateRange,
     setDateRange,
   } = useContext(GrantsContext)
-  const handleDirection = (e) => {
+  const handleDirection = (e: React.ChangeEvent<HTMLInputElement>) => {
     const id = e.target.id;
     if (directionsList.includes(id)) {
       const updatedList = directionsList.filter((item) => item !== id);
       setDirectionsList(updatedList);
     } else {
-      setDirectionsList((prevList) => [...prevList, id]);
+      setDirectionsList((prevList: string[]) => [...prevList, id]);
     }
   };
 
-  const handleAmount = (e) => {
+  const handleAmount = (e : React.ChangeEvent<HTMLInputElement>) => {
     setAmount(e.target.value);
   };
 

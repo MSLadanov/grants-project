@@ -4,7 +4,10 @@ import { DateInput } from "@mantine/dates";
 import GrantsContext from "@/contexts/GrantsContext";
 import dayjs from "dayjs";
 
-const GrantsMobileFilter = forwardRef<HTMLDivElement, React.PropsWithChildren<object>>((props, ref) => {
+const GrantsMobileFilter = forwardRef<
+  HTMLDivElement,
+  React.PropsWithChildren<object>
+>((props, ref) => {
   const {
     directions,
     amount,
@@ -16,24 +19,25 @@ const GrantsMobileFilter = forwardRef<HTMLDivElement, React.PropsWithChildren<ob
     setDateRange,
   } = useContext(GrantsContext);
 
-  const handleDirection = (e) => {
+  const handleDirection = (e: React.ChangeEvent<HTMLInputElement>) => {
     const id = e.target.id;
     if (directionsList.includes(id)) {
       const updatedList = directionsList.filter((item) => item !== id);
       setDirectionsList(updatedList);
     } else {
-      setDirectionsList((prevList) => [...prevList, id]);
+      const newDirectionsList = [...directionsList, id];
+      setDirectionsList(newDirectionsList);
     }
   };
 
-  const handleAmount = (e) => {
+  const handleAmount = (e: React.ChangeEvent<HTMLInputElement>) => {
     setAmount(e.target.value);
   };
 
-  const handleStartDateBlur = (value) => {
+  const handleStartDateBlur = (value: string) => {
     try {
-      const dateValue = dayjs(value, 'DD/MM/YYYY');
-      if (dateValue.isValid()) { 
+      const dateValue = dayjs(value, "DD/MM/YYYY");
+      if (dateValue.isValid()) {
         setDateRange([dateValue.toDate(), dateRange[1]]);
       } else {
         console.error("Некорректная дата начала:", value);
@@ -43,10 +47,10 @@ const GrantsMobileFilter = forwardRef<HTMLDivElement, React.PropsWithChildren<ob
     }
   };
 
-  const handleEndDateBlur = (value) => {
+  const handleEndDateBlur = (value: string) => {
     try {
-      const dateValue = dayjs(value, 'DD/MM/YYYY');
-      if (dateValue.isValid()) { 
+      const dateValue = dayjs(value, "DD/MM/YYYY");
+      if (dateValue.isValid()) {
         setDateRange([dateRange[0], dateValue.toDate()]);
       } else {
         console.error("Некорректная дата окончания:", value);

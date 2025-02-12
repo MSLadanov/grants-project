@@ -3,7 +3,11 @@ import "./style.scss";
 import GrantsContext from "@/contexts/GrantsContext";
 import React from "react";
 
-const GrantsMobileMenu = ({ toggleModal }): ReactElement => {
+const GrantsMobileMenu = ({
+  toggleModal,
+}: {
+  toggleModal: () => void;
+}): ReactElement => {
   const { directions, setDirectionsList, setAmount, setDateRange } =
     useContext(GrantsContext);
   const handleReset = () => {

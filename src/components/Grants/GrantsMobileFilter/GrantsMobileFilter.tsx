@@ -4,7 +4,7 @@ import { DateInput } from "@mantine/dates";
 import GrantsContext from "@/contexts/GrantsContext";
 import dayjs from "dayjs";
 
-const GrantsMobileFilter = forwardRef((props, ref) => {
+const GrantsMobileFilter = forwardRef<HTMLDivElement, React.PropsWithChildren<object>>((props, ref) => {
   const {
     directions,
     amount,
@@ -33,7 +33,7 @@ const GrantsMobileFilter = forwardRef((props, ref) => {
   const handleStartDateBlur = (value) => {
     try {
       const dateValue = dayjs(value, 'DD/MM/YYYY');
-      if (dateValue.isValid()) { // Проверка на корректность даты
+      if (dateValue.isValid()) { 
         setDateRange([dateValue.toDate(), dateRange[1]]);
       } else {
         console.error("Некорректная дата начала:", value);
@@ -46,7 +46,7 @@ const GrantsMobileFilter = forwardRef((props, ref) => {
   const handleEndDateBlur = (value) => {
     try {
       const dateValue = dayjs(value, 'DD/MM/YYYY');
-      if (dateValue.isValid()) { // Проверка на корректность даты
+      if (dateValue.isValid()) { 
         setDateRange([dateRange[0], dateValue.toDate()]);
       } else {
         console.error("Некорректная дата окончания:", value);

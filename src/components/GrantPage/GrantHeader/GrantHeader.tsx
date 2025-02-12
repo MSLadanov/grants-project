@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import "./style.scss";
 import { NavLink } from "react-router";
 import BackwardButton from "../BackwardButton/BackwardButton";
+import React from "react";
 
 const GrantHeader = ({ grantData }): ReactElement => {
   return (

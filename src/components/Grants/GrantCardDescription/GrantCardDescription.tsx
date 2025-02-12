@@ -1,6 +1,7 @@
 import { ReactElement } from "react";
 import { NavLink } from "react-router";
 import "./style.scss";
+import React from "react";
 
 const GrandCardDescription = ({ id, title, description }): ReactElement => {
   return (

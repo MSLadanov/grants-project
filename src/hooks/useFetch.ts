@@ -3,20 +3,22 @@ import { useEffect, useState } from "react";
 const useFetch = (url: string) => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [isError, setIsError] = useState(null);
+  const [isError, setIsError] = useState<null | Error>(null);
 
   useEffect(() => {
     const fetchData = async () => {
-      setIsError(null); 
+      setIsError(null);
       try {
         const response = await fetch(url);
         if (!response.ok) {
-          throw new Error('Произошла ошибка!');
+          throw new Error("Произошла ошибка!");
         }
         const result = await response.json();
         setData(result);
       } catch (error) {
-        setIsError(error);
+        if (error instanceof Error) {
+          setIsError(error);
+        }
       } finally {
         setIsLoading(false);
       }

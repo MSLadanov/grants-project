@@ -3,6 +3,7 @@ import { NavLink } from "react-router";
 import backwardArrow from "@/assets/backward-arrow.svg";
 import backwardArrowWhite from '@/assets/backward-white.svg'
 import "./style.scss";
+import React from "react";
 
 const BackwardButton = (): ReactElement => {
   return (

@@ -1,6 +1,7 @@
 import { ReactElement } from "react";
 import dateFormatter from "@/utils/dateFormatter";
 import "./style.scss";
+import React from "react";
 
 const GrandCardInfo = ({
   grantor,

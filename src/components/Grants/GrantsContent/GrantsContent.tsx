@@ -9,10 +9,11 @@ import GrantsContext from "@/contexts/GrantsContext";
 import useFilters from "@/hooks/useFilters";
 import { TGrants } from "@/types/types";
 import GrantsMobileFilter from "../GrantsMobileFilter/GrantsMobileFilter";
+import React from "react";
 
 dayjs.extend(isBetween);
 
-const GrantsContent = ({ grants } : { grants : TGrants }) => {
+const GrantsContent = ({ grants }: { grants: TGrants }) => {
   const { toggleModal, Modal } = useModal(<GrantsMobileFilter />);
   const [grantsList] = useState(grants);
   const [filteredGrantsList, setFilteredGrantsList] = useState(grants);
@@ -31,7 +32,7 @@ const GrantsContent = ({ grants } : { grants : TGrants }) => {
     matchesDateRange,
     matchesSearchQuery,
   } = useFilters(directionsList, amount, dateRange, searchQuery);
-  const handleSearchChange = (e) => {
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
   };
 

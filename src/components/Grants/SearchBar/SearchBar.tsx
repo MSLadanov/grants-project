@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import "./style.scss";
 import search from "@/assets/search.svg";
 import clear from "@/assets/clear.svg";
+import React from "react";
 
 const SearchBar = ({
   searchGrants,

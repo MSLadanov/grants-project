@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import './style.scss'
+import React from "react";
 
 const Requirements = ({ requirements }): ReactElement => {
   return (

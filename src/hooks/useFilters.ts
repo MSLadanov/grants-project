@@ -1,14 +1,17 @@
+import { TGrant } from "@/types/types";
 import dayjs from "dayjs";
+import isBetween from "dayjs/plugin/isBetween";
+dayjs.extend(isBetween);
 
-const useFilters = (directionsList, amount, dateRange, searchQuery) => {
-  const matchesDirection = (grant) => directionsList.includes(grant.direction);
-  const matchesAmount = (grant) => {
+const useFilters = (directionsList: string[], amount: string | null, dateRange: [Date | null, Date | null], searchQuery: string) => {
+  const matchesDirection = (grant : TGrant) => directionsList.includes(grant.direction);
+  const matchesAmount = (grant : TGrant) => {
     if (amount === null) return true;
     const grantAmount = +grant.amount.split(" ")[1];
     const selectedAmount = +amount.split(" ")[1];
     return grantAmount <= selectedAmount;
   };
-  const matchesDateRange = (grant) => {
+  const matchesDateRange = (grant : TGrant) => {
     if (!dateRange.every((date) => date !== null)) return true;
     return dayjs(grant.application_period.start).isBetween(
       dayjs(dateRange[0]),
@@ -17,7 +20,7 @@ const useFilters = (directionsList, amount, dateRange, searchQuery) => {
       "[]"
     );
   };
-  const matchesSearchQuery = (grant) => {
+  const matchesSearchQuery = (grant : TGrant) => {
     return Object.values(grant).some(
       (value) =>
         typeof value === "string" &&

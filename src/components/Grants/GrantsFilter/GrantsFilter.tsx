@@ -3,6 +3,7 @@ import "./style.scss";
 import CustomDatePicker from "../CustomDatePicker/CustomDatePicker";
 import { DateInput } from "@mantine/dates";
 import GrantsContext from "@/contexts/GrantsContext";
+import React from "react";
 
 const GrantsFilter = (): ReactElement => {
   const {

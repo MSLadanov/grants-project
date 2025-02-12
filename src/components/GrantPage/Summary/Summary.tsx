@@ -5,6 +5,7 @@ import sectionsClose from "@/assets/sections-close.svg";
 import "./style.scss";
 import useModal from "@/hooks/useModal";
 import MobileSectionMenu from "../MobileSectionMenu/MobileSectionMenu";
+import React from "react";
 
 const Summary = ({ applicationPeriod, dueDate, amount }): ReactElement => {
   const { toggleModal, Modal, openModal, closeModal } = useModal(

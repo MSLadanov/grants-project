@@ -8,7 +8,7 @@ const GrantsContext  = createContext<GrantsContextType>({
   directionsList: [],
   setDirectionsList: (dirs : string[]) => {},
   setAmount: (amount : string | null) => {},
-  dateRange: null,
+  dateRange: [null, null],
   setDateRange: (dates : [Date | null, Date | null]) => {},
   grantsList: [],
   searchGrants: () => {},

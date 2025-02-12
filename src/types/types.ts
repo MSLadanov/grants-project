@@ -13,6 +13,10 @@ export type TGrant = {
   due_date: string;
 };
 
+export type TGrantsData = {
+  grants: TGrant;
+};
+
 export type TGrants = TGrant[];
 
 export interface GrantsContextType {
@@ -22,9 +26,9 @@ export interface GrantsContextType {
   directionsList: string[];
   setDirectionsList: (dirs: string[]) => void;
   setAmount: (amount: string | null) => void;
-  dateRange: [Date | null, Date | null] | null;
+  dateRange: [Date | null, Date | null];
   setDateRange: (dates: [Date | null, Date | null]) => void;
-  grantsList: TGrant[]; 
+  grantsList: TGrant[];
   searchGrants: () => void;
   handleSearchChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   clearSearchQuery: () => void;

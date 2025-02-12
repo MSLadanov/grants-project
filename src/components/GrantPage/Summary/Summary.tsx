@@ -7,7 +7,15 @@ import useModal from "@/hooks/useModal";
 import MobileSectionMenu from "../MobileSectionMenu/MobileSectionMenu";
 import React from "react";
 
-const Summary = ({ applicationPeriod, dueDate, amount }): ReactElement => {
+const Summary = ({
+  applicationPeriod,
+  dueDate,
+  amount,
+}: {
+  applicationPeriod: { start: string; end: string };
+  dueDate: string;
+  amount: string;
+}): ReactElement => {
   const { toggleModal, Modal, openModal, closeModal } = useModal(
     <MobileSectionMenu />
   );

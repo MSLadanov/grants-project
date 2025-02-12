@@ -4,7 +4,13 @@ import { ReactElement } from "react";
 import "./style.scss";
 import React from "react";
 
-const CustomDatePicker = ({ dateRange, setDateRange }): ReactElement => {
+const CustomDatePicker = ({
+  dateRange,
+  setDateRange,
+}: {
+  dateRange: [Date | null, Date | null];
+  setDateRange: () => void;
+}): ReactElement => {
   return (
     <DatePicker
       type="range"

@@ -7,6 +7,10 @@ const GrandCardInfo = ({
   grantor,
   application_period,
   amount,
+}: {
+  grantor: string;
+  application_period: { start: string; end: string };
+  amount: string;
 }): ReactElement => {
   return (
     <div className="grant-card-info">

@@ -1,5 +1,7 @@
 {  
   "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": ".",
     "module": "ES2020",
     "jsx": "react-jsx",
     "downlevelIteration": true,

@@ -1,6 +1,7 @@
 {
   "name": "grants-project",
   "version": "0.1.0",
+  "homepage": "https://msladanov.github.io/grants-project/",
   "private": true,
   "dependencies": {
     "@mantine/core": "^7.16.1",

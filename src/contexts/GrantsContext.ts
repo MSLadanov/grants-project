@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { GrantsContextType } from "@/types/types";
+import { GrantsContextType } from "../types/types";
 
 const GrantsContext  = createContext<GrantsContextType>({
   directions: [],

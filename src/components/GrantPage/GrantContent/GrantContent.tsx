@@ -3,7 +3,7 @@ import BackwardButton from "../BackwardButton/BackwardButton";
 import GrantDescription from "../GrantDescription/GrantDescription";
 import SectionMenu from "../SectionMenu/SectionMenu";
 import './style.scss'
-import { TGrant } from "@/types/types";
+import { TGrant } from "../../../types/types";
 import React from "react";
 
 const GrantContent = ({ grantData } : {grantData : TGrant}): ReactElement => {

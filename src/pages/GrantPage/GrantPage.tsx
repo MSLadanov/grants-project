@@ -1,8 +1,8 @@
-import ErrorComponent from "@/components/ErrorComponent/Error";
-import GrantContent from "@/components/GrantPage/GrantContent/GrantContent";
-import GrantHeader from "@/components/GrantPage/GrantHeader/GrantHeader";
-import Loader from "@/components/Loader/Loader";
-import { TGrant } from "@/types/types";
+import ErrorComponent from "../../components/ErrorComponent/Error";
+import GrantContent from "../../components/GrantPage/GrantContent/GrantContent";
+import GrantHeader from "../../components/GrantPage/GrantHeader/GrantHeader";
+import Loader from "../../components/Loader/Loader";
+import { TGrant } from "../../types/types";
 import { ReactElement, useEffect, useState } from "react";
 import { useOutletContext } from "react-router";
 

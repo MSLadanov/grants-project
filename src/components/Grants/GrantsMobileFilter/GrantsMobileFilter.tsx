@@ -1,7 +1,7 @@
 import React, { forwardRef, useContext } from "react";
 import "./style.scss";
 import { DateInput } from "@mantine/dates";
-import GrantsContext from "@/contexts/GrantsContext";
+import GrantsContext from "../../../contexts/GrantsContext";
 import dayjs from "dayjs";
 
 const GrantsMobileFilter = forwardRef<

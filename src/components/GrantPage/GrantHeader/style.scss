@@ -2,7 +2,7 @@
 
 .grant-header {
   display: flex;
-  background: url("/src/assets/grants-header-desktop.svg");
+  background: url("../../../assets/grants-header-desktop.svg");
   background-size: cover;
   background-repeat: no-repeat;
   color: #ffffff;
@@ -87,14 +87,14 @@
   @include media-mobile-landscape {
     height: 255px;
     flex-direction: column;
-    background: url("/src/assets/grants-header-ml.svg");
+    background: url("../../../assets/grants-header-ml.svg");
   }
 
   @include media-mobile-portrait {
     justify-content: space-evenly;
     flex-direction: column;
     height: 443px;
-    background: url("/src/assets/grants-header-mp.svg");
+    background: url("../../../assets/grants-header-mp.svg");
   }
 }
 .grant-header-title {

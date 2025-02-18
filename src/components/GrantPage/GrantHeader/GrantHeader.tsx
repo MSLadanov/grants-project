@@ -3,7 +3,7 @@ import "./style.scss";
 import { NavLink } from "react-router";
 import BackwardButton from "../BackwardButton/BackwardButton";
 import React from "react";
-import { TGrant } from "@/types/types";
+import { TGrant } from "../../../types/types";
 
 const GrantHeader = ({ grantData } : {grantData : TGrant}): ReactElement => {
   return (

@@ -3,7 +3,7 @@
 .grant-card-info {
   width: 30%;
   border-radius: 46px;
-  background: url("/src/assets/card-info.svg");
+  background: url("../../../assets/card-info.svg");
   padding: 15px;
   @include media-tablet-landscape {
     border-radius: 20px;

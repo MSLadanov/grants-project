@@ -1,6 +1,6 @@
 import { ReactElement, useContext } from "react";
 import "./style.scss";
-import GrantsContext from "@/contexts/GrantsContext";
+import GrantsContext from "../../../contexts/GrantsContext";
 import React from "react";
 
 const GrantsMobileMenu = ({

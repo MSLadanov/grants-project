@@ -1,4 +1,4 @@
-import { TGrant } from "@/types/types";
+import { TGrant } from "../types/types";
 import dayjs from "dayjs";
 import isBetween from "dayjs/plugin/isBetween";
 dayjs.extend(isBetween);

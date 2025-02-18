@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import dateFormatter from "@/utils/dateFormatter";
+import dateFormatter from "../../../utils/dateFormatter";
 import "./style.scss";
 import React from "react";
 

@@ -87,7 +87,7 @@
       }
     }
     .direction input[type="checkbox"]:checked::after {
-      background: url("/src/assets/check.svg");
+      background: url("../../../assets/check.svg");
       background-size: contain;
     }
     .amount {

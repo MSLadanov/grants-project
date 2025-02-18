@@ -2,7 +2,7 @@
 
 .grants-header {
   display: flex;
-  background: url("/src/assets/grants-header-desktop.svg");
+  background: url("../../../assets/grants-header-desktop.svg");
   background-size: cover;
   background-repeat: no-repeat;
   color: #ffffff;
@@ -53,13 +53,13 @@
 
   @include media-mobile-landscape {
     height: 255px;
-    background: url("/src/assets/grants-header-ml.svg");
+    background: url("../../../assets/grants-header-ml.svg");
   }
 
   @include media-mobile-portrait {
     flex-direction: column;
     height: 443px;
-    background: url("/src/assets/grants-header-mp.svg");
+    background: url("../../../assets/grants-header-mp.svg");
   }
 }
 .grants-header-left {

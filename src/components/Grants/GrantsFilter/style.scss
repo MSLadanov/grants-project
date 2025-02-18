@@ -195,7 +195,7 @@
     }
   }
   .direction input[type="checkbox"]:checked::after {
-    background: url("/src/assets/check.svg");
+    background: url("../../../assets/check.svg");
     background-size: contain;
   }
   .amount {
@@ -425,12 +425,12 @@
       height: 24px;
       width: 24px;
     }
-    background: url("/src/assets/calendar.svg");
+    background: url("../../../assets/calendar.svg");
     background-size: contain;
     position: absolute;
     cursor: pointer;
     &.active {
-      background: url("/src/assets/calendar-active.svg");
+      background: url("../../../assets/calendar-active.svg");
       background-size: contain;
     }
   }

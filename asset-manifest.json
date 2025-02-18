@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/grants-project/static/css/main.ca441f45.css",
-    "main.js": "/grants-project/static/js/main.0ed13ce2.js",
+    "main.js": "/grants-project/static/js/main.18461dd5.js",
     "static/media/card-info.svg": "/grants-project/static/media/card-info.9b658491d09a1bac3f72.svg",
     "static/media/sponsors.svg": "/grants-project/static/media/sponsors.04c7c0fba31ef02b56f1def7e0d71e99.svg",
     "static/media/Montserrat-SemiBold.ttf": "/grants-project/static/media/Montserrat-SemiBold.38e62f01be69b2e02e29.ttf",
@@ -22,10 +22,10 @@
     "static/media/clear.svg": "/grants-project/static/media/clear.6b44901a9a3838ca9207b81d11b0dae3.svg",
     "index.html": "/grants-project/index.html",
     "main.ca441f45.css.map": "/grants-project/static/css/main.ca441f45.css.map",
-    "main.0ed13ce2.js.map": "/grants-project/static/js/main.0ed13ce2.js.map"
+    "main.18461dd5.js.map": "/grants-project/static/js/main.18461dd5.js.map"
   },
   "entrypoints": [
     "static/css/main.ca441f45.css",
-    "static/js/main.0ed13ce2.js"
+    "static/js/main.18461dd5.js"
   ]
 }

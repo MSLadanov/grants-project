@@ -2,6 +2,7 @@
   "name": "grants-project",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@mantine/core": "^7.16.1",
     "@mantine/dates": "^7.16.1",

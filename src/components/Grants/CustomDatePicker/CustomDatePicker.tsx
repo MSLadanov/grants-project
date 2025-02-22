@@ -1,16 +1,15 @@
 import { DatePicker } from "@mantine/dates";
 import "dayjs/locale/ru";
-import { ReactElement } from "react";
+import { ReactElement, useContext } from "react";
 import "./style.scss";
 import React from "react";
+import GrantsContext from "../../../contexts/GrantsContext";
 
-const CustomDatePicker = ({
-  dateRange,
-  setDateRange,
-}: {
-  dateRange: [Date | null, Date | null];
-  setDateRange: () => void;
-}): ReactElement => {
+const CustomDatePicker = (): ReactElement => {
+  const {
+    dateRange,
+    setDateRange,
+  } = useContext(GrantsContext);
   return (
     <DatePicker
       type="range"

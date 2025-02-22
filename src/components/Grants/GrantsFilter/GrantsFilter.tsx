@@ -90,6 +90,7 @@ const GrantsFilter = (): ReactElement => {
               placeholder="23/10/2023"
               value={dateRange[0] || null}
               onChange={(date) => setDateRange([date, dateRange[1]])}
+              disabled
             />
             <div
               className={"filter-date-icon" + (dateRange[0] ? " active" : "")}
@@ -102,6 +103,7 @@ const GrantsFilter = (): ReactElement => {
               label="Конец периода"
               placeholder="01/12/2023"
               value={dateRange[1] || null}
+              disabled
               onChange={(date) => setDateRange([dateRange[0], date])}
             />
             <div

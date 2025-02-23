@@ -5,7 +5,7 @@ import React from "react";
 const NoGrantsComponent = () : ReactElement=> {
   return (
     <div className="no-grants">
-      <h1>Нет грантов!</h1>
+      <h3>Нет грантов по данному поисковому запросу!</h3>
     </div>
   );
 };

@@ -31,18 +31,10 @@ const useFilters = (
       "[]"
     );
   };
-  const matchesSearchQuery = (grant: TGrant) => {
-    return Object.values(grant).some(
-      (value) =>
-        typeof value === "string" &&
-        value.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-  };
   return {
     matchesDirection,
     matchesAmount,
     matchesDateRange,
-    matchesSearchQuery,
   };
 };
 

@@ -28,25 +28,25 @@ const GrantsContent = ({ grants }: { grants: TGrants }) => {
     null,
   ]);
   const [searchQuery, setSearchQuery] = useState("");
-  const {
-    matchesDirection,
-    matchesAmount,
-    matchesDateRange,
-    matchesSearchQuery,
-  } = useFilters(directionsList, amount, dateRange, searchQuery);
+  const { matchesDirection, matchesAmount, matchesDateRange } = useFilters(
+    directionsList,
+    amount,
+    dateRange,
+    searchQuery
+  );
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
   };
 
   const searchGrants = () => {
-    const searchedGrantsList = grantsList.filter((grant) => {
+    const searchedGrants = grantsList.filter((grant) => {
       return Object.values(grant).some(
         (value) =>
           typeof value === "string" &&
           value.toLowerCase().includes(searchQuery.toLowerCase())
       );
     });
-    setFilteredGrantsList(searchedGrantsList);
+    setSearchedGrantsList(searchedGrants);
   };
 
   const filterGrants = () => {
@@ -54,8 +54,7 @@ const GrantsContent = ({ grants }: { grants: TGrants }) => {
       return (
         matchesDirection(grant) &&
         matchesAmount(grant) &&
-        matchesDateRange(grant) &&
-        matchesSearchQuery(grant)
+        matchesDateRange(grant)
       );
     });
     setFilteredGrantsList(filteredGrants);
@@ -68,8 +67,10 @@ const GrantsContent = ({ grants }: { grants: TGrants }) => {
 
   useEffect(() => {
     filterGrants();
-  }, [directionsList, grantsList, amount, dateRange, searchQuery]);
-
+  }, [directionsList, grantsList, amount, dateRange]);
+  useEffect(() => {
+    searchGrants();
+  }, [searchQuery]);
   return (
     <GrantsContext.Provider
       value={{
@@ -81,7 +82,8 @@ const GrantsContent = ({ grants }: { grants: TGrants }) => {
         setAmount,
         dateRange,
         setDateRange,
-        grantsList: filteredGrantsList,
+        grantsList:
+          searchQuery === "" ? filteredGrantsList : searchedGrantsList,
         searchGrants,
         handleSearchChange,
         clearSearchQuery,

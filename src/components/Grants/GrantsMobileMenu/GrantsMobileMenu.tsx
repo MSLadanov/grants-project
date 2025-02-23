@@ -8,10 +8,10 @@ const GrantsMobileMenu = ({
 }: {
   toggleModal: () => void;
 }): ReactElement => {
-  const { directions, setDirectionsList, setAmount, setDateRange } =
+  const { setDirectionsList, setAmount, setDateRange } =
     useContext(GrantsContext);
   const handleReset = () => {
-    setDirectionsList(directions);
+    setDirectionsList([]);
     setAmount(null);
     setDateRange([null, null]);
   };

@@ -33,7 +33,7 @@ const GrantsFilter = (): ReactElement => {
   };
 
   const handleReset = () => {
-    setDirectionsList(directions);
+    setDirectionsList([]);
     setAmount(null);
     setDateRange([null, null]);
   };

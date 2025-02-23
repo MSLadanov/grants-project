@@ -17,9 +17,11 @@ const GrantsContent = ({ grants }: { grants: TGrants }) => {
   const { toggleModal, Modal } = useModal(<GrantsMobileFilter />);
   const [grantsList] = useState(grants);
   const [filteredGrantsList, setFilteredGrantsList] = useState(grants);
-  const [directionsList, setDirectionsList] = useState([
-    ...new Set(grantsList.map((item) => item.direction)),
-  ]);
+  const [searchedGrantsList, setSearchedGrantsList] = useState(grants);
+  // const [directionsList, setDirectionsList] = useState([
+  //   ...new Set(grantsList.map((item) => item.direction)),
+  // ]);
+  const [directionsList, setDirectionsList] = useState<string[]>([]);
   const [amount, setAmount] = useState<null | string>(null);
   const [dateRange, setDateRange] = useState<[Date | null, Date | null]>([
     null,

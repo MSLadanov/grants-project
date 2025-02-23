@@ -4,7 +4,7 @@ import React from "react";
 
 const NoGrantsComponent = () : ReactElement=> {
   return (
-    <div>
+    <div className="no-grants">
       <h1>Нет грантов!</h1>
     </div>
   );

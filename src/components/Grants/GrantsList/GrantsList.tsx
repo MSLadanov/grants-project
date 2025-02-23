@@ -25,7 +25,7 @@ const GrantsList = (): ReactElement => {
   const paginatedGrants = grantsList.slice(firstPageIndex, lastPageIndex);
   if (grantsList.length === 0) {
     return (
-      <div>
+      <div className="grants-list">
         <SearchBar
           searchGrants={searchGrants}
           handleSearchChange={handleSearchChange}

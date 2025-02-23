@@ -6,11 +6,11 @@
   button {
     font-size: 21px;
     @include media-tablet-landscape {
-        font-size: 10px;
+      font-size: 10px;
     }
 
     @include media-tablet-portrait {
-        font-size: 10px;
+      font-size: 10px;
     }
 
     @include media-mobile-landscape {
@@ -54,29 +54,53 @@
   margin-top: 10%;
 }
 
-.mantine-DatePicker-month{
+.mantine-DatePicker-month {
   width: 100%;
 }
 
-.mantine-DatePicker-monthCell button{
+.mantine-DatePicker-monthsList {
+  width: 100%;
+}
+
+.mantine-DatePicker-yearsList{
+  width: 100%;
+}
+
+.mantine-DatePicker-yearsListCell {
+  text-align: center;
+  button {
+    border: none;
+    background: transparent;
+  }
+}
+
+.mantine-DatePicker-monthsListCell {
+  text-align: center;
+  button {
+    border: none;
+    background: transparent;
+  }
+}
+
+.mantine-DatePicker-monthCell button {
   border: none;
   background: transparent;
 }
 
 .mantine-DatePicker-month * {
-    color: #6E7880;
-    font-size: 16px;
-    @include media-tablet-landscape {
-        font-size: 10px;
-    }
+  color: #6e7880;
+  font-size: 16px;
+  @include media-tablet-landscape {
+    font-size: 10px;
+  }
 
-    @include media-tablet-portrait {
-        font-size: 10px;
-    }
+  @include media-tablet-portrait {
+    font-size: 10px;
+  }
 
-    @include media-mobile-landscape {
-    }
+  @include media-mobile-landscape {
+  }
 
-    @include media-mobile-portrait {
-    }
+  @include media-mobile-portrait {
+  }
 }

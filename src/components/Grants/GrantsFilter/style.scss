@@ -31,6 +31,8 @@
   align-items: center;
   height: 50px;
   width: 50%;
+  background-color: #ecf7fd;
+  border-bottom-right-radius: 30px;
   h3 {
     position: relative;
     left: 10px;
@@ -39,25 +41,35 @@
 }
 
 .grant-filter-divisor {
-  width: 5px;
-  border-bottom: 50px solid white;
+  width: 0px;
+  border-bottom: 50px solid #ffffff;
   border-left: 40px solid transparent;
   border-right: 40px solid transparent;
   transform: rotate(135deg);
   position: relative;
-  top: 14px;
-  left: 29px;
-  border-bottom-left-radius: 20px;
+  top: 34px;
+  left: 34px;
+  border-bottom-left-radius: 0px;
+  &::after {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: "";
+    min-height: 10px;
+    min-width: 10px;
+    background-color: red;
+  }
 }
 
 .filter-header-reset {
   height: 50px;
   width: 50%;
   border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
   background-color: #ffffff;
   & button {
-    height: 50px;
-    width: 142px;
+    height: 44px;
+    width: 125px;
     border-radius: 100px;
     @include media-tablet-landscape {
       height: 30px;
@@ -83,7 +95,7 @@
     background-color: #ffffff;
     position: relative;
     top: 25%;
-    left: -10%;
+    left: 10%;
   }
 }
 

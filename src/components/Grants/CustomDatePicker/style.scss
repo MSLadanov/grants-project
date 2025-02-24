@@ -14,6 +14,10 @@ div [data-calendar="true"] {
   }
 }
 
+.mantine-Popover-dropdown{
+  display: none;
+}
+
 .mantine-DatePicker-calendarHeader {
   display: flex;
   justify-content: space-between;

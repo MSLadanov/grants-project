@@ -93,6 +93,20 @@
   border-bottom-left-radius: 30px;
   padding: 20px 25px;
   overflow: hidden;
+  @include media-tablet-landscape {
+    padding: 20px 14px;
+  }
+  @include media-tablet-portrait {
+    padding: 20px 14px;
+  }
+
+  @include media-mobile-landscape {
+    padding: 20px 14px;
+  }
+
+  @include media-mobile-portrait {
+    padding: 20px 14px;
+  }
   .direction {
     margin: 15px 0px;
     color: #6e7880;

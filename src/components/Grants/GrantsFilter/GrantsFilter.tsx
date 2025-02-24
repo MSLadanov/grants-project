@@ -42,7 +42,9 @@ const GrantsFilter = (): ReactElement => {
     <div className="filter">
       <div className="filter-header">
         <div className="filter-header-logo">
-          <h3>Фильтр</h3>
+          <div className="filter-header-text">
+            <h3>Фильтр</h3>
+          </div>
         </div>
         {/* <div className="grant-filter-divisor"></div> */}
         <div className="filter-header-reset">
@@ -111,7 +113,7 @@ const GrantsFilter = (): ReactElement => {
             ></div>
           </div>
         </div>
-        <CustomDatePicker/>
+        <CustomDatePicker />
       </div>
     </div>
   );

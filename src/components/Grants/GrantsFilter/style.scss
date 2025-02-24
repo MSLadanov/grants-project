@@ -24,24 +24,22 @@
   align-items: center;
   justify-content: space-between;
   background-color: #ecf7fd;
-}
-
-.filter-header-logo {
-  position: relative;
-  top: 10px;
-  width: 50%;
-  background-color: #ffffff;
-  height: 29px;
-  h3 {
+  .filter-header-text{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
     background-color: #ecf7fd;
-    font-family: "Montsserrat SemiBold";
     border-bottom-right-radius: 30px;
-    height: 35px;
-    position: relative;
+  }
+}
 
+.filter-header-logo {
+  width: 50%;
+  height: 50px;
+  background-color: #ffffff;
+  h3 {
+    font-family: "Montsserrat SemiBold";
   }
 }
 

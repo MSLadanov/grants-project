@@ -31,8 +31,15 @@
   align-items: center;
   height: 50px;
   width: 50%;
-  background-color: #ecf7fd;
   border-bottom-right-radius: 30px;
+  &::after{
+    margin-top: 49px;
+    position: absolute;
+    content: "";
+    min-height: 10px;
+    min-width: 214px;
+    background-color: #ecf7fd;
+  }
   h3 {
     position: relative;
     left: 10px;
@@ -45,25 +52,27 @@
   border-bottom: 50px solid #ffffff;
   border-left: 40px solid transparent;
   border-right: 40px solid transparent;
-  transform: rotate(135deg);
+  transform: rotate(125deg);
   position: relative;
   top: 34px;
-  left: 34px;
+  left: 44px;
   border-bottom-left-radius: 0px;
   &::after {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 49px;
+    left: -47px;
     content: "";
-    min-height: 10px;
-    min-width: 10px;
-    background-color: red;
+    min-height: 17px;
+    min-width: 65px;
+    background-color: #ecf7fd;;
+    /* transform: rotate(55deg); */
+    border-top-right-radius: 87px;
   }
 }
 
 .filter-header-reset {
   height: 50px;
-  width: 50%;
+  width: 75%;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
   background-color: #ffffff;
@@ -95,13 +104,13 @@
     background-color: #ffffff;
     position: relative;
     top: 25%;
-    left: 10%;
+    left: 15%;
   }
 }
 
 .filter-body {
   background-color: #ffffff;
-  border-top-left-radius: 30px;
+  border-top-left-radius: 28px;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
   padding: 20px 25px;

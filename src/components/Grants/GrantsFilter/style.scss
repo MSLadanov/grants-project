@@ -23,27 +23,25 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #ecf7fd;
 }
 
 .filter-header-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
+  position: relative;
+  top: 10px;
   width: 50%;
-  border-bottom-right-radius: 30px;
-  &::after{
-    margin-top: 49px;
-    position: absolute;
-    content: "";
-    min-height: 10px;
-    min-width: 214px;
-    background-color: #ecf7fd;
-  }
+  background-color: #ffffff;
+  height: 29px;
   h3 {
-    position: relative;
-    left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ecf7fd;
     font-family: "Montsserrat SemiBold";
+    border-bottom-right-radius: 30px;
+    height: 35px;
+    position: relative;
+
   }
 }
 
@@ -64,7 +62,7 @@
     content: "";
     min-height: 17px;
     min-width: 65px;
-    background-color: #ecf7fd;;
+    background-color: #ecf7fd;
     /* transform: rotate(55deg); */
     border-top-right-radius: 87px;
   }
@@ -72,7 +70,7 @@
 
 .filter-header-reset {
   height: 50px;
-  width: 75%;
+  width: 50%;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
   background-color: #ffffff;

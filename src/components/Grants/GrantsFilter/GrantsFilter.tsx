@@ -44,7 +44,7 @@ const GrantsFilter = (): ReactElement => {
         <div className="filter-header-logo">
           <h3>Фильтр</h3>
         </div>
-        <div className="grant-filter-divisor"></div>
+        {/* <div className="grant-filter-divisor"></div> */}
         <div className="filter-header-reset">
           <button onClick={handleReset}>Сбросить</button>
         </div>

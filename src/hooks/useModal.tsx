@@ -7,14 +7,18 @@ function useModal(modalContent: ReactElement) {
   const [isModalOpened, setIsModalOpened] = useState(false);
 
   function toggleModal() {
+    console.log('toggle modal')
     setIsModalOpened((prev) => !prev);
+    console.log(isModalOpened)
   }
 
   function openModal(){
-    setIsModalOpened(true)
+    console.log('open modal')
+   setIsModalOpened(true)
   }
 
   function closeModal() {
+    console.log('close modal')
     setIsModalOpened(false);
   }
 

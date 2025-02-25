@@ -68,8 +68,12 @@
   .grant-sections-toggler {
     display: none;
     justify-content: end;
+    background-color: transparent;
     @include media-mobile-landscape {
       display: flex;
+      position: fixed;
+      bottom: 5%;
+      right: 5%;
     }
 
     @include media-mobile-portrait {

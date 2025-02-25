@@ -2,7 +2,7 @@ import { useState, useRef, ReactElement } from "react";
 import { createPortal } from "react-dom";
 import { useClickOutside } from "./useOutsideClick";
 
-function useModal(modalContent: ReactElement) {
+function useModal(modalContent: ReactElement, closingOutside : boolean) {
   const modalRef = useRef(null);
   const [isModalOpened, setIsModalOpened] = useState(false);
 
@@ -37,11 +37,11 @@ function useModal(modalContent: ReactElement) {
       return null;
     }
     return isModalOpened
-      ? createPortal(<div ref={modalRef}>{modalContent}</div>, modalRoot)
+      ? createPortal(<div ref={closingOutside ? modalRef : null}>{modalContent}</div>, modalRoot)
       : null;
   }
 
-  return { toggleModal, Modal, isModalOpened, openModal, closeModal };
+  return { toggleModal, Modal, isModalOpened, openModal, closeModal, setIsModalOpened };
 }
 
 export default useModal;

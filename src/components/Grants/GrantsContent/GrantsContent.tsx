@@ -14,7 +14,7 @@ import React from "react";
 dayjs.extend(isBetween);
 
 const GrantsContent = ({ grants }: { grants: TGrants }) => {
-  const { toggleModal, Modal } = useModal(<GrantsMobileFilter />);
+  const { toggleModal, Modal } = useModal(<GrantsMobileFilter />, true);
   const [grantsList] = useState(grants);
   const [filteredGrantsList, setFilteredGrantsList] = useState(grants);
   const [searchedGrantsList, setSearchedGrantsList] = useState(grants);

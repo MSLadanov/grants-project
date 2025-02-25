@@ -1,4 +1,4 @@
-import { ReactElement, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import dateFormatter from "../../../utils/dateFormatter";
 import sectionsOpen from "../../../assets/sections-open.svg";
 import sectionsClose from "../../../assets/sections-close.svg";
@@ -18,14 +18,16 @@ const Summary = ({
   dueDate,
   amount,
 }: SummaryProps): ReactElement => {
-  const { toggleModal, Modal, openModal, closeModal, isModalOpened } = useModal(
-    <MobileSectionMenu />
-  );
-  const [toggleButton, setToggleButton ] = useState(false)
-  const toggler = () => {
-    console.log(isModalOpened)
-    openModal()
-  }
+  const {
+    Modal,
+    isModalOpened,
+    setIsModalOpened,
+  } = useModal(<MobileSectionMenu />, false);
+  
+  const toggleModal = () => {
+    setIsModalOpened(prev => !prev);
+  };
+
   return (
     <div className="grant-summary">
       <div className="grant-summary-column">
@@ -43,7 +45,6 @@ const Summary = ({
           <p>Срок выполнения гранта:</p>
         </div>
         <div className="grant-summary-cell">
-          {" "}
           <h3>{dueDate}</h3>
         </div>
       </div>
@@ -58,9 +59,7 @@ const Summary = ({
       <div className="grant-sections-toggler">
         <img
           src={isModalOpened ? sectionsClose : sectionsOpen}
-          onClick={() => {
-            toggleModal()
-            console.log(isModalOpened)}}
+          onClick={toggleModal}
           alt=""
         />
       </div>

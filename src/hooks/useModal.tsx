@@ -4,19 +4,23 @@ import { useClickOutside } from "./useOutsideClick";
 
 function useModal(modalContent: ReactElement) {
   const modalRef = useRef(null);
-  const [openModal, setOpenModal] = useState(false);
+  const [isModalOpened, setIsModalOpened] = useState(false);
 
   function toggleModal() {
-    setOpenModal((prev) => !prev);
+    setIsModalOpened((prev) => !prev);
+  }
+
+  function openModal(){
+    setIsModalOpened(true)
   }
 
   function closeModal() {
-    setOpenModal(false);
+    setIsModalOpened(false);
   }
 
   function handleOutSideClick() {
-    if (openModal) {
-      setOpenModal(false);
+    if (isModalOpened) {
+      setIsModalOpened(false);
     }
   }
 
@@ -28,12 +32,12 @@ function useModal(modalContent: ReactElement) {
       console.error("Модальное окно не обнаружено");
       return null;
     }
-    return openModal
+    return isModalOpened
       ? createPortal(<div ref={modalRef}>{modalContent}</div>, modalRoot)
       : null;
   }
 
-  return { toggleModal, Modal, openModal, closeModal };
+  return { toggleModal, Modal, isModalOpened, openModal, closeModal };
 }
 
 export default useModal;

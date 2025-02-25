@@ -16,7 +16,7 @@ const Summary = ({
   dueDate: string;
   amount: string;
 }): ReactElement => {
-  const { toggleModal, Modal, openModal, closeModal } = useModal(
+  const { Modal, isModalOpened, openModal, closeModal } = useModal(
     <MobileSectionMenu />
   );
   return (
@@ -49,23 +49,17 @@ const Summary = ({
         </div>
       </div>
       <div className="grant-sections-toggler">
-        {openModal ? (
-          <img
-            src={sectionsClose}
-            onClick={() => {
-              closeModal();
-            }}
-            alt=""
-          />
-        ) : (
-          <img
-            src={sectionsOpen}
-            onClick={() => {
-              toggleModal();
-            }}
-            alt=""
-          />
-        )}
+        <img
+          src={isModalOpened ? sectionsClose : sectionsOpen}
+          onClick={() => {
+            if (!isModalOpened) {
+              openModal()
+            } else {
+              closeModal()
+            }
+          }}
+          alt=""
+        />
       </div>
       <Modal />
     </div>

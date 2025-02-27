@@ -29,7 +29,8 @@ body{
 #shadow-box{
   height: 100vh;
   width: 100vw;
-  position: absolute;
+  position: fixed;
   top: 0px;
+  left: 0px;
   background-color: rgba(0,0,0,0.25);
 }

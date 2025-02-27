@@ -27,10 +27,17 @@ body{
 }
 
 #shadow-box{
+  display: none;
   height: 100vh;
   width: 100vw;
   position: fixed;
   top: 0px;
   left: 0px;
-  background-color: rgba(0,0,0,0.25);
+  background-color: transparent;
+}
+
+.toggled-shadow-box{
+  transition: transform 4s;
+  display: block !important;
+  background-color: rgba(0,0,0,0.25) !important;
 }

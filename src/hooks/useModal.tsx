@@ -5,19 +5,24 @@ import { useClickOutside } from "./useOutsideClick";
 function useModal(modalContent: ReactElement, closingOutside: boolean) {
   const modalRef = useRef(null);
   const [isModalOpened, setIsModalOpened] = useState(false);
-  const shadowBox = document.getElementById('shadow-box')
+  const shadowBox = document.getElementById("shadow-box");
+
+  function toggleShadowBox() {
+    if (shadowBox) {
+      shadowBox.classList.toggle("toggled-shadow-box");
+    }
+  }
+
   function toggleModal() {
     setIsModalOpened((prev) => !prev);
-    if(shadowBox){
-      shadowBox.classList.toggle('toggled-shadow-box')
-    }
+    toggleShadowBox();
   }
 
   function handleOutSideClick() {
     if (isModalOpened) {
       setIsModalOpened(false);
-      if(shadowBox){
-        shadowBox.classList.remove('toggled-shadow-box')
+      if (shadowBox) {
+        shadowBox.classList.remove("toggled-shadow-box");
       }
     }
   }
@@ -42,6 +47,7 @@ function useModal(modalContent: ReactElement, closingOutside: boolean) {
     toggleModal,
     Modal,
     isModalOpened,
+    toggleShadowBox,
     setIsModalOpened,
   };
 }

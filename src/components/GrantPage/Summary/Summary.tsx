@@ -22,6 +22,7 @@ const Summary = ({
     Modal,
     isModalOpened,
     setIsModalOpened,
+    toggleShadowBox
   } = useModal(<MobileSectionMenu />, false);
   
   const toggleModal = () => {
@@ -59,7 +60,11 @@ const Summary = ({
       <div className="grant-sections-toggler">
         <img
           src={isModalOpened ? sectionsClose : sectionsOpen}
-          onClick={toggleModal}
+          onClick={() => {
+            toggleModal()
+            toggleShadowBox()
+          }
+          }
           alt=""
         />
       </div>

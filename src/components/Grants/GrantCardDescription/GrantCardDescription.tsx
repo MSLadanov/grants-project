@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import { NavLink } from "react-router";
+import descriptionFormatter from "../../../utils/descriptionFormatter";
 import "./style.scss";
 import React from "react";
 
@@ -14,13 +15,14 @@ const GrandCardDescription = ({
 }): ReactElement => {
   return (
     <div className="grant-card-description">
-      <div>
+      <div className="description-text">
         <div>
           <h3>{title}</h3>
         </div>
         <div>
-          <p>{description}</p>
+          <p>{descriptionFormatter(description, 200)}</p>
         </div>
+        <div className="description-blur"></div>
       </div>
       <div>
         <NavLink to={`/grants/${id}`}>Подробнее о программе</NavLink>

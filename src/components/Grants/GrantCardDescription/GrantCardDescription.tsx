@@ -25,6 +25,7 @@ const GrandCardDescription = ({
         <div className="description-blur"></div>
       </div>
       <div>
+        <hr />
         <NavLink to={`/grants/${id}`}>Подробнее о программе</NavLink>
       </div>
     </div>

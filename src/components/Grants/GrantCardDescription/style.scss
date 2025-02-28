@@ -41,13 +41,19 @@
     position: relative;
     bottom: 25%;
     height: 25%;
-
     background: rgb(255, 255, 255);
     background: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0) 0%,
       rgba(255, 255, 255, 0.8785889355742297) 50%
     );
+  }
+  hr{
+    padding: 0;
+    height: 0;
+    border: none;
+    border-top: 1px solid #e6e6e6;
+    margin: 15px -19px;
   }
   h3 {
     font-size: 38px;

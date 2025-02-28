@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import './style.scss'
+import "./style.scss";
 import React from "react";
 
 const Sections = (): ReactElement => {
@@ -8,9 +8,13 @@ const Sections = (): ReactElement => {
       <ol>
         <li>
           <a href="#summary">Краткая информация</a>
-          Краткая информация</li>
-        <li>Основные сведения о гранте</li>
-        <li>Требования для участия</li>
+        </li>
+        <li>
+          <a href="#main-info">Основные сведения о гранте</a>
+        </li>
+        <li>
+          <a href="#requirements">Требования для участия</a>
+        </li>
       </ol>
     </div>
   );

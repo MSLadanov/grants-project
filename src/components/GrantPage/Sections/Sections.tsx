@@ -6,7 +6,9 @@ const Sections = (): ReactElement => {
   return (
     <div className="grantpage-sections-list">
       <ol>
-        <li>Краткая информация</li>
+        <li>
+          <a href="#summary">Краткая информация</a>
+          Краткая информация</li>
         <li>Основные сведения о гранте</li>
         <li>Требования для участия</li>
       </ol>

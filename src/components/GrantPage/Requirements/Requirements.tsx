@@ -4,7 +4,7 @@ import React from "react";
 
 const Requirements = ({ requirements } : { requirements : string}): ReactElement => {
   return (
-    <div className="grant-requirements">
+    <div className="grant-requirements" id="requirements">
       <p>{requirements}</p>
     </div>
   );

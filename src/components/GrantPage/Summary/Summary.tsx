@@ -30,7 +30,7 @@ const Summary = ({
   };
 
   return (
-    <div className="grant-summary">
+    <div className="grant-summary" id="summary">
       <div className="grant-summary-column">
         <div className="grant-summary-cell">
           <p>Статус конкурса:</p>

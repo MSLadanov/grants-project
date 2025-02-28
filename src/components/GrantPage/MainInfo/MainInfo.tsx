@@ -4,7 +4,7 @@ import React from "react";
 
 const MainInfo = ({ description } : { description : string}): ReactElement => {
   return (
-    <div className="grant-maininfo">
+    <div className="grant-maininfo" id="main-info">
       <p>{description}</p>
     </div>
   );

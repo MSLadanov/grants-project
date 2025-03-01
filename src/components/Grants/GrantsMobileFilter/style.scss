@@ -16,6 +16,10 @@
   }
   .filter-date-group label{
     width: 100%;
+    @include media-mobile-portrait {
+      font-size: 14px;
+      top: 0px;
+    }
   }
   .filter-body {
     background-color: #ffffff;
@@ -158,6 +162,9 @@
 
     h4 {
       font-family: "Montsserrat SemiBold";
+      &:nth-child(3){
+        margin: 15px 0px 15px 0px;
+      }
       @include media-mobile-landscape {
         margin: 10px 0px;
         font-size: 16px;

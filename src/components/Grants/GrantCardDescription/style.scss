@@ -53,7 +53,7 @@
     height: 0;
     border: none;
     border-top: 1px solid #e6e6e675;
-    margin: 15px -19px;
+    margin: 60px -19px 20px -19px;
   }
   h3 {
     font-family: "Montsserrat SemiBold";
@@ -90,6 +90,7 @@
     border-radius: 19px;
     height: 68px;
     font-size: 24px;
+    font-family: 'Open Sans Light';
     @include media-tablet-landscape {
       border-radius: 4px;
       height: 36px;

@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import sponsors from '../../../assets/sponsors.svg'
+import sponsors from '../../../assets/sponsors.png'
 import "./style.scss";
 import React from "react";
 

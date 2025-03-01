@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: #ecf7fd;
-  .filter-header-text{
+  .filter-header-text {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,27 +73,34 @@
   border-top-left-radius: 30px;
   background-color: #ffffff;
   & button {
-    height: 44px;
-    width: 125px;
+    font-family: "Open Sans Regular";
+    font-size: 21px;
+    height: 50px;
+    width: 142px;
+    color:#6E7880;
     border-radius: 100px;
     @include media-tablet-landscape {
       height: 30px;
       width: 87px;
+      font-size: 12px;
     }
 
     @include media-tablet-portrait {
       height: 30px;
       width: 87px;
+      font-size: 12px;
     }
 
     @include media-mobile-landscape {
       height: 38px;
       width: 104px;
+      font-size: 16px;
     }
 
     @include media-mobile-portrait {
       height: 38px;
       width: 104px;
+      font-size: 16px;
     }
 
     border: 1px solid #99a7b2;

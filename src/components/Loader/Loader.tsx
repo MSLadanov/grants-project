@@ -1,12 +1,12 @@
-import React from "react";
-import { ReactElement } from "react";
+import React, { ReactElement } from 'react';
+import './style.scss';
 
-const Loader = (): ReactElement => {
-  return (
-    <>
-      <h1>Loading</h1>
-    </>
-  );
+const Loader = () : ReactElement => {
+    return (
+        <div className="loader">
+            <div className="loader-circle"></div>
+        </div>
+    );
 };
 
 export default Loader;

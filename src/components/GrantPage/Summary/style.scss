@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   border-radius: 35px;
-  padding: 24px;
+  padding: 3%;
   @include media-mobile-landscape {
     flex-direction: column;
   }
@@ -19,20 +19,23 @@
       display: flex;
       height: 50%;
       flex-direction: column;
+      &:first-child{
+        margin-bottom: 10%;
+      }
       @include media-mobile-landscape {
-        margin: 2% 0%;
+        margin: 2% 0% !important;
       }
 
       @include media-mobile-portrait {
-        margin: 2% 0%;
+        margin: 2% 0% !important;
       }
       p {
         @include media-mobile-landscape {
-          margin: 1% 0%;
+          margin: 1% 0% !important;
         }
 
         @include media-mobile-portrait {
-          margin: 1% 0%;
+          margin: 1% 0% !important;
         }
       }
     }

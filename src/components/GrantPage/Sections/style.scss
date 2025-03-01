@@ -41,8 +41,32 @@
     @include media-mobile-portrait {
       font-size: 16px;
     }
-    li{
+    li {
       margin: 7% 0%;
+      a {
+        background-color: transparent;
+        display: block;
+        color: #000000;
+        font-size: 24px;
+        height: auto;
+        width: 100%;
+        @include media-tablet-landscape {
+          padding-right: 0px;
+          font-size: 14px;
+        }
+
+        @include media-tablet-portrait {
+          font-size: 12px;
+        }
+
+        @include media-mobile-landscape {
+          font-size: 16px;
+        }
+
+        @include media-mobile-portrait {
+          font-size: 16px;
+        }
+      }
     }
   }
 }

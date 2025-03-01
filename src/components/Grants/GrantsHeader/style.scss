@@ -8,7 +8,7 @@
   color: #ffffff;
   border-radius: 38px;
   padding: 0px 4%;
-  height: 620px;
+  height: 25vw;
   overflow: hidden;
   @include media-tablet-landscape {
     border-radius: 18px;
@@ -26,7 +26,7 @@
     border-radius: 20px;
   }
   h1 {
-    font-size: 84px;
+    font-size: 4vw;
     @include media-tablet-landscape {
       font-size: 38px;
     }

@@ -1,14 +1,18 @@
 {
   "files": {
-    "main.css": "./static/css/main.0a23920e.css",
-    "main.js": "./static/js/main.3fdeaaee.js",
+    "main.css": "./static/css/main.91be5cf7.css",
+    "main.js": "./static/js/main.04e66e3a.js",
+    "static/media/card-info-tablet-landscape.svg": "./static/media/card-info-tablet-landscape.096d7748c5ef10fb8041.svg",
+    "static/media/card-info-tablet-portrait.svg": "./static/media/card-info-tablet-portrait.67e4a36b745037c38ebf.svg",
+    "static/media/card-info-mobile-portrait.svg": "./static/media/card-info-mobile-portrait.4c0d9f2c0ad72dcf3898.svg",
+    "static/media/card-info-mobile-landscape.svg": "./static/media/card-info-mobile-landscape.5cf1ff4a72b4a2c35233.svg",
     "static/media/card-info.svg": "./static/media/card-info.9b658491d09a1bac3f72.svg",
-    "static/media/sponsors.svg": "./static/media/sponsors.04c7c0fba31ef02b56f1def7e0d71e99.svg",
     "static/media/Montserrat-SemiBold.ttf": "./static/media/Montserrat-SemiBold.38e62f01be69b2e02e29.ttf",
     "static/media/Montserrat-Light.ttf": "./static/media/Montserrat-Light.afe0a608093579a47b06.ttf",
     "static/media/grants-header-desktop.svg": "./static/media/grants-header-desktop.40d0732adce8542f6ad6.svg",
     "static/media/grants-header-ml.svg": "./static/media/grants-header-ml.c6880301fc5bd404f395.svg",
     "static/media/grants-header-mp.svg": "./static/media/grants-header-mp.c9dcc5d61785c117c68b.svg",
+    "static/media/sponsors.png": "./static/media/sponsors.8c911942e0cdd2cab48e.png",
     "static/media/OpenSans-Regular.ttf": "./static/media/OpenSans-Regular.b8cc747a58ffa52b7ff9.ttf",
     "static/media/OpenSans-Light.ttf": "./static/media/OpenSans-Light.9405e3d0d19c1cf91bad.ttf",
     "static/media/sections-open.svg": "./static/media/sections-open.65f8b9ad7278f27bff2056b06b562b52.svg",
@@ -21,11 +25,11 @@
     "static/media/search.svg": "./static/media/search.6bc2df4d0d6a6d6aab846404e1d25efd.svg",
     "static/media/clear.svg": "./static/media/clear.6b44901a9a3838ca9207b81d11b0dae3.svg",
     "index.html": "./index.html",
-    "main.0a23920e.css.map": "./static/css/main.0a23920e.css.map",
-    "main.3fdeaaee.js.map": "./static/js/main.3fdeaaee.js.map"
+    "main.91be5cf7.css.map": "./static/css/main.91be5cf7.css.map",
+    "main.04e66e3a.js.map": "./static/js/main.04e66e3a.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a23920e.css",
-    "static/js/main.3fdeaaee.js"
+    "static/css/main.91be5cf7.css",
+    "static/js/main.04e66e3a.js"
   ]
 }

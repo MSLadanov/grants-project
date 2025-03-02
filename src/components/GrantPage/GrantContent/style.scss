@@ -1,6 +1,22 @@
+@import '/src/variables.scss';
+
 .grantpage-content{
     display: flex;
     margin-top: 2%;
+    @include media-tablet-landscape {
+      margin-top: 3%; 
+    }
+
+    @include media-tablet-portrait {
+      margin-top: 3%; 
+    }
+    @include media-mobile-landscape {
+      margin-top: 5%; 
+    }
+
+    @include media-mobile-portrait {
+      margin-top: 7%; 
+    }
     h1{
       margin-bottom: 20px;
     }

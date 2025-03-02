@@ -4,23 +4,37 @@
   width: 30%;
   border-radius: 46px;
   background: url("../../../assets/card-info.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 15px;
   @include media-tablet-landscape {
+    background: url("../../../assets/card-info-tablet-landscape.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 20px;
     padding: 10px;
   }
 
   @include media-tablet-portrait {
+    background: url("../../../assets/card-info-tablet-portrait.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 20px;
     padding: 10px;
   }
   @include media-mobile-landscape {
+    background: url("../../../assets/card-info-mobile-landscape.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     padding: 0px;
     border-radius: 16px;
   }
 
   @include media-mobile-portrait {
+    background: url("../../../assets/card-info-mobile-portrait.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     padding: 0px;
     border-radius: 16px;
@@ -33,20 +47,23 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 0.1%;
     @include media-tablet-landscape {
       border-radius: 20px;
+      margin: 0.1%;
     }
 
     @include media-tablet-portrait {
       border-radius: 20px;
+      margin: 0.1%;
     }
     @include media-mobile-landscape {
-      margin: 20px;
+      margin: 3%;
       border-radius: 16px;
     }
 
     @include media-mobile-portrait {
-      margin: 20px;
+      margin: 3%;
       border-radius: 16px;
     }
     div {

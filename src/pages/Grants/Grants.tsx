@@ -9,7 +9,7 @@ import { TGrantsData } from "../../types/types";
 
 const Grants = (): ReactElement => {
   const { grantId } = useParams();
-  const { data, isLoading, isError } = useFetch<TGrantsData>("/data.json");
+  const { data, isLoading, isError } = useFetch<TGrantsData>("./data.json");
   if (grantId) {
     return <Outlet context={{ data, isLoading, isError, grantId }} />;
   }

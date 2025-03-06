@@ -2,6 +2,7 @@ import React, { forwardRef, useContext } from "react";
 import "./style.scss";
 import { DateInput } from "@mantine/dates";
 import GrantsContext from "../../../contexts/GrantsContext";
+import { IMaskInput } from "react-imask";
 import dayjs from "dayjs";
 
 const GrantsMobileFilter = forwardRef<
@@ -116,6 +117,7 @@ const GrantsMobileFilter = forwardRef<
               placeholder="01/12/2023"
               value={dateRange[1] || null}
               onBlur={(event) => handleEndDateBlur(event.target.value)}
+              
             />
             <div
               className={"filter-date-icon" + (dateRange[1] ? " active" : "")}

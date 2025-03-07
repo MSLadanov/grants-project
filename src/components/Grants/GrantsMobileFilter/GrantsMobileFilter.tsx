@@ -2,6 +2,7 @@ import React, { forwardRef, useContext } from "react";
 import "./style.scss";
 import { DateInput } from "@mantine/dates";
 import GrantsContext from "../../../contexts/GrantsContext";
+import { InputBase } from "@mantine/core";
 import { IMaskInput } from "react-imask";
 import dayjs from "dayjs";
 
@@ -97,27 +98,38 @@ const GrantsMobileFilter = forwardRef<
         <h4>Период</h4>
         <div className="filter-date-group">
           <div className="filter-date-indicator">
-            <DateInput
+            {/* <DateInput
               className={dateRange[0] ? "active" : ""}
               valueFormat="DD/MM/YYYY"
               label="Начало периода"
               placeholder="23/10/2023"
               value={dateRange[0] || null}
               onBlur={(event) => handleStartDateBlur(event.target.value)}
+            /> */}
+            <InputBase
+              label="Начало периода"
+              component={IMaskInput}
+              mask="00/00/0000"
+              placeholder="23/10/2023"
             />
             <div
               className={"filter-date-icon" + (dateRange[0] ? " active" : "")}
             ></div>
           </div>
           <div className="filter-date-indicator">
-            <DateInput
+            {/* <DateInput
               className={dateRange[1] ? "active" : ""}
               valueFormat="DD/MM/YYYY"
               label="Конец периода"
               placeholder="01/12/2023"
               value={dateRange[1] || null}
               onBlur={(event) => handleEndDateBlur(event.target.value)}
-              
+            /> */}
+            <InputBase
+              label="Конец периода"
+              component={IMaskInput}
+              mask="00/00/0000"
+              placeholder="01/12/2023"
             />
             <div
               className={"filter-date-icon" + (dateRange[1] ? " active" : "")}

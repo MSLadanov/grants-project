@@ -107,6 +107,7 @@ const GrantsMobileFilter = forwardRef<
               onBlur={(event) => handleStartDateBlur(event.target.value)}
             /> */}
             <InputBase
+              className={dateRange[1] ? "active" : ""}
               label="Начало периода"
               component={IMaskInput}
               mask="00/00/0000"
@@ -126,6 +127,7 @@ const GrantsMobileFilter = forwardRef<
               onBlur={(event) => handleEndDateBlur(event.target.value)}
             /> */}
             <InputBase
+              className={dateRange[1] ? "active" : ""}
               label="Конец периода"
               component={IMaskInput}
               mask="00/00/0000"

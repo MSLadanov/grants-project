@@ -13,6 +13,10 @@
   }
   .filter-date-indicator{
     width: 50%;
+    input{
+      border: none;
+      outline: none;
+    }
   }
   .filter-date-group label{
     width: 100%;

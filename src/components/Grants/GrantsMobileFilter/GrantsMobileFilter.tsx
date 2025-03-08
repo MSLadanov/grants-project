@@ -5,6 +5,8 @@ import GrantsContext from "../../../contexts/GrantsContext";
 import { InputBase } from "@mantine/core";
 import { IMaskInput } from "react-imask";
 import dayjs from "dayjs";
+import customParseFormat from 'dayjs'
+dayjs.extend(customParseFormat)
 
 const GrantsMobileFilter = forwardRef<
   HTMLDivElement,
@@ -36,29 +38,28 @@ const GrantsMobileFilter = forwardRef<
     setAmount(e.target.value);
   };
 
-  const handleStartDateBlur = (value: string) => {
-    try {
-      const dateValue = dayjs(value, "DD/MM/YYYY");
-      if (dateValue.isValid()) {
-        setDateRange([dateValue.toDate(), dateRange[1]]);
-      } else {
-        console.error("Некорректная дата начала:", value);
-      }
-    } catch (error) {
-      console.error("Ошибка при установке даты начала:", error);
-    }
+  const formatDate = (date : Date | null) => {
+    if (!date) return "23/10/2023";
+    const d = new Date(date);
+    const day = String(d.getDate()).padStart(2, '0');
+    const month = String(d.getMonth() + 1).padStart(2, '0'); 
+    const year = d.getFullYear();
+    return `${day}/${month}/${year}`;
   };
 
-  const handleEndDateBlur = (value: string) => {
+  const handleDateBlur = (value: string, position: 'start' | 'end') => {
     try {
-      const dateValue = dayjs(value, "DD/MM/YYYY");
+      const dateArr = value.split('/').map(Number)
+      const d = new Date(dateArr[2], dateArr[1], dateArr[0])
+      console.log(d)
+      const dateValue = dayjs(d, "DD/MM/YYYY");
       if (dateValue.isValid()) {
-        setDateRange([dateRange[0], dateValue.toDate()]);
+        setDateRange([dateValue.toDate(), position === 'start' ? dateRange[1] : dateRange[0] ]);
       } else {
-        console.error("Некорректная дата окончания:", value);
+        console.error(`Некорректная дата ${position === 'start' ? 'начала' : 'конца'}:`, value);
       }
     } catch (error) {
-      console.error("Ошибка при установке даты окончания:", error);
+      console.error(`Ошибка при установке даты ${position === 'start' ? 'начала' : 'конца'}:`, error);
     }
   };
 
@@ -112,6 +113,8 @@ const GrantsMobileFilter = forwardRef<
               component={IMaskInput}
               mask="00/00/0000"
               placeholder="23/10/2023"
+              value={formatDate(dateRange[0])}
+              onBlur={(event) => handleDateBlur(event.target.value, 'start')}
             />
             <div
               className={"filter-date-icon" + (dateRange[0] ? " active" : "")}
@@ -132,6 +135,7 @@ const GrantsMobileFilter = forwardRef<
               component={IMaskInput}
               mask="00/00/0000"
               placeholder="01/12/2023"
+              onBlur={(event) => handleDateBlur(event.target.value, 'end')}
             />
             <div
               className={"filter-date-icon" + (dateRange[1] ? " active" : "")}

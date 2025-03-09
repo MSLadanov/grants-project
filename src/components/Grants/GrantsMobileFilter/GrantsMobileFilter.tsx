@@ -48,16 +48,16 @@ const GrantsMobileFilter = forwardRef<
   };
 
   const handleDateBlur = (value: string, position: 'start' | 'end') => {
-    console.log(position)
     try {
       const dateArr = value.split('/').map(Number)
-      console.log(dateArr)
       const d = new Date(dateArr[2], dateArr[1] - 1, dateArr[0])
-      console.log(d)
       const dateValue = dayjs(d, "DD/MM/YYYY");
       if (dateValue.isValid()) {
-        console.log(dateRange)
-        setDateRange([dateValue.toDate(), position === 'start' ? dateRange[0] : dateRange[1] ]);
+        if(position === 'start'){
+          setDateRange([dateValue.toDate(), dateRange[1] ])
+        } else {
+          setDateRange([dateRange[0], dateValue.toDate() ])
+        }
       } else {
         console.error(`Некорректная дата ${position === 'start' ? 'начала' : 'конца'}:`, value);
       }
@@ -102,14 +102,6 @@ const GrantsMobileFilter = forwardRef<
         <h4>Период</h4>
         <div className="filter-date-group">
           <div className="filter-date-indicator">
-            {/* <DateInput
-              className={dateRange[0] ? "active" : ""}
-              valueFormat="DD/MM/YYYY"
-              label="Начало периода"
-              placeholder="23/10/2023"
-              value={dateRange[0] || null}
-              onBlur={(event) => handleStartDateBlur(event.target.value)}
-            /> */}
             <InputBase
               className={dateRange[1] ? "active" : ""}
               label="Начало периода"
@@ -124,20 +116,13 @@ const GrantsMobileFilter = forwardRef<
             ></div>
           </div>
           <div className="filter-date-indicator">
-            {/* <DateInput
-              className={dateRange[1] ? "active" : ""}
-              valueFormat="DD/MM/YYYY"
-              label="Конец периода"
-              placeholder="01/12/2023"
-              value={dateRange[1] || null}
-              onBlur={(event) => handleEndDateBlur(event.target.value)}
-            /> */}
             <InputBase
               className={dateRange[1] ? "active" : ""}
               label="Конец периода"
               component={IMaskInput}
               mask="00/00/0000"
               placeholder="01/12/2023"
+              value={formatDate(dateRange[1])}
               onBlur={(event) => handleDateBlur(event.target.value, 'end')}
             />
             <div

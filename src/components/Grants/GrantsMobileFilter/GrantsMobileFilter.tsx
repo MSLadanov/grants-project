@@ -39,7 +39,7 @@ const GrantsMobileFilter = forwardRef<
   };
 
   const formatDate = (date : Date | null) => {
-    if (!date) return "23/10/2023";
+    if (!date) return "";
     const d = new Date(date);
     const day = String(d.getDate()).padStart(2, '0');
     const month = String(d.getMonth() + 1).padStart(2, '0'); 
@@ -48,13 +48,16 @@ const GrantsMobileFilter = forwardRef<
   };
 
   const handleDateBlur = (value: string, position: 'start' | 'end') => {
+    console.log(position)
     try {
       const dateArr = value.split('/').map(Number)
-      const d = new Date(dateArr[2], dateArr[1], dateArr[0])
+      console.log(dateArr)
+      const d = new Date(dateArr[2], dateArr[1] - 1, dateArr[0])
       console.log(d)
       const dateValue = dayjs(d, "DD/MM/YYYY");
       if (dateValue.isValid()) {
-        setDateRange([dateValue.toDate(), position === 'start' ? dateRange[1] : dateRange[0] ]);
+        console.log(dateRange)
+        setDateRange([dateValue.toDate(), position === 'start' ? dateRange[0] : dateRange[1] ]);
       } else {
         console.error(`Некорректная дата ${position === 'start' ? 'начала' : 'конца'}:`, value);
       }

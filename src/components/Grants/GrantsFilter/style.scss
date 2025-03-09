@@ -43,7 +43,6 @@
 
 .filter-header-logo {
   width: 50%;
-  height: 65px;
   // background-color: #ffffff;
   h3 {
     font-family: "Montsserrat SemiBold";
@@ -92,6 +91,13 @@
     position: relative;
     top: 25%;
     left: 15%;
+  }
+  @include media-tablet-landscape {
+    height: 52px;
+  }
+
+  @include media-tablet-portrait {
+    height: 52px;
   }
 }
 

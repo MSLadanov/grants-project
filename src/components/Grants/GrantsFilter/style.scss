@@ -1,6 +1,6 @@
 @import "/src/variables.scss";
 
-.filter {
+.filter-side {
   width: 400px;
   @include media-tablet-landscape {
     width: 221px;
@@ -19,59 +19,43 @@
   }
 }
 
+.filter{
+  
+}
+
 .filter-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #ecf7fd;
+  // background-color: #ecf7fd;
+  background-image: url('../../../../src/assets/filter-background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
   .filter-header-text {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    background-color: #ecf7fd;
+    // background-color: #ecf7fd;
     border-bottom-right-radius: 30px;
   }
 }
 
 .filter-header-logo {
   width: 50%;
-  height: 50px;
-  background-color: #ffffff;
+  height: 65px;
+  // background-color: #ffffff;
   h3 {
     font-family: "Montsserrat SemiBold";
   }
 }
 
-.grant-filter-divisor {
-  width: 0px;
-  border-bottom: 50px solid #ffffff;
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent;
-  transform: rotate(125deg);
-  position: relative;
-  top: 34px;
-  left: 44px;
-  border-bottom-left-radius: 0px;
-  &::after {
-    position: absolute;
-    top: 49px;
-    left: -47px;
-    content: "";
-    min-height: 17px;
-    min-width: 65px;
-    background-color: #ecf7fd;
-    /* transform: rotate(55deg); */
-    border-top-right-radius: 87px;
-  }
-}
-
 .filter-header-reset {
-  height: 50px;
+  height: 65px;
   width: 50%;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
-  background-color: #ffffff;
+  // background-color: #ffffff;
   & button {
     font-family: "Open Sans Regular";
     font-size: 21px;
@@ -119,9 +103,11 @@
   padding: 20px 25px;
   overflow: hidden;
   @include media-tablet-landscape {
+    border-top-left-radius: 0px;
     padding: 20px 14px;
   }
   @include media-tablet-portrait {
+    border-top-left-radius: 0px;
     padding: 20px 14px;
   }
 

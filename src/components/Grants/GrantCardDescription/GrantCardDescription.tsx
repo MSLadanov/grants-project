@@ -21,9 +21,9 @@ const GrandCardDescription = ({
           <h3>{title}</h3>
         </div>
         <div>
-          {isFormatted && <p>{formattedString}</p>}
+          <p>{formattedString}</p>
         </div>
-        <div className="description-blur"></div>
+        {isFormatted && <div className="description-blur"></div>}
       </div>
       <div>
         <hr />

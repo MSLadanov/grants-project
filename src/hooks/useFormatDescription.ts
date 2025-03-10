@@ -11,15 +11,16 @@ const useFormatDescription = (
 ): TFormatted => {
   const [isFormatted, setIsFormatted] = useState<boolean>(false);
   const [formattedString, setFormattedString] = useState(description);
-  useEffect(() => {}, [description, length]);
-  if (description.length < length) {
-    return { formattedString, isFormatted };
-  }
-  const ending = description.length < length ? "" : "...";
-  setFormattedString(
-    description.slice(0, length).split(" ").slice(0, -1).join(" ") + ending
-  );
-  setIsFormatted(true);
+  useEffect(() => {
+    if (description.length < length) {
+      return;
+    }
+    const ending = description.length < length ? "" : "...";
+    setFormattedString(
+      description.slice(0, length).split(" ").slice(0, -1).join(" ") + ending
+    );
+    setIsFormatted(true);
+  }, [description, length]);
   return { formattedString, isFormatted };
 };
 

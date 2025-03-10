@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { NavLink } from "react-router";
-import descriptionFormatter from "../../../utils/descriptionFormatter";
+import useFormatDescription from "../../../hooks/useFormatDescription";
 import "./style.scss";
 import React from "react";
 
@@ -13,6 +13,7 @@ const GrandCardDescription = ({
   title: string;
   description: string;
 }): ReactElement => {
+  const { formattedString, isFormatted } = useFormatDescription(description, 200)
   return (
     <div className="grant-card-description">
       <div className="description-text">
@@ -20,7 +21,7 @@ const GrandCardDescription = ({
           <h3>{title}</h3>
         </div>
         <div>
-          <p>{descriptionFormatter(description, 200)}</p>
+          {isFormatted && <p>{formattedString}</p>}
         </div>
         <div className="description-blur"></div>
       </div>

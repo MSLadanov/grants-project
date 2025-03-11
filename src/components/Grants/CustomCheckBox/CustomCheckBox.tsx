@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { ReactElement, useState } from "react";
+import "./style.scss";
 
-const CustomCheckBox = () => {
-  const [checked, setChecked] = useState<boolean>(false);
-  return <div className={"checkbox" + checked ? "checked" : ""}></div>;
+type TCustomCheckBoxProps = {
+    checked: boolean
+}
+
+const CustomCheckBox = ({ checked } : TCustomCheckBoxProps): ReactElement => {
+  return <div className={checked ? "checkbox checked" : "checkbox"}></div>;
 };
 
 export default CustomCheckBox;

@@ -4,6 +4,7 @@ import { DateInput } from "@mantine/dates";
 import GrantsContext from "../../../contexts/GrantsContext";
 import React from "react";
 import CustomDatePicker from "../CustomDatePicker/CustomDatePicker";
+import CustomCheckBox from "../CustomCheckBox/CustomCheckBox";
 
 const GrantsFilter = (): ReactElement => {
   const {
@@ -57,6 +58,7 @@ const GrantsFilter = (): ReactElement => {
           <div>
             {directions.map((item, index) => (
               <div key={index} className="direction">
+                <CustomCheckBox checked={directionsList.includes(item)}/>
                 <input
                   id={item}
                   checked={directionsList.includes(item)}

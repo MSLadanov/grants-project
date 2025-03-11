@@ -1,0 +1,29 @@
+@import "/src/variables.scss";
+.checkbox {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #dbe4eb;
+    content: "";
+    background: #dbe4eb;
+    border: 1px solid #dbe4eb;
+    border-radius: 6px;
+    @include media-tablet-landscape {
+      height: 20px;
+      width: 20px;
+    }
+
+    @include media-tablet-portrait {
+      height: 20px;
+      width: 20px;
+    }
+
+    @include media-mobile-landscape {
+      height: 24px;
+      width: 24px;
+    }
+
+    @include media-mobile-portrait {
+      height: 24px;
+      width: 24px;
+    }
+}

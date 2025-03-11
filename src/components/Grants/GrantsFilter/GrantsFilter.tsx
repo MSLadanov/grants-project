@@ -18,8 +18,8 @@ const GrantsFilter = (): ReactElement => {
     setDateRange,
   } = useContext(GrantsContext);
 
-  const handleDirection = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const id = e.target.id;
+  const handleDirection = (e: React.MouseEvent<HTMLDivElement>) => {
+    const id = e.currentTarget.id;
     if (directionsList.includes(id)) {
       const updatedList = directionsList.filter((item) => item !== id);
       setDirectionsList(updatedList);
@@ -58,12 +58,10 @@ const GrantsFilter = (): ReactElement => {
           <div>
             {directions.map((item, index) => (
               <div key={index} className="direction">
-                <CustomCheckBox checked={directionsList.includes(item)}/>
-                <input
+                <CustomCheckBox
                   id={item}
                   checked={directionsList.includes(item)}
-                  type="checkbox"
-                  onChange={(e) => handleDirection(e)}
+                  handleDirection={handleDirection}
                 />
                 <label htmlFor={item}>{item}</label>
               </div>

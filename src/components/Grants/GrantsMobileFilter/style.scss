@@ -19,6 +19,8 @@
     }
   }
   .filter-date-group label{
+    font-family: "Open Sans Regular";
+    color: #99A7B2;
     width: 100%;
     @include media-mobile-portrait {
       font-size: 14px;

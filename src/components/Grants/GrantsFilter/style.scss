@@ -360,7 +360,7 @@
   @include media-mobile-portrait {
   }
   .filter-date-icon {
-    top: 25px;
+    top: 20px;
     left: 5px;
     height: 30px;
     width: 30px;
@@ -377,6 +377,7 @@
     }
 
     @include media-mobile-landscape {
+      top: 25px;
       left: 0px;
       height: 24px;
       width: 24px;

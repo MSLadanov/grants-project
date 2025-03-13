@@ -32,7 +32,10 @@ div [data-calendar="true"] {
     }
 
     @include media-tablet-portrait {
+      display: flex;
       font-size: 10px;
+      justify-content: center;
+      align-items: center;
     }
 
     @include media-mobile-landscape {
@@ -73,11 +76,14 @@ div [data-calendar="true"] {
 }
 
 .mantine-DatePicker-levelsGroup {
+  padding: 1%;
   margin: 3% 0%;
 }
 
 .mantine-DatePicker-month {
   width: 100%;
+  position: relative;
+  left: -2%;
 }
 
 .mantine-DatePicker-monthsList {

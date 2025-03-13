@@ -61,6 +61,8 @@
     flex-direction: column;
     height: 443px;
     background: url("../../../assets/grants-header-mp.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 .grants-header-left {
@@ -101,6 +103,7 @@
       width: 296px;
       height: 228px;
       top: 131px;
+      left: 20px;
     }
   }
 }

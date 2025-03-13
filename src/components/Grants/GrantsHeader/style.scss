@@ -71,7 +71,7 @@
   justify-content: center;
   @include media-mobile-portrait {
     position: relative;
-    top:70px;
+    top: 70px;
   }
 }
 
@@ -103,7 +103,9 @@
       width: 296px;
       height: 228px;
       top: 131px;
-      left: 20px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 5%);
     }
   }
 }

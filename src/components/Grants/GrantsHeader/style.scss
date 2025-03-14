@@ -55,6 +55,8 @@
   @include media-mobile-landscape {
     height: 255px;
     background: url("../../../assets/grants-header-ml.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   @include media-mobile-portrait {
@@ -102,10 +104,10 @@
     @include media-mobile-portrait {
       width: 296px;
       height: 228px;
-      top: 131px;
-      top: 63%;
+      position: absolute;
+      top: 19%;
       left: 50%;
-      transform: translate(-50%, 5%);
+      transform: translate(-50%, 0%);
     }
   }
 }

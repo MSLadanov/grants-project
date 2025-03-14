@@ -1,7 +1,7 @@
 @import "/src/variables.scss";
 
 .grants-list {
-
+  overflow: hidden;
   padding: 0px 20px;
   @include media-mobile-landscape {
     padding: 0px;

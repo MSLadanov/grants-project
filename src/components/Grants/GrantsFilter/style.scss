@@ -1,13 +1,13 @@
 @import "/src/variables.scss";
 
 .filter-side {
-  width: 400px;
+  max-width: 400px;
   @include media-tablet-landscape {
-    width: 221px;
+    min-width: 221px;
   }
 
   @include media-tablet-portrait {
-    width: 231px;
+    min-width: 231px;
   }
 
   @include media-mobile-landscape {
@@ -20,7 +20,7 @@
 }
 
 .filter{
-  
+  width: 100%;
 }
 
 .filter-header {

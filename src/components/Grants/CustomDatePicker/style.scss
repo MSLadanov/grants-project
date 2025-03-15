@@ -150,5 +150,8 @@ div [data-calendar="true"] {
 
 .mantine-DatePicker-month {
   font-family: "Open Sans Regular";
-  border-spacing: 0.1rem 0.5rem; 
+  border-spacing: 0px 0.5rem; 
+  td{
+    width: 14%;
+  }
 }

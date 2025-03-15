@@ -122,11 +122,11 @@ div [data-calendar="true"] {
   color: #6e7880;
   font-size: 16px;
   @include media-tablet-landscape {
-    font-size: 10px;
+    font-size: 0.6rem;
   }
 
   @include media-tablet-portrait {
-    font-size: 10px;
+    font-size: 0.6rem;
   }
 
   @include media-mobile-landscape {

@@ -113,9 +113,15 @@ div [data-calendar="true"] {
 }
 
 .mantine-DatePicker-monthCell button {
-  margin: 10%;
+  // margin: 10%;
   border: none;
   background: transparent;
+}
+
+.mantine-DatePicker-monthCell{
+  button{
+    width: 100%;
+  }
 }
 
 .mantine-DatePicker-month * {
@@ -134,4 +140,9 @@ div [data-calendar="true"] {
 
   @include media-mobile-portrait {
   }
+}
+
+.mantine-DatePicker-month {
+  font-size: "Open Sans Regular";
+  border-spacing: 0.1rem 0.5rem; 
 }

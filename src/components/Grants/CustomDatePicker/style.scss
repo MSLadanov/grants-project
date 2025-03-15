@@ -76,7 +76,6 @@ div [data-calendar="true"] {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin: 3% 0%;
   div[data-month-level='true']{
     width: 100%;
   }
@@ -84,8 +83,6 @@ div [data-calendar="true"] {
 
 .mantine-DatePicker-month {
   width: 100%;
-  // position: relative;
-  // left: -5%;
 }
 
 .mantine-DatePicker-monthsList {
@@ -115,7 +112,6 @@ div [data-calendar="true"] {
 }
 
 .mantine-DatePicker-monthCell button {
-  // margin: 10%;
   border: none;
   background: transparent;
 }
@@ -141,7 +137,4 @@ div [data-calendar="true"] {
 .mantine-DatePicker-month {
   font-family: "Open Sans Regular";
   border-spacing: 0px 0.5rem; 
-  td{
-    width: 14%;
-  }
 }

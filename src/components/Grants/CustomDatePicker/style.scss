@@ -26,25 +26,19 @@ div [data-calendar="true"] {
     color: #6E7880;
   }
   button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     font-size: 21px;
+    &:first-of-type{
+      justify-content: flex-start;
+    }
     @include media-tablet-landscape {
-      display: flex;
       font-size: 10px;
-      justify-content: center;
-      align-items: center;
     }
 
     @include media-tablet-portrait {
-      display: flex;
       font-size: 10px;
-      justify-content: center;
-      align-items: center;
-    }
-
-    @include media-mobile-landscape {
-    }
-
-    @include media-mobile-portrait {
     }
   }
 }

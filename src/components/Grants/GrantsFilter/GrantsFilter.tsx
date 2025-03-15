@@ -99,6 +99,7 @@ const GrantsFilter = (): ReactElement => {
                 className={"filter-date-icon" + (dateRange[0] ? " active" : "")}
               ></div>
             </div>
+            <div className="indicator-divisor"></div>
             <div className="filter-date-indicator">
               <DateInput
                 className={dateRange[1] ? "active" : ""}

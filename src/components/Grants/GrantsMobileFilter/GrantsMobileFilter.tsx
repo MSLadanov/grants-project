@@ -123,6 +123,7 @@ const GrantsMobileFilter = forwardRef<
               className={"filter-date-icon" + (dateRange[0] ? " active" : "")}
             ></div>
           </div>
+          <div className="indicator-divisor"></div>
           <div className="filter-date-indicator">
             <InputBase
               className={dateRange[1] ? "active" : ""}

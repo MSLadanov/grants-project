@@ -75,12 +75,14 @@
       height: 30px;
       width: 87px;
       font-size: 12px;
+      left: 30px;
     }
 
     @include media-tablet-portrait {
       height: 30px;
       width: 87px;
       font-size: 12px;
+      left: 30px;
     }
 
     @include media-mobile-landscape {
@@ -309,6 +311,10 @@
   justify-content: space-between;
   font-family: "Open Sans Regular";
   font-size: 14px;
+  .indicator-divisor{
+    width: 1px;
+    background-color: #E0E4E7;
+  }
   label {
     @include media-tablet-landscape {
       font-size: 12px;
@@ -329,9 +335,6 @@
 }
 
 .filter-date-indicator {
-  &:first-child {
-    border-right: 1px solid #e0e4e7;
-  }
   input {
     height: 35px;
     padding-left: 40px;

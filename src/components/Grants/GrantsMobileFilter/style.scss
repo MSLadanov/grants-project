@@ -6,19 +6,23 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
-  overflow: hidden;
   z-index: 2;
   @include media-not-mobile {
     display: none;
   }
   .filter-date-indicator{
-    width: 50%;
+    width: 40%;
     input{
       border: none;
       outline: none;
     }
   }
-  .filter-date-group label{
+  .filter-date-group {
+    .indicator-divisor{
+      width: 1px;
+      background-color: #E0E4E7;
+    }
+    label{
     font-family: "Open Sans Regular";
     color: #99A7B2;
     width: 100%;
@@ -27,6 +31,7 @@
       top: 0px;
     }
   }
+}
   .filter-body {
     background-color: #ffffff;
     border-radius: 30px;

@@ -136,12 +136,6 @@ div [data-calendar="true"] {
   @include media-tablet-portrait {
     font-size: 0.6rem;
   }
-
-  @include media-mobile-landscape {
-  }
-
-  @include media-mobile-portrait {
-  }
 }
 
 .mantine-DatePicker-month {

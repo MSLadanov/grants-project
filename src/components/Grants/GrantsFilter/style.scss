@@ -20,7 +20,14 @@
 }
 
 .filter{
-  width: 100%;
+  width: 110%;
+  @include media-tablet-landscape {
+    width: 120%;
+  }
+
+  @include media-tablet-portrait {
+    width: 120%;
+  }
 }
 
 .filter-header {

@@ -22,6 +22,9 @@ div [data-calendar="true"] {
   display: flex;
   justify-content: space-between;
   padding: 5% 0%;
+  * {
+    color: #6E7880;
+  }
   button {
     font-size: 21px;
     @include media-tablet-landscape {
@@ -76,7 +79,7 @@ div [data-calendar="true"] {
 }
 
 .mantine-DatePicker-levelsGroup {
-  padding: 1%;
+  padding: 0.5rem;
   margin: 3% 0%;
 }
 
@@ -143,6 +146,6 @@ div [data-calendar="true"] {
 }
 
 .mantine-DatePicker-month {
-  font-size: "Open Sans Regular";
+  font-family: "Open Sans Regular";
   border-spacing: 0.1rem 0.5rem; 
 }

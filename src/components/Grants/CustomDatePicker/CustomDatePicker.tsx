@@ -16,6 +16,7 @@ const CustomDatePicker = (): ReactElement => {
       monthLabelFormat={"MMMM"}
       locale="ru"
       value={dateRange}
+      size="xs"
       onChange={setDateRange}
       hideOutsideDates
     />

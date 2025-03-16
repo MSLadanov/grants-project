@@ -3,12 +3,12 @@
 .grantpage-sections-list {
   border: 1px solid #6e7880;
   border-radius: 35px;
-  width: 60vh;
+  width: 37vh;
   position: sticky;
   top: 85px;
   background-color: #ecf7fd;
   @include media-laptop{
-    width: 52vh;
+    width: 29vh;
   }
   @include media-tablet-landscape {
     width: 230px;
@@ -30,6 +30,9 @@
   ol {
     padding-right: 20px;
     font-size: 24px;
+    @include media-laptop{
+      font-size: 20px;
+    }
     @include media-tablet-landscape {
       padding-right: 0px;
       font-size: 14px;
@@ -56,6 +59,9 @@
         font-size: 24px;
         height: auto;
         width: 100%;
+        @include media-laptop{
+          font-size: 20px;
+        }
         @include media-tablet-landscape {
           padding-right: 0px;
           font-size: 14px;

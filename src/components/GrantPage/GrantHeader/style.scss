@@ -75,7 +75,6 @@
     }
 
     @include media-mobile-portrait {
-      margin-top: 10%;
       font-size: 24px;
     }
   }
@@ -110,18 +109,25 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  
+  @include media-mobile-landscape {
+    left: -8vw;
+  }
+
+  @include media-mobile-portrait {
+    left: -8vw;
+  }
   h1{
     padding-right: 10%;
   }
   @include media-tablet-landscape {
     top: 4vw;
-    width: 80%;
+    // width: 80%;
   }
   @include media-tablet-portrait {
     top: 4vw;
     width: 80%;
   }
+  
 }
 
 .grant-header-organizer {

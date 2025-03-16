@@ -9,7 +9,7 @@
   color: #ffffff;
   border-radius: 38px;
   padding: 0px 4%;
-  height: 25vw;
+  height: 30vw;
   overflow: hidden;
   @include media-tablet-landscape {
     border-radius: 18px;
@@ -86,7 +86,7 @@
 .grants-header-right {
   img {
     position: relative;
-    top: 5vw;
+    top: 10vw;
     width: 25vw;
     height: 20vw;
     @include media-tablet-landscape {

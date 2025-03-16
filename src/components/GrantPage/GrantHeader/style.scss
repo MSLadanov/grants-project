@@ -109,6 +109,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  
+  h1{
+    padding-right: 10%;
+  }
+  @include media-tablet-landscape {
+    top: 4vw;
+    width: 80%;
+  }
+  @include media-tablet-portrait {
+    top: 4vw;
+    width: 80%;
+  }
 }
 
 .grant-header-organizer {

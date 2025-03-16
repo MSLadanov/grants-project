@@ -1,4 +1,5 @@
 $breakpoint-desktop: 1920px;         // Десктопка
+$breakpoint-laptop: 1366px;          // Ноутбук
 $breakpoint-tablet-portrait: 768px;   // Планшет вертикаль
 $breakpoint-tablet-landscape: 1000px; // Планшет горизонталь
 // $breakpoint-mobile-portrait: 395px;    // Мобильная версия вертикаль
@@ -8,6 +9,12 @@ $breakpoint-mobile-landscape: 650px;   // Мобильная версия гор
 
 @mixin media-desktop {
   @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin media-laptop {
+  @media (max-width: $breakpoint-laptop) {
     @content;
   }
 }

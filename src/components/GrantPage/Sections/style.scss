@@ -3,10 +3,13 @@
 .grantpage-sections-list {
   border: 1px solid #6e7880;
   border-radius: 35px;
-  width: 41vh;
+  width: 60vh;
   position: sticky;
   top: 85px;
-  background-color: #ecf7fd;;
+  background-color: #ecf7fd;
+  @include media-laptop{
+    width: 52vh;
+  }
   @include media-tablet-landscape {
     width: 230px;
     border-radius: 20px;

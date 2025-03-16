@@ -146,6 +146,9 @@
   h3 {
     font-family: "Open Sans Regular";
     font-size: 30px;
+    @include media-laptop{
+      font-size: 20px;
+    }
     @include media-tablet-landscape {
       font-size: 16px;
     }
@@ -165,6 +168,9 @@
   h4 {
     font-family: "Montsserrat SemiBold";
     font-size: 24px;
+    @include media-laptop{
+      font-size: 20px;
+    }
     @include media-tablet-landscape {
       font-size: 16px;
     }
@@ -180,6 +186,10 @@
     @include media-mobile-portrait {
       font-size: 16px;
     }
+  }
+  @include media-laptop{
+    border-radius: 16px;
+    width: 25vw;
   }
   @include media-tablet-landscape {
     width: 256px;
@@ -213,6 +223,9 @@
       box-shadow: 0 0 2px 0 #c2e4ff, 0 0 4px 0 #c2e4ff, 0 0 13px 0 #c2e4ff,
         0 0 27px 0 #c2e4ff, 0 0 46px 0 #c2e4ff, 0 0 80px 0 #c2e4ff;
     }
+    @include media-laptop{
+      width: 20vw;
+    }
     @include media-tablet-landscape {
       display: none;
     }
@@ -242,6 +255,10 @@ a {
   border-radius: 16px;
   font-size: 24px;
   align-self: center;
+  @include media-laptop{
+    border-radius: 16px;
+    font-size: 16px;
+  }
   @include media-tablet-landscape {
     display: none;
   }

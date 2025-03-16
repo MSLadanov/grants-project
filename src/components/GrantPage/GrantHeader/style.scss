@@ -239,6 +239,7 @@
 
     @include media-mobile-portrait {
       display: flex;
+      width: 70%;
     }
   }
 }

@@ -2,8 +2,7 @@ import { DatePicker } from "@mantine/dates";
 import "dayjs/locale/ru";
 import { ReactElement, useContext } from "react";
 import "./style.scss";
-import React from "react";
-import GrantsContext from "../../../contexts/GrantsContext";
+import GrantsContext from "@contexts/GrantsContext";
 
 const CustomDatePicker = (): ReactElement => {
   const {

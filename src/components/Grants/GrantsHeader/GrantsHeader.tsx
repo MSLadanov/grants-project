@@ -1,7 +1,6 @@
 import { ReactElement } from "react";
-import sponsors from '../../../assets/sponsors.png'
+import sponsors from '@assets/sponsors.png'
 import "./style.scss";
-import React from "react";
 
 const GrantsHeader = (): ReactElement => {
   return (

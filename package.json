@@ -31,9 +31,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject",
     "predeploy": "npm run build"
@@ -57,6 +57,7 @@
     ]
   },
   "devDependencies": {
+    "@craco/craco": "^7.1.0",
     "@types/react-router-hash-link": "^2.4.9",
     "gh-pages": "^6.3.0"
   }

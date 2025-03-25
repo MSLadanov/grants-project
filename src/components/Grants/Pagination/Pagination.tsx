@@ -1,7 +1,6 @@
-import { DOTS, usePagination } from "../../../hooks/usePagination";
+import { DOTS, usePagination } from "@hooks/usePagination";
 import classnames from "classnames";
 import "./style.scss"
-import React from "react";
 
 const Pagination = (props: {
   onPageChange: (page: number) => void;

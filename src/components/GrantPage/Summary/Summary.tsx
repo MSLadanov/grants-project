@@ -1,11 +1,10 @@
-import { ReactElement, useEffect, useState } from "react";
-import dateFormatter from "../../../utils/dateFormatter";
-import sectionsOpen from "../../../assets/sections-open.svg";
-import sectionsClose from "../../../assets/sections-close.svg";
+import { ReactElement } from "react";
+import dateFormatter from "@utils/dateFormatter";
+import sectionsOpen from "@assets/sections-open.svg";
+import sectionsClose from "@assets/sections-close.svg";
 import "./style.scss";
-import useModal from "../../../hooks/useModal";
+import useModal from "@hooks/useModal";
 import MobileSectionMenu from "../MobileSectionMenu/MobileSectionMenu";
-import React from "react";
 
 interface SummaryProps {
   applicationPeriod: { start: string; end: string };

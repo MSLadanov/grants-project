@@ -1,8 +1,7 @@
 import { ReactElement } from "react";
 import { NavLink } from "react-router";
-import useFormatDescription from "../../../hooks/useFormatDescription";
-import "./style.scss";
-import React from "react";
+import useFormatDescription from "@hooks/useFormatDescription";
+import "./style.scss"
 
 const GrandCardDescription = ({
   id,

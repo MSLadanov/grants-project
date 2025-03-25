@@ -4,10 +4,10 @@ import GrantsList from "../GrantsList/GrantsList";
 import "./style.scss";
 import dayjs from "dayjs";
 import isBetween from "dayjs/plugin/isBetween";
-import useModal from "../../../hooks/useModal";
-import GrantsContext from "../../../contexts/GrantsContext";
-import useFilters from "../../../hooks/useFilters";
-import { TGrants } from "../../../types/types";
+import useModal from "@hooks/useModal";
+import GrantsContext from "@contexts/GrantsContext";
+import useFilters from "@hooks/useFilters";
+import { TGrants } from "@/types/types";
 import GrantsMobileFilter from "../GrantsMobileFilter/GrantsMobileFilter";
 import React from "react";
 

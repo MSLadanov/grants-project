@@ -1,7 +1,6 @@
 import React, { forwardRef, useContext } from "react";
 import "./style.scss";
-import { DateInput } from "@mantine/dates";
-import GrantsContext from "../../../contexts/GrantsContext";
+import GrantsContext from "@contexts/GrantsContext";
 import { InputBase } from "@mantine/core";
 import { IMaskInput } from "react-imask";
 import dayjs from "dayjs";

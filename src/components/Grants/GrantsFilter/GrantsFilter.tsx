@@ -1,7 +1,7 @@
 import { ReactElement, useContext } from "react";
 import "./style.scss";
 import { DateInput } from "@mantine/dates";
-import GrantsContext from "../../../contexts/GrantsContext";
+import GrantsContext from "@contexts/GrantsContext";
 import React from "react";
 import CustomDatePicker from "../CustomDatePicker/CustomDatePicker";
 import CustomCheckBox from "../CustomCheckBox/CustomCheckBox";

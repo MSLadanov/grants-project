@@ -1,6 +1,5 @@
 import { ReactElement } from "react";
 import './style.scss'
-import React from "react";
 
 const MainInfo = ({ description } : { description : string}): ReactElement => {
   return (

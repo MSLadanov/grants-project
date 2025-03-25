@@ -1,11 +1,11 @@
 import { ReactElement } from "react";
 import { Outlet, useParams } from "react-router";
-import GrantsHeader from "../../components/Grants/GrantsHeader/GrantsHeader";
-import GrantsContent from "../../components/Grants/GrantsContent/GrantsContent";
-import useFetch from "../../hooks/useFetch";
-import Loader from "../../components/Loader/Loader";
-import ErrorComponent from "../../components/ErrorComponent/Error";
-import { TGrantsData } from "../../types/types";
+import GrantsHeader from "@components/Grants/GrantsHeader/GrantsHeader";
+import GrantsContent from "@/components/Grants/GrantsContent/GrantsContent";
+import useFetch from "@hooks/useFetch";
+import Loader from "@components/Loader/Loader";
+import ErrorComponent from "@components/ErrorComponent/Error";
+import { TGrantsData } from "@/types/types";
 
 const Grants = (): ReactElement => {
   const { grantId } = useParams();

@@ -1,9 +1,17 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "baseUrl": "src", // Указываем базовый путь
+    "baseUrl": "./src",
     "paths": {
-      "src/*": ["*"] // Настраиваем алиас @ для папки src
+      "@/*": ["./*"],
+      "@assets/*": ["./assets/*"],
+      "@components/*": ["./components/*"],
+      "@contexts/*": ["./contexts/*"],
+      "@fonts/*": ["./fonts/*"],
+      "@hooks/*": ["./hooks/*"],
+      "@pages/*": ["./pages/*"],
+      "@types/*": ["./types/*"],
+      "@utils/*": ["./utils/*"],
     },
     "lib": [
       "dom",

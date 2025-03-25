@@ -3,8 +3,7 @@ import Summary from "../Summary/Summary";
 import MainInfo from "../MainInfo/MainInfo";
 import Requirements from "../Requirements/Requirements";
 import "./style.scss";
-import { TGrant } from "../../../types/types";
-import React from "react";
+import { TGrant } from "@/types/types";
 
 const GrantDescription = ({
   grantData,

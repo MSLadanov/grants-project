@@ -1,13 +1,12 @@
 import { ReactElement, useContext, useState } from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import GrantCard from "../GrantCard/GrantCard";
-import Pagination from "../../../components/Grants/Pagination/Pagination";
+import Pagination from "@components/Grants/Pagination/Pagination";
 import "./style.scss";
 import GrantsMobileMenu from "../GrantsMobileMenu/GrantsMobileMenu";
-import GrantsContext from "../../../contexts/GrantsContext";
-import { TGrant } from "../../../types/types";
+import GrantsContext from "@contexts/GrantsContext";
+import { TGrant } from "@/types/types";
 import NoGrantsComponent from "../NoGrantsComponent/NoGrantsComponent";
-import React from "react";
 
 const GrantsList = (): ReactElement => {
   const {

@@ -1,7 +1,6 @@
 import { ReactElement } from "react";
 import "./style.scss";
 import { HashLink } from 'react-router-hash-link'
-import React from "react";
 
 const Sections = (): ReactElement => {
   return (

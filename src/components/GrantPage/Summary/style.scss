@@ -5,6 +5,7 @@
   justify-content: space-between;
   border-radius: 35px;
   padding: 3%;
+  height: 150px;
   @include media-mobile-landscape {
     flex-direction: column;
   }

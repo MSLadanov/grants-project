@@ -6,6 +6,15 @@ body{
   box-sizing: border-box;
 }
 
+.pixel-perfect-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.5;
+  z-index: 999;
+}
+
 @font-face {
   font-family: "Montsserrat SemiBold";
   src: local("Montsserrat SemiBold"), url(./fonts/Montserrat-SemiBold.ttf) format("truetype");

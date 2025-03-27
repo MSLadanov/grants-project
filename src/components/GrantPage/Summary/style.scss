@@ -5,7 +5,7 @@
   justify-content: space-between;
   border-radius: 35px;
   padding: 3%;
-  height: 150px;
+  height: 140px;
   @include media-mobile-landscape {
     flex-direction: column;
   }
@@ -52,7 +52,7 @@
 
   @include media-tablet-landscape {
     border-radius: 16px;
-    padding: 14px;
+    padding: 25px 32px;
   }
 
   @include media-tablet-portrait {

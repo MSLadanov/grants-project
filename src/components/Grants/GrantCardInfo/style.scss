@@ -21,6 +21,7 @@
     background-size: cover;
     border-radius: 20px;
     padding: 10px;
+    width: 35%;
   }
   @include media-mobile-landscape {
     background: url("../../../assets/card-info-mobile-landscape.svg");
@@ -84,7 +85,7 @@ h3 {
   }
 
   @include media-tablet-portrait {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   @include media-mobile-landscape {
@@ -108,7 +109,7 @@ h4 {
   }
 
   @include media-tablet-portrait {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   @include media-mobile-landscape {

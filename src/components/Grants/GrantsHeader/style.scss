@@ -34,7 +34,7 @@
     }
 
     @include media-tablet-portrait {
-      font-size: 32px;
+      font-size: 30px;
     }
 
     @include media-mobile-landscape {
@@ -50,7 +50,7 @@
   }
 
   @include media-tablet-portrait {
-    height: 237px;
+    height: 255px;
   }
 
   @include media-mobile-landscape {
@@ -99,7 +99,7 @@
     @include media-tablet-portrait {
       width: 256px;
       height: 198px;
-      top: 40px;
+      top: 55px;
     }
 
     @include media-mobile-landscape {

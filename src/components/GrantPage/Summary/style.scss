@@ -7,15 +7,22 @@
   padding: 3%;
   height: 140px;
   @include media-mobile-landscape {
+    height: auto;
     flex-direction: column;
   }
 
   @include media-mobile-portrait {
+    height: auto;
     flex-direction: column;
   }
   .grant-summary-column {
     display: flex;
     flex-direction: column;
+    p, h3{
+      @include media-tablet-portrait {
+        font-size: 14px;
+      }
+    }
     &:first-child{
       :last-child{
         margin-left: 5px;

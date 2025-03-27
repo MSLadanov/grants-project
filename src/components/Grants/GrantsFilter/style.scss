@@ -7,7 +7,7 @@
   }
 
   @include media-tablet-portrait {
-    width: 176px;
+    width: 184px;
   }
 
   @include media-mobile-landscape {
@@ -153,6 +153,7 @@
       }
 
       @include media-tablet-portrait {
+        margin-left: 16px;
         font-size: 10px;
         top: -6px;
         left: 0px;
@@ -187,6 +188,7 @@
 
       @include media-tablet-portrait {
         font-size: 10px;
+        margin-left: 16px;
       }
 
       @include media-mobile-landscape {

@@ -11,13 +11,19 @@
 
   @include media-tablet-portrait {
     margin-top: 3%;
+    margin-right: 2%;
+    margin-left: 4%;
   }
   @include media-mobile-landscape {
     margin-top: 5%;
+    margin-right: 0%;
+    margin-left: 0%;
   }
 
   @include media-mobile-portrait {
     margin-top: 7%;
+    margin-right: 0%;
+    margin-left: 0%;
   }
   h1 {
     margin-bottom: 5px;

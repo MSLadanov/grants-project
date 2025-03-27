@@ -9,7 +9,7 @@ const GrantHeader = ({ grantData }: { grantData: TGrant }): ReactElement => {
     <div className="grant-header">
       <BackwardButton />
       <div className="grant-header-title">
-        <h1>{grantData?.title}</h1>
+        <h1>"{grantData?.title}"</h1>
       </div>
       {grantData && (
         <div className="grant-header-organizer">

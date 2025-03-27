@@ -3,7 +3,7 @@
 .filter-side {
   width: 400px;
   @include media-tablet-landscape {
-    width: 221px;
+    width: 197px;
   }
 
   @include media-tablet-portrait {
@@ -76,7 +76,7 @@
       height: 30px;
       width: 87px;
       font-size: 12px;
-      left: 30px;
+      left: 8px;
     }
 
     @include media-tablet-portrait {

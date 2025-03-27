@@ -28,8 +28,8 @@
     display: none;
     @include media-tablet-landscape {
       position: absolute;
-      top: 3%;
-      left: 6%;
+      top: 47px;
+      left: 91px;
       display: block;
     }
 
@@ -79,7 +79,7 @@
     }
   }
   @include media-tablet-landscape {
-    height: 280px;
+    height: 261px;
   }
 
   @include media-tablet-portrait {
@@ -117,10 +117,12 @@
     left: -8vw;
   }
   h1{
+    text-transform: uppercase;
     padding-right: 10%;
   }
   @include media-tablet-landscape {
     top: 4vw;
+    left: 3vw;
     // width: 80%;
   }
   @include media-tablet-portrait {
@@ -192,7 +194,7 @@
     width: 25vw;
   }
   @include media-tablet-landscape {
-    width: 256px;
+    width: 390px;
     height: 147px;
     border-radius: 16px;
   }

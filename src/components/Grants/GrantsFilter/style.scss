@@ -55,6 +55,13 @@
     font-family: "Montsserrat SemiBold";
     font-size: 34px;
     @include media-tablet-landscape {
+      position: relative;
+      bottom: 5px;
+      font-size: 16px;
+    }
+    @include media-tablet-portrait {
+      position: relative;
+      bottom: 5px;
       font-size: 16px;
     }
   }
@@ -131,7 +138,7 @@
     padding: 20px 14px;
   }
   @include media-tablet-portrait {
-    // border-top-left-radius: 0px;
+    border-top-left-radius: 0px;
     padding: 20px 14px;
   }
 

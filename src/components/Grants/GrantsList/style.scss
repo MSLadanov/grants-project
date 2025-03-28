@@ -7,6 +7,9 @@
   @include media-tablet-landscape {
     padding-right: 0px;
   }
+  @include media-tablet-portrait {
+    padding-right: 0px;
+  }
   @include media-mobile-landscape {
     padding: 0px;
   }

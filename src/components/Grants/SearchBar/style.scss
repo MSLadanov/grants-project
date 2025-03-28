@@ -4,6 +4,9 @@
   display: flex;
   width: 90%;
   margin: 0% 0% 2% 0%;
+  @include media-tablet-landscape {
+    width: 100%;
+  }
   @include media-mobile-landscape {
     margin: 2% 0% 2% 0%;
   }

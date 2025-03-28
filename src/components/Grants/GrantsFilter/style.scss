@@ -54,6 +54,9 @@
   h3 {
     font-family: "Montsserrat SemiBold";
     font-size: 34px;
+    @include media-tablet-landscape {
+      font-size: 16px;
+    }
   }
 }
 
@@ -76,7 +79,7 @@
       height: 30px;
       width: 87px;
       font-size: 12px;
-      left: 8px;
+      left: 18px;
     }
 
     @include media-tablet-portrait {
@@ -124,7 +127,7 @@
   padding: 20px 25px;
   overflow: hidden;
   @include media-tablet-landscape {
-    // border-top-left-radius: 0px;
+    border-top-left-radius: 0px;
     padding: 20px 14px;
   }
   @include media-tablet-portrait {
@@ -273,6 +276,9 @@
     margin: 30px 0px;
     &:nth-child(3){
       margin: 45px 0px 30px 0px;
+    }
+    &:first-of-type{
+      margin-top: 0px;
     }
     @include media-tablet-landscape {
       margin: 20px 0px;

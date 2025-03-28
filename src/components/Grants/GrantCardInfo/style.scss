@@ -8,6 +8,7 @@
   background-size: cover;
   padding: 15px;
   @include media-tablet-landscape {
+    width: 30%;
     background: url("../../../assets/card-info-tablet-landscape.svg");
     background-repeat: no-repeat;
     background-size: cover;

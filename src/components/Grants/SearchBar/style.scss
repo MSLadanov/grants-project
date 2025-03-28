@@ -8,10 +8,12 @@
     width: 100%;
   }
   @include media-mobile-landscape {
+    width: 100%;
     margin: 2% 0% 2% 0%;
   }
 
   @include media-mobile-portrait {
+    width: 100%;
     margin: 2% 0% 2% 0%;
   }
   .grants-searchbar-input {

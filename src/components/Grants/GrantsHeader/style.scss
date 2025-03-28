@@ -9,7 +9,7 @@
   color: #ffffff;
   border-radius: 38px;
   padding: 0px 4%;
-  height: 30vw;
+  height: 33vw;
   overflow: hidden;
   @include media-tablet-landscape {
     border-radius: 18px;
@@ -88,8 +88,9 @@
   img {
     position: relative;
     top: 10vw;
-    width: 25vw;
-    height: 20vw;
+    width: 31vw;
+    height: 23vw;
+    left: 2vw;
     @include media-tablet-landscape {
       width: 296px;
       height: 228px;

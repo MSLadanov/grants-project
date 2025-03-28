@@ -15,7 +15,7 @@ const CustomDatePicker = (): ReactElement => {
       monthLabelFormat={"MMMM"}
       styles={{
         levelsGroup:{
-          width: '200px'
+          width: '100%'
         }
       }}
       locale="ru"

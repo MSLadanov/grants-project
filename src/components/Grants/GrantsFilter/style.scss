@@ -1,7 +1,7 @@
 @import "/src/variables.scss";
 
 .filter-side {
-  width: 400px;
+  width: 30vh;
   @include media-tablet-landscape {
     width: 197px;
   }

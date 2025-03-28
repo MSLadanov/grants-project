@@ -2,6 +2,16 @@
 
 .grantpage-sections {
   margin-left: 2%;
+  margin-right: 2%;
+  @include media-tablet-landscape {
+    margin-right: 0%;
+    margin-left: 2%;
+  }
+
+  @include media-tablet-portrait {
+    margin-right: 0%;
+    margin-left: 2%;
+  }
   @include media-mobile-landscape {
     display: none;
   }

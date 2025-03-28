@@ -121,10 +121,11 @@
     width: 80%;
   }
   @include media-mobile-landscape {
-    padding-left: 10%;
+    padding-left: 0%;
     left: -8vw;
   }
   @include media-mobile-portrait {
+    padding-left: 0%;
     left: -8vw;
   }
   h1 {
@@ -138,7 +139,7 @@
   flex-direction: column;
   justify-content: space-around;
   position: relative;
-  top: 6vw;
+  top: 5vw;
   right: 5vw;
   padding: 0% 2%;
   width: 402px;

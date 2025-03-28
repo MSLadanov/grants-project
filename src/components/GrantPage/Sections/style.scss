@@ -3,7 +3,8 @@
 .grantpage-sections-list {
   border: 1px solid #6e7880;
   border-radius: 35px;
-  width: 37vh;
+  width: 32vh;
+  height: 23vh;
   position: sticky;
   top: 85px;
   background-color: #ecf7fd;
@@ -19,6 +20,7 @@
   @include media-tablet-portrait {
     width: 180px;
     border-radius: 20px;
+    height: 12vh;
   }
 
   @include media-mobile-landscape {

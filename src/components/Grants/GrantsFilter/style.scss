@@ -168,6 +168,9 @@
     label {
       margin-left: 30px;
       font-size: 21px;
+      @include media-laptop {
+       font-size: 18px;
+      }
       @include media-tablet-landscape {
         font-size: 12px;
         top: -6px;
@@ -203,6 +206,9 @@
       margin-left: 30px;
       font-size: 21px;
       left: 8px;
+      @include media-laptop {
+        font-size: 18px;
+       }
       @include media-tablet-landscape {
         font-size: 12px;
         left: 0px;

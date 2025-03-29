@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.4a55ec6a.css",
-    "main.js": "./static/js/main.25272861.js",
+    "main.css": "./static/css/main.e76123b4.css",
+    "main.js": "./static/js/main.f770cd9c.js",
     "static/media/card-info-tablet-landscape.svg": "./static/media/card-info-tablet-landscape.096d7748c5ef10fb8041.svg",
     "static/media/card-info-tablet-portrait.svg": "./static/media/card-info-tablet-portrait.67e4a36b745037c38ebf.svg",
     "static/media/card-info-mobile-portrait.svg": "./static/media/card-info-mobile-portrait.4c0d9f2c0ad72dcf3898.svg",
@@ -26,11 +26,11 @@
     "static/media/clear.svg": "./static/media/clear.6b44901a9a3838ca9207b81d11b0dae3.svg",
     "index.html": "./index.html",
     "static/media/filter-background.svg": "./static/media/filter-background.8efa2b1f4acdcfcbe927.svg",
-    "main.4a55ec6a.css.map": "./static/css/main.4a55ec6a.css.map",
-    "main.25272861.js.map": "./static/js/main.25272861.js.map"
+    "main.e76123b4.css.map": "./static/css/main.e76123b4.css.map",
+    "main.f770cd9c.js.map": "./static/js/main.f770cd9c.js.map"
   },
   "entrypoints": [
-    "static/css/main.4a55ec6a.css",
-    "static/js/main.25272861.js"
+    "static/css/main.e76123b4.css",
+    "static/js/main.f770cd9c.js"
   ]
 }

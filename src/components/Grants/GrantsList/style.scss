@@ -2,9 +2,12 @@
 
 .grants-list {
   overflow: hidden;
-  padding-left: 48px;
+  padding-left: 28px;
   padding-right: 30px;
   width: 100%;
+  @include media-laptop {
+    padding-left: 18px;
+  }
   @include media-tablet-landscape {
     padding-left: 10px;
     padding-right: 0px;

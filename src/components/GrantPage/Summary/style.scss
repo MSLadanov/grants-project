@@ -31,7 +31,19 @@
     }
     &:first-child{
       :last-child{
-        margin-left: 5px;
+        @include media-tablet-landscape{
+          margin-left: 0px;
+        }
+        @include media-tablet-portrait{
+          margin-left: 0px;
+        }
+        @include media-mobile-landscape {
+          margin-left: 5px;
+        }
+      
+        @include media-mobile-portrait {
+          margin-left: 5px;
+        }
       }
     }
     .grant-summary-cell {

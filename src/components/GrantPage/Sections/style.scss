@@ -4,7 +4,7 @@
   border: 1px solid #6e7880;
   border-radius: 35px;
   width: 21vw;
-  height: 23vh;
+  height: auto;
   position: sticky;
   top: 85px;
   background-color: #ecf7fd;
@@ -14,14 +14,14 @@
   }
   @include media-tablet-landscape {
     width: 257px;
-    height: 160px;
+    height: auto;
     border-radius: 20px;
   }
 
   @include media-tablet-portrait {
     width: 180px;
     border-radius: 20px;
-    height: 12vh;
+    height: auto;
   }
 
   @include media-mobile-landscape {
@@ -29,7 +29,7 @@
   }
 
   @include media-mobile-portrait {
-    height: 27vh;
+    height: auto;
     border-radius: 16px;
   }
   ol {

@@ -5,12 +5,12 @@
   justify-content: space-between;
   border-radius: 35px;
   padding: 3%;
-  height: 270px;
+  height: auto;
   @include media-tablet-landscape{
-    height: 140px;
+    height: auto;
   }
   @include media-tablet-portrait{
-    height: 140px;
+    height: auto;
   }
   @include media-mobile-landscape {
     height: auto;

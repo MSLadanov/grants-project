@@ -29,6 +29,7 @@
   }
 
   @include media-mobile-portrait {
+    height: 27vh;
     border-radius: 16px;
   }
   ol {

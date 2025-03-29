@@ -13,14 +13,9 @@ const CustomDatePicker = (): ReactElement => {
     <DatePicker
       type="range"
       monthLabelFormat={"MMMM"}
-      styles={{
-        levelsGroup:{
-          width: '100%'
-        }
-      }}
       locale="ru"
-      value={dateRange}
       size="xs"
+      value={dateRange}
       onChange={setDateRange}
       hideOutsideDates
     />

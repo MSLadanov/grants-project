@@ -3,11 +3,11 @@
 .filter-side {
   width: 30vw;
   @include media-tablet-landscape {
-    width: 197px;
+    width: 232px;
   }
 
   @include media-tablet-portrait {
-    width: 184px;
+    width: 210px;
   }
 
   @include media-mobile-landscape {
@@ -20,13 +20,13 @@
 }
 
 .filter{
-  width: 110%;
+  width: 100%;
   @include media-tablet-landscape {
-    width: 120%;
+    width: 100%;
   }
 
   @include media-tablet-portrait {
-    width: 120%;
+    width: 100%;
   }
 }
 

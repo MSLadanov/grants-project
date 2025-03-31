@@ -75,67 +75,69 @@ const GrantsMobileFilter = forwardRef<
   };
 
   return (
-    <div className="filter-mobile" ref={ref}>
-      <div className="filter-body">
-        <h4>Направление</h4>
-        <div>
-          {directions.map((item, index) => (
-            <div key={index} className="direction">
-              <CustomCheckBox
-                id={item}
-                checked={directionsList.includes(item)}
-                handleDirection={handleDirection}
-              />
-              <label htmlFor={item}>{item}</label>
-            </div>
-          ))}
-        </div>
-        <h4>Размер</h4>
-        <div>
-          {amounts.map((item, index) => (
-            <div key={index} className="amount">
-              <input
-                id={item}
-                value={item}
-                name="amount"
-                type="radio"
-                checked={amount === item}
-                onChange={handleAmount}
-              />
-              <label htmlFor={item}>{item}</label>
-            </div>
-          ))}
-        </div>
-        <h4>Период</h4>
-        <div className="filter-date-group">
-          <div className="filter-date-indicator">
-            <InputBase
-              className={dateRange[1] ? "active" : ""}
-              label="Начало периода"
-              component={IMaskInput}
-              mask="00/00/0000"
-              placeholder="23/10/2023"
-              value={formatDate(dateRange[0])}
-              onBlur={(event) => handleDateBlur(event.target.value, "start")}
-            />
-            <div
-              className={"filter-date-icon" + (dateRange[0] ? " active" : "")}
-            ></div>
+    <div className="filter-wrapper">
+      <div className="filter-mobile" ref={ref}>
+        <div className="filter-body">
+          <h4>Направление</h4>
+          <div>
+            {directions.map((item, index) => (
+              <div key={index} className="direction">
+                <CustomCheckBox
+                  id={item}
+                  checked={directionsList.includes(item)}
+                  handleDirection={handleDirection}
+                />
+                <label htmlFor={item}>{item}</label>
+              </div>
+            ))}
           </div>
-          <div className="indicator-divisor"></div>
-          <div className="filter-date-indicator">
-            <InputBase
-              className={dateRange[1] ? "active" : ""}
-              label="Конец периода"
-              component={IMaskInput}
-              mask="00/00/0000"
-              placeholder="01/12/2023"
-              value={formatDate(dateRange[1])}
-              onBlur={(event) => handleDateBlur(event.target.value, "end")}
-            />
-            <div
-              className={"filter-date-icon" + (dateRange[1] ? " active" : "")}
-            ></div>
+          <h4>Размер</h4>
+          <div>
+            {amounts.map((item, index) => (
+              <div key={index} className="amount">
+                <input
+                  id={item}
+                  value={item}
+                  name="amount"
+                  type="radio"
+                  checked={amount === item}
+                  onChange={handleAmount}
+                />
+                <label htmlFor={item}>{item}</label>
+              </div>
+            ))}
+          </div>
+          <h4>Период</h4>
+          <div className="filter-date-group">
+            <div className="filter-date-indicator">
+              <InputBase
+                className={dateRange[1] ? "active" : ""}
+                label="Начало периода"
+                component={IMaskInput}
+                mask="00/00/0000"
+                placeholder="23/10/2023"
+                value={formatDate(dateRange[0])}
+                onBlur={(event) => handleDateBlur(event.target.value, "start")}
+              />
+              <div
+                className={"filter-date-icon" + (dateRange[0] ? " active" : "")}
+              ></div>
+            </div>
+            <div className="indicator-divisor"></div>
+            <div className="filter-date-indicator">
+              <InputBase
+                className={dateRange[1] ? "active" : ""}
+                label="Конец периода"
+                component={IMaskInput}
+                mask="00/00/0000"
+                placeholder="01/12/2023"
+                value={formatDate(dateRange[1])}
+                onBlur={(event) => handleDateBlur(event.target.value, "end")}
+              />
+              <div
+                className={"filter-date-icon" + (dateRange[1] ? " active" : "")}
+              ></div>
+            </div>
           </div>
         </div>
       </div>

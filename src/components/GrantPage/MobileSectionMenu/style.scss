@@ -8,6 +8,7 @@
   width: 80%;
   overflow: hidden;
   border-radius: 25px;
+  z-index: 5;
   @include media-not-mobile {
     display: none;
   }
